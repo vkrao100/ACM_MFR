@@ -1,0 +1,229 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{16}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{}, \showDOI{}, and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showDOI}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showDOI #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showDOI      \undefined \def \showDOI       #1{#1}\fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[\protect\citeauthoryear{Adams and Loustaunau}{Adams and
+  Loustaunau}{1994}]%
+        {gb_book}
+\bibfield{author}{\bibinfo{person}{W.~W. Adams} {and} \bibinfo{person}{P.
+  Loustaunau}.} \bibinfo{year}{1994}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{{A}n {I}ntroduction to {G}r\"obner
+  {B}ases}}.
+\newblock \bibinfo{publisher}{American Mathematical Society}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Brayton and Mishchenko}{Brayton and
+  Mishchenko}{2010}]%
+        {abc}
+\bibfield{author}{\bibinfo{person}{Robert Brayton} {and} \bibinfo{person}{Alan
+  Mishchenko}.} \bibinfo{year}{2010}\natexlab{}.
+\newblock \showarticletitle{ABC: {A}n {A}cademic {I}ndustrial-strength
+  {V}erification {T}ool}. In \bibinfo{booktitle}{\emph{Computer Aided
+  Verification}}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Brickenstein and Dreyer}{Brickenstein and
+  Dreyer}{2009}]%
+        {pbori:JSC09}
+\bibfield{author}{\bibinfo{person}{M. Brickenstein} {and} \bibinfo{person}{A.
+  Dreyer}.} \bibinfo{year}{2009}\natexlab{}.
+\newblock \showarticletitle{PolyBoRi: A framework for Gröbner-basis
+  computations with Boolean polynomials}.
+\newblock \bibinfo{journal}{\emph{J. Symb. Comput.}} (\bibinfo{year}{2009}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Dao, Lee, Chen, Lin, Jiang, Mishchenko, and
+  Brayton}{Dao et~al\mbox{.}}{2018}]%
+        {SS_Alan:DAC18}
+\bibfield{author}{\bibinfo{person}{Ai~Quoc Dao}, \bibinfo{person}{Nian-Ze Lee},
+  \bibinfo{person}{Li-Cheng Chen}, \bibinfo{person}{Mark Po-Hung Lin},
+  \bibinfo{person}{Jie-Hong~R. Jiang}, \bibinfo{person}{Alan Mishchenko}, {and}
+  \bibinfo{person}{Robert Brayton}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{{Efficient Computation of ECO Patch Functions}}. In
+  \bibinfo{booktitle}{\emph{DAC}}. \bibinfo{pages}{51:1--51:6}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Farahmandi and Mishra}{Farahmandi and
+  Mishra}{2017}]%
+        {farimah:2017:1}
+\bibfield{author}{\bibinfo{person}{F. Farahmandi} {and} \bibinfo{person}{P.
+  Mishra}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{{A}utomated {D}ebugging of {A}rithmetic {C}ircuits
+  {U}sing {I}ncremental {G}r\"obner {B}asis {R}eduction}. In
+  \bibinfo{booktitle}{\emph{ICCD}}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Gitina, Reimer, Sauer, Wimmer, Scholl, and
+  Becker}{Gitina et~al\mbox{.}}{2013}]%
+        {scholl:2}
+\bibfield{author}{\bibinfo{person}{K. Gitina}, \bibinfo{person}{S. Reimer},
+  \bibinfo{person}{M. Sauer}, \bibinfo{person}{R. Wimmer}, \bibinfo{person}{C.
+  Scholl}, {and} \bibinfo{person}{B. Becker}.} \bibinfo{year}{2013}\natexlab{}.
+\newblock \showarticletitle{{E}quivalence {C}hecking of {P}artial {D}esigns
+  {U}sing {D}ependency {Q}uantified {B}oolean {F}ormulae}. In
+  \bibinfo{booktitle}{\emph{IEEE International Conference on Computer Design
+  (ICCD)}}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Gupta, Ilioaea, Rao, Srinath, Kalla, and
+  Enescu}{Gupta et~al\mbox{.}}{2018}]%
+        {Utkarsh:VLSI18}
+\bibfield{author}{\bibinfo{person}{U. Gupta}, \bibinfo{person}{I. Ilioaea},
+  \bibinfo{person}{V. Rao}, \bibinfo{person}{A. Srinath}, \bibinfo{person}{P.
+  Kalla}, {and} \bibinfo{person}{F. Enescu}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{{On the Rectifiability of Arithmetic Circuits using
+  Craig Interpolants in Finite Fields}}. In
+  \bibinfo{booktitle}{\emph{VLSI-SoC}}. \bibinfo{pages}{49--54}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{{Kimura}, {Gharehbaghi}, and
+  {Fujita}}{{Kimura} et~al\mbox{.}}{2019}]%
+        {SS_Fujita:ISCAS19}
+\bibfield{author}{\bibinfo{person}{Y. {Kimura}}, \bibinfo{person}{A.~M.
+  {Gharehbaghi}}, {and} \bibinfo{person}{M. {Fujita}}.}
+  \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{{Signal Selection Methods for Efficient
+  Multi-Target Correction}}. In \bibinfo{booktitle}{\emph{ISCAS}}.
+  \bibinfo{pages}{1--5}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{{Kravets}, {Lee}, and {Jiang}}{{Kravets}
+  et~al\mbox{.}}{2019}]%
+        {SS_Roland:DAC19}
+\bibfield{author}{\bibinfo{person}{V.~N. {Kravets}}, \bibinfo{person}{N.
+  {Lee}}, {and} \bibinfo{person}{J.~R. {Jiang}}.}
+  \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{{Comprehensive Search for ECO Rectification Using
+  Symbolic Sampling}}. In \bibinfo{booktitle}{\emph{DAC}}.
+  \bibinfo{pages}{1--6}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Lv, Kalla, and Enescu}{Lv
+  et~al\mbox{.}}{2013}]%
+        {lv:tcad2013}
+\bibfield{author}{\bibinfo{person}{J. Lv}, \bibinfo{person}{P. Kalla}, {and}
+  \bibinfo{person}{F. Enescu}.} \bibinfo{year}{2013}\natexlab{}.
+\newblock \showarticletitle{{E}fficient {G}r\"obner {B}asis {R}eductions for
+  {F}ormal {V}erification of {G}alois {F}ield {A}rithmetic {C}ircuits}. In
+  \bibinfo{booktitle}{\emph{IEEE Trans. on CAD}}, Vol.~\bibinfo{volume}{32}.
+  \bibinfo{pages}{1409--1420}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Mahzoon, Gro{\ss}e, and Drechsler}{Mahzoon
+  et~al\mbox{.}}{2018}]%
+        {MF_Rolf:ISVLSI18}
+\bibfield{author}{\bibinfo{person}{Alireza Mahzoon}, \bibinfo{person}{Daniel
+  Gro{\ss}e}, {and} \bibinfo{person}{Rolf Drechsler}.}
+  \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{{C}ombining {S}ymbolic {C}omputer {A}lgebra and
+  {B}oolean {S}atisfiability for {A}utomatic {D}ebugging and {F}ixing of
+  {C}omplex {M}ultipliers}. In \bibinfo{booktitle}{\emph{ISVLSI}}.
+  \bibinfo{pages}{351--356}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Rao, Gupta, Srinath, Ilioaea, Kalla, and
+  Enescu}{Rao et~al\mbox{.}}{2018}]%
+        {Vkrao:FMCAD18}
+\bibfield{author}{\bibinfo{person}{V. Rao}, \bibinfo{person}{U. Gupta},
+  \bibinfo{person}{A. Srinath}, \bibinfo{person}{I. Ilioaea},
+  \bibinfo{person}{P. Kalla}, {and} \bibinfo{person}{F. Enescu}.}
+  \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{{P}ost-{V}erification {D}ebugging and
+  {R}ectification of {F}inite {F}ield {A}rithmetic {C}ircuits using {C}omputer
+  {A}lgebra {T}echniques}. In \bibinfo{booktitle}{\emph{FMCAD}}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Rao, Ilioaea, Ondricek, Kalla, and Enescu}{Rao
+  et~al\mbox{.}}{2021}]%
+        {Vkrao:ISQED21}
+\bibfield{author}{\bibinfo{person}{V. Rao}, \bibinfo{person}{I. Ilioaea},
+  \bibinfo{person}{H. Ondricek}, \bibinfo{person}{P. Kalla}, {and}
+  \bibinfo{person}{F. Enescu}.} \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{Word-Level Multi-Fix Rectifiability of Finite Field
+  Arithmetic Circuits}. In \bibinfo{booktitle}{\emph{ISQED}}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Sentovich~{\em et al.}}{Sentovich~{\em et
+  al.}}{1992}]%
+        {SIS92}
+\bibfield{author}{\bibinfo{person}{E. Sentovich~{\em et al.}}}
+  \bibinfo{year}{1992}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{{SIS}: {A} {S}ystem for {S}equential
+  {C}ircuit {S}ynthesis}}.
+\newblock \bibinfo{type}{{T}echnical {R}eport} UCB/ERL M92/41.
+  \bibinfo{institution}{ERL, Dept. of EECS, Univ. of California, Berkeley.}
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Tang, Huang, Chou, and Huang}{Tang
+  et~al\mbox{.}}{2012}]%
+        {MF_Huang:DATE12}
+\bibfield{author}{\bibinfo{person}{K.~F. Tang}, \bibinfo{person}{P.~K. Huang},
+  \bibinfo{person}{C.~N. Chou}, {and} \bibinfo{person}{C.~Y. Huang}.}
+  \bibinfo{year}{2012}\natexlab{}.
+\newblock \showarticletitle{{M}ulti-patch {G}eneration for {M}ulti-error
+  {L}ogic {R}ectification by {I}nterpolation with {C}ofactor {R}eduction}. In
+  \bibinfo{booktitle}{\emph{DATE}}. \bibinfo{pages}{1567--1572}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Zhang and Jiang}{Zhang and Jiang}{2018}]%
+        {SS_Roland:DAC18}
+\bibfield{author}{\bibinfo{person}{H.~T. Zhang} {and} \bibinfo{person}{J.~H.~R.
+  Jiang}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{{C}ost-Aware {P}atch {G}eneration for
+  {M}ulti-Target {F}unction {R}ectification of {E}ngineering {C}hange
+  {O}rders}. In \bibinfo{booktitle}{\emph{Design Automation Conference (DAC)}}.
+  \bibinfo{pages}{1--6}.
+\newblock
+
+
+\end{thebibliography}
