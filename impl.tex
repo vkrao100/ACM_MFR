@@ -1,0 +1,22 @@
+\section{Efficient Implementation of MFR setup using ZDDs}\label{impl}
+
+Taking inspiration from~\cite{Utkarsh:TCAD19}, we utilize 
+PolyBori’s~\cite{pbori:JSC09} reduction procedure with 
+ZDDs~\cite{Minato:DAC93,Minato:DAC94} as the underlying data structure 
+to improve our proposed approach.
+PolyBori proposed the use of ZDDs to compute
+\Grobner bases for Boolean polynomials. PolyBori is a generic Boolean GB computational
+engine that caters to many permissible term orders. Its division algorithm is also generally
+based on the conventional concept of canceling one monomial in every step of reduction.
+In contrast, our algorithms are tailored for GB-reduction under the RTTO > . The efficiency
+of our approach stems from the observation that the RTTO > imposes a special structure
+on the ZDDs, which allows for multiple monomials to be canceled in one division-step,
+along with simplifying the search for divisors.
+The efficiency is derived by treating the polynomials 
+as unate cube sets and checking isomorphism between the implementation and specification 
+graphs. We reason about the presence or absence of solutions and other properties of a 
+system of polynomials without explicitly solving them. 
+The Boolean values of the nets of a circuit for all possible input assignments is a set 
+of points, which can be construed as solutions to a set of polynomials.
+We further improve upon the rectification approach by exploiting the circuit 
+topology and ZDD based GB reductions.

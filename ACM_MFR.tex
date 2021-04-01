@@ -1,9 +1,15 @@
 % \documentclass[]{IEEEtran}
-\documentclass[]{acmart}
+\documentclass[acmsmall,screen,review]{acmart}
 %\documentclass{article}
+
 \settopmatter{printacmref=false} % Removes citation information below abstract
 \renewcommand\footnotetextcopyrightpermission[1]{} % removes footnote with conference information in first column
 % \pagestyle{plain} % removes running headers
+
+%% \BibTeX command to typeset BibTeX logo in the docs
+% \AtBeginDocument{%
+%   \providecommand\BibTeX{{%
+%     \normalfont B\kern-0.5em{\scshape i\kern-0.25em b}\kern-0.8em\TeX}}}
 
 %% set page size to US letter
 % \special{papersize=8.5in,11in}
@@ -57,8 +63,8 @@
 %      \ignorespaces
 %     }
 % New command for the table bnotes.
-\def\tabnote#1{{\small{#1}}}
-\textheight 666pt
+% \def\tabnote#1{{\small{#1}}}
+% \textheight 666pt
 % \theoremstyle{definition}
 
 %the following is for space before and after align or other equation environment.
@@ -90,29 +96,55 @@
 %% \setlength{\belowdisplayskip}{0pt}
 %% \setlength{\abovedisplayshortskip}{0pt}
 %% \setlength{\belowdisplayshortskip}{0pt}
-\title{ Computing Rectification Functions for Finite Field Arithmetic Circuits using Computer Algebra Techniques} 
+\title{Rectification of Finite Field Arithmetic Circuits using Computer Algebra Techniques} 
   % \thanks{This research is funded in part by the
   %  US Na4onal Science Foundation grants CCF-1619370 and
   %  CCF-1320385.}}
-% \begin{anonsuppress}
-\author{Vikas Rao$^1$, Haden Ondricek$^1$, Priyank Kalla$^1$,  and Florian Enescu$^2$\\
-$^1$Electrical \& Computer Engineering, University of Utah\\
-}
-% \end{anonsuppress}
-% \texttt{anonymous}
+\author{Vikas Rao}
+\affiliation{%
+  \institution{University of Utah}
+  \city{Salt Lake City}
+  \country{USA}}
+\email{vikas.k.rao@utah.edu}
 
+\author{Haden Ondricek}
+\affiliation{%
+  \institution{University of Utah}
+  \city{Salt Lake City}
+  \country{USA}}
+\email{haden.ondricek@utah.edu}
 
+\author{Priyank Kalla}
+\affiliation{%
+  \institution{University of Utah}
+  \city{Salt Lake City}
+  \country{USA}}
+\email{kalla@ece.utah.edu}
+
+\author{Florian Enescu}
+\affiliation{%
+  \institution{Georgia State University}
+  \city{Atlanta}
+  \country{USA}}
+\email{fenescu@gsu.edu}
+
+\renewcommand{\shortauthors}{Rao et al.}
+
+\input{abstract.tex}
 % \institute{}
 \ccsdesc{Hardware~Electronic design automation~Logic synthesis~Combinational synthesis}
 
-% \keywords{Logic Synthesis, Rectification, Arithmetic Circuits}
+\keywords{Logic Synthesis, Rectification, Arithmetic Circuits}
 
-\input{abstract.tex}
+\def\acmBooktitle#1{\gdef\@acmBooktitle{#1}}
+\acmBooktitle{Proceedings of \acmConference@name
+       \ifx\acmConference@name\acmConference@shortname\else
+         \ (\acmConference@shortname)\fi}
 
 \maketitle
 \fancyfoot{} 	
-\thispagestyle{empty}
-\pagestyle{plain}
+% \thispagestyle{empty}
+% \pagestyle{plain}
 %%%%%%%%%%%%%%%%%%%% Include your files here %%%%%%%%%%%%%%%%%%%%%
 
 \input{intro.tex}
@@ -120,7 +152,7 @@ $^1$Electrical \& Computer Engineering, University of Utah\\
 \input{pmodel.tex}
 \input{rectify.tex}
 \input{func_comp.tex}
-\input{impl.tex}
+% \input{impl.tex}
 \input{experiments.tex}
 %%%%%%%%%%%%%%%%%%%% The bibliography %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -153,7 +185,7 @@ $^1$Electrical \& Computer Engineering, University of Utah\\
 % 
 
 % \bibliographystyle{IEEEtran}
-% \bibliographystyle{ACM-Reference-Format}
+\bibliographystyle{ACM-Reference-Format}
 \bibliography{vikas,utkarsh,tim,xiaojun,logic}
 
 \end{document}

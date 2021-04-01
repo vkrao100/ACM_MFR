@@ -1,30 +1,6 @@
 \section{Experimental Results}
 \label{sec:exp}
 
-% \begin{table}[hbt!]
-% \centering
-% \caption{{\footnotesize Synthesis results for mapped patch network; $\textit{I}$ = Benchmark Index, GFC = Greedy function computation,
-% DFC = Function computation with don't cares, $A$ = Area, $D$ = Delay, '-' - SIS core dumped while performing optimization}}
-% \label{tab:fun_synth}
-% \resizebox{\linewidth}{!}{
-% \begin{tabular}
-% {!{\vrule width 1pt} c !{\vrule width 1pt} c | c !{\vrule width 1pt} c | c !{\vrule width 1pt} c | c !{\vrule width 1pt} c | c !{\vrule width 1pt} c | c !{\vrule width 1pt} c | c !{\vrule width 1pt}}\noalign{\hrule height 1pt}
-% \multicolumn{1}{!{\vrule width 1pt} c !{\vrule width 1pt}}{} & \multicolumn{4}{ c !{\vrule width 1pt}}{Mastrovito} & \multicolumn{4}{ c !{\vrule width 1pt}}{Montgomery} & \multicolumn{4}{ c !{\vrule width 1pt}}{Point Addition}\\ \noalign{\hrule height 1pt}
-% \multicolumn{1}{!{\vrule width 1pt} c !{\vrule width 1pt}}{} & \multicolumn{2}{ c !{\vrule width 1pt}}{GFC} & \multicolumn{2}{ c !{\vrule width 1pt}}{DFC}& \multicolumn{2}{ c !{\vrule width 1pt}}{GFC}& \multicolumn{2}{ c !{\vrule width 1pt}}{DFC}& \multicolumn{2}{ c !{\vrule width 1pt}}{GFC}& \multicolumn{2}{ c !{\vrule width 1pt}}{DFC}\\ \noalign{\hrule height 1pt}
-% $\textit{I}$ & {$A$} & {$D$} & {$A$} & {$D$} & {$A$} & {$D$}  & {$A$} & {$D$} & {$A$} & {$D$} & {$A$} & {$D$} \\ \noalign{\hrule height 1pt}
-% 1  & 19   & 3  & 179 & 30 & 19   & 3  & 108  & 16 & 27788 & 50 & -     & -  & 27819 & 38 & -    & -  & 761   & 40 & 605  & 24 & 769  & 37 & 523  & 23 \\ \hline
-% 2  & 34   & 5  & 35  & 4  & 34   & 4  & 35   & 5  & 19340 & 65 & -     & -  & 19110 & 73 & -    &    & 8882  & 69 & 9508 & 61 & 8652 & 61 & 9796 & 65 \\ \hline
-% 3  & 1675 & 29 & 1628& 40 & 1562 & 27 & 1578 & 45 & 1511  & 30 & 839   & 24 & 1389  & 28 & 1540 & 42 & 3040  & 32 & 3733 & 41 & 2776 & 29 & 3438 & 40 \\ \hline
-% 4  & 86   & 11 & 67  & 14 & 94   & 11 & 76   & 14 & 55085 & 50 & -     & -  & 43957 & 48 & -    & -  & 6642  & 89 & 6098 & 75 & 6597 & 84 & 6108 & 76 \\ \hline
-% 5  & 283  & 21 & 109 & 12 & 215  & 17 & 103  & 12 & 25819 & 44 & 26744 & 35 & -     & -  & -    & -  & 27544 & 36 & -    & -  & -    & -  & -    & -  \\ \hline
-% 6  & 222  & 17 & 238 & 17 & 148  & 13 & 217  & 25 & 27035 & 68 & -     & -  & -     & -  & -    & -  & 66    & 8  & 49   & 9  & 52   & 10 & 59   & 16 \\ \hline
-% 7  & 9    & 4  & 9   & 4  & 9    & 4  & 9    & 4  & 8094  & 25 & 4948  & 28 & 6413  & 23 & 9418 & 30 & 4345  & 30 & 5169 & 34 & 4825 & 28 & 4935 & 35 \\ \hline
-% 8  & 16   & 4  & 16  & 4  & 16   & 4  & 16   & 4  & 844   & 13 & 4     & 2  & 844   & 13 & 4    & 2  & 2707  & 24 & -    & -  &  -   & -  & -    & -  \\ \hline
-% 9  & 21   & 7  & 21  & 6  & 21   & 7  & 21   & 6  & -     & -  & -     & -  & -     & -  & -    & -  & 622   & 22 & 210  & 16 & 486  & 24 & 210  & 16 \\ \noalign{\hrule height 1pt}
-% \end{tabular}}
-% \vspace{- 0.25in}  
-% \end{table}
-
 % {\it implicit} characteristic set representation 
 % for storing and manipulating polynomials. 
 % The same framework 
@@ -144,7 +120,35 @@ Finally, we {\it map} the computed functions using a library of AND-XOR-INV gate
 the synthesis results for {\it area} and {\it delay}. The experiments are performed on a 3.5GHz 
 Intel(R) $\text{Core}^{\text{TM}}$ i7-4770K Quad-Core CPU with 32 GB RAM.
 
-~\autoref{exptbl} presents the characteristics of the benchmark 
+\begin{table*}[t]
+\footnotesize
+\centering
+% \small
+\caption{{\footnotesize 
+% The notations in the columns denote the following: 
+Time is in seconds; $\textit{I}$ = Benchmark Index, $\textit{n}$ = Datapath Size, $\textit{m}$ = target word size, AM = Maximum resident memory utilization in Mega Bytes (Average across benchmarks), \#G = Number of gates $\times 10^3$, 
+, \#BO = Number of faulty outputs, PBS = Required time for PolyBori setup (ring declaration/poly collection/spec collection), 
+% VF = time for verification (Sec.~\ref{sec:verify}), MS = Multi-fix check setup time (Sec.~\ref{sec:comps} [Rectification Setup]), RC = time for MFR check (Thm.~\ref{Thm:rect}), TE = Total execution time.}}
+RC = Required time for verification, multi-fix setup and rectifiability check, GFC = Required time for function computation using the greedy approach,
+DFC = Required time for function computation with don't cares}}
+\label{exptbl}
+\resizebox{\linewidth}{!}{
+\begin{tabular}{!{\vrule width 1pt} c | c | c | c !{\vrule width 1pt} c | c | c | c | c | c !{\vrule width 1pt} c | c | c | c | c | c !{\vrule width 1pt} c | c | c | c | c | c !{\vrule width 1pt}}\noalign{\hrule height 1pt}
+\multicolumn{4}{!{\vrule width 1pt} c !{\vrule width 1pt}}{} & \multicolumn{6}{ c !{\vrule width 1pt}}{Mastrovito} & \multicolumn{6}{ c !{\vrule width 1pt}}{Montgomery} & \multicolumn{6}{ c !{\vrule width 1pt}}{Point Addition}\\ \noalign{\hrule height 1pt}
+$\textit{I}$&{\textit{\textbf{n}}} & {\textit{\textbf{m}}} & {\textbf{AM}} & {\textbf{\#G}} & {\textbf{\#BO}}& {\textbf{PBS}} & {\textbf{RC}} & {\textbf{GFC}} & {\textbf{DFC}}& {\textbf{\#G}} & {\textbf{\#BO}}& {\textbf{PBS}} & {\textbf{RC}} & {\textbf{GFC}} & {\textbf{DFC}} & {\textbf{\#G}} & {\textbf{\#BO}}& {\textbf{PBS}} & {\textbf{RC}} & {\textbf{GFC}} & {\textbf{DFC}} \\ \noalign{\hrule height 1pt}
+1 &\mb{16}  & \mb{5} & 100 & 0.8  & 6  & 0.05  & 0.01 & 1.7 & 4.7 & 0.9   & 16  & 0.05 & 0.44 & 190 & 277*  & 0.9  & 7   & 0.07  & 0.02 & 6.6 & 20  \\ \hline
+2 &\mb{32 } & \mb{5} & 120 & 2.8  & 8  & 0.14  & 0.02 & 2   & 8   & 2.8   & 32  & 0.16 & 0.1  & 114 & 180*  & 2.9  & 13  & 0.2   & 0.06 & 36  & 85* \\ \hline
+3 &\mb{64 } & \mb{3} & 160 & 11.2 & 5  & 0.61  & 3.59 & 5   & 15  & 9.6   & 47  & 0.53 & 0.14 & 7   & 14    & 10.6 & 64  & 0.8   & 0.18 & 10  & 35  \\ \hline
+4 &\mb{96 } & \mb{2} & 240 & 24.5 & 5  & 1.45  & 0.12 & 0.4 & 0.7 & 21    & 96  & 1.35 & 3.14 & 87  & 111*  & 24.8 & 96  & 2.53  & 0.5  & 7.7 & 90  \\ \hline
+5 &\mb{128} & \mb{2} & 370 & 43.2 & 5  & 3.23  & 0.24 & 0.8 & 1.2 & 35.8  & 128 & 2.92 & 2.06 & 28  & 393*  & 43.2 & 128 & 6.42  & 4.38 & 49  & 62* \\ \hline
+6 &\mb{163} & \mb{5} & 550 & 69.8 & 6  & 6.21  & 0.4  & 4.4 & 7.7 & 57.5  & 128 & 5.38 & 1.53 & 131 & 220*  & 71.6 & 22  & 15.9  & 1.53 & 3.2 & 8   \\ \hline
+7 &\mb{233} & \mb{2} & 750 & 119  & 3  & 12.7  & 0.66 & 0.3 & 1.7 & 112   & 233 & 12.6 & 2.69 & 6   & 40    & 122  & 233 & 19.7  & 1.44 & 6.4 & 32  \\ \hline
+8 &\mb{409} & \mb{2} & 2400& 384  & 2  & 190   & 2.22 & 0.3 & 9   & 340   & 409 & 136  & 6.15 & 2.7 & 5.2   & 368  & 409 & 224   & 5.3  & 7.7 & 8*  \\ \hline
+9 &\mb{571} & \mb{2} & 5000& 827  & 5  & 2143  & 5.96 & 0.3 & 26  & 663   & 427 & 1386 & 49   & 1.6 & 30    & 813  & 5   & 2492  & 13.2 & 1.2 & 20  \\ \noalign{\hrule height 1pt}
+\end{tabular} }
+\end{table*}
+
+Table~\ref{exptbl} presents the characteristics of the benchmark 
 suit and the execution time for the computations using our approach.
 Column PBS denotes the time taken to build the respective ZDD 
 models (commensurates with the operand word-length $n$).
@@ -179,6 +183,61 @@ The time taken for GFC is less than the time taken for DFC computations.
 However, synthesis results computed using DFC where {\it sis} completed
 simplification successfully are of better quality than
 the one computed using GFC for most of the cases.  
+
+\begin{table}[hbt]
+\centering
+\caption{{\footnotesize Synthesis results for mapped patch network; $\textit{I}$ = Benchmark Index, GFC = Greedy function computation,
+DFC-on = Function computation with don't care optimization of on-set, DFC-off = Function computation with don't care optimization of complement of off-set,
+ $A$ = Area in terms of number of gates , $D$ = Longest delay} }
+\label{tab_func_synth}
+\resizebox{\linewidth}{!}{
+\begin{tabular}
+{!{\vrule width 1pt} c !{\vrule width 1pt} c | c !{\vrule width 1pt} c | c !{\vrule width 1pt} c | c !{\vrule width 1pt} c | c 
+!{\vrule width 1pt} c | c !{\vrule width 1pt} c | c !{\vrule width 1pt} c | c !{\vrule width 1pt} c | c !{\vrule width 1pt} c | c 
+!{\vrule width 1pt}}\noalign{\hrule height 1pt}
+\multicolumn{1}{!{\vrule width 1pt} c !{\vrule width 1pt}}{} & \multicolumn{6}{ c !{\vrule width 1pt}}{Mastrovito} & \multicolumn{6}{ c !{\vrule width 1pt}}{Montgomery}&\multicolumn{6}{ c !{\vrule width 1pt}}{Point Addition}\\ \noalign{\hrule height 1pt}
+\multicolumn{1}{!{\vrule width 1pt} c !{\vrule width 1pt}}{} & \multicolumn{2}{ c !{\vrule width 1pt}}{GFC} & \multicolumn{2}{ c !{\vrule width 1pt}}{DFC-on}
+& \multicolumn{2}{ c !{\vrule width 1pt}}{DFC-off} & \multicolumn{2}{ c !{\vrule width 1pt}}{GFC}& \multicolumn{2}{ c !{\vrule width 1pt}}{DFC-on}
+& \multicolumn{2}{ c !{\vrule width 1pt}}{DFC-off} & \multicolumn{2}{ c !{\vrule width 1pt}}{GFC}& \multicolumn{2}{ c !{\vrule width 1pt}}{DFC-on}
+& \multicolumn{2}{ c !{\vrule width 1pt}}{DFC-off}\\ \noalign{\hrule height 1pt}
+$\textit{I}$ & {$A$} & {$D$} & {$A$} & {$D$} & {$A$} & {$D$} & {$A$} & {$D$} & {$A$} & {$D$} 
+& {$A$} & {$D$}& {$A$} & {$D$} & {$A$} & {$D$} & {$A$} & {$D$} \\ \noalign{\hrule height 1pt}
+1  & 19   & 3  & 17  & 3  & & & 27788 & 50 & 27941* & 62* & & & 761   & 40 & 265   & 12  & &  \\ \hline
+2  & 34   & 5  & 35  & 4  & & & 19340 & 65 & 19384* & 57* & & & 8882  & 69 & 9063* & 60* & &  \\ \hline
+3  & 1675 & 29 & 1577& 46 & & & 1511  & 30 & 560    & 18  & & & 3040  & 32 & 3733  & 41  & &  \\ \hline
+4  & 86   & 11 & 21  & 5  & & & 55085 & 50 & 55568* & 52* & & & 6642  & 89 & 6193  & 70  & &  \\ \hline
+5  & 283  & 21 & 103 & 12 & & & 25819 & 44 & 26744* & 35* & & & 27544 & 36 & 27289*& 35* & &  \\ \hline
+6  & 222  & 17 & 99  & 7  & & & 27035 & 68 & 27409* & 61* & & & 66    & 8  & 39    & 7   & &  \\ \hline
+7  & 9    & 4  & 9   & 4  & & & 8094  & 25 & 4948   & 28  & & & 4345  & 30 & 5169  & 34  & &  \\ \hline
+8  & 16   & 4  & 11  & 4  & & & 844   & 13 & 4      & 2   & & & 2707  & 24 & 2611* & 23* & &  \\ \hline
+9  & 21   & 7  & 18  & 6  & & & 299   & 19 & 287    & 19  & & & 622   & 22 & 210   & 16  & &  \\ \noalign{\hrule height 1pt}
+\end{tabular}}
+\end{table}
+
+
+% \begin{table}[hbt]
+% \centering
+% \caption{{\footnotesize Synthesis results for mapped patch network; $\textit{I}$ = Benchmark Index, GFC = Greedy function computation,
+% DFC = Function computation with don't cares, $A$ = Area in terms of number of gates , $D$ = Longest delay} }
+% \label{tab_func_synth}
+% \begin{tabular}
+% {!{\vrule width 1pt} c !{\vrule width 1pt} c | c !{\vrule width 1pt} c | c !{\vrule width 1pt} c | c !{\vrule width 1pt} c | c !{\vrule width 1pt} c | c !{\vrule width 1pt} c | c !{\vrule width 1pt}}\noalign{\hrule height 1pt}
+% \multicolumn{1}{!{\vrule width 1pt} c !{\vrule width 1pt}}{} & \multicolumn{4}{ c !{\vrule width 1pt}}{Mastrovito} & \multicolumn{4}{ c !{\vrule width 1pt}}{Montgomery}&\multicolumn{4}{ c !{\vrule width 1pt}}{Point Addition}\\ \noalign{\hrule height 1pt}
+% \multicolumn{1}{!{\vrule width 1pt} c !{\vrule width 1pt}}{} & \multicolumn{2}{ c !{\vrule width 1pt}}{GFC} & \multicolumn{2}{ c !{\vrule width 1pt}}{DFC}& \multicolumn{2}{ c !{\vrule width 1pt}}{GFC}& \multicolumn{2}{ c !{\vrule width 1pt}}{DFC}& \multicolumn{2}{ c !{\vrule width 1pt}}{GFC}& \multicolumn{2}{ c !{\vrule width 1pt}}{DFC}\\ \noalign{\hrule height 1pt}
+% $\textit{I}$ & {$A$} & {$D$} & {$A$} & {$D$} & {$A$} & {$D$}& {$A$} & {$D$} & {$A$} & {$D$} & {$A$} & {$D$} \\ \noalign{\hrule height 1pt}
+% 1  & 19   & 3  & 17  & 3  & 27788 & 50 & 27941* & 62* & 761   & 40 & 265   & 12  \\ \hline
+% 2  & 34   & 5  & 35  & 4  & 19340 & 65 & 19384* & 57* & 8882  & 69 & 9063* & 60* \\ \hline
+% 3  & 1675 & 29 & 1577& 46 & 1511  & 30 & 560    & 18  & 3040  & 32 & 3733  & 41  \\ \hline
+% 4  & 86   & 11 & 21  & 5  & 55085 & 50 & 55568* & 52* & 6642  & 89 & 6193  & 70  \\ \hline
+% 5  & 283  & 21 & 103 & 12 & 25819 & 44 & 26744* & 35* & 27544 & 36 & 27289*& 35* \\ \hline
+% 6  & 222  & 17 & 99  & 7  & 27035 & 68 & 27409* & 61* & 66    & 8  & 39    & 7   \\ \hline
+% 7  & 9    & 4  & 9   & 4  & 8094  & 25 & 4948   & 28  & 4345  & 30 & 5169  & 34  \\ \hline
+% 8  & 16   & 4  & 11  & 4  & 844   & 13 & 4      & 2   & 2707  & 24 & 2611* & 23* \\ \hline
+% 9  & 21   & 7  & 18  & 6  & 299   & 19 & 287    & 19  & 622   & 22 & 210   & 16  \\ \noalign{\hrule height 1pt}
+% \end{tabular}
+% \end{table}
+
+
 % As seen from the results table, for most of the cases where {\it sis} completed
 % simplification successfully, the synthesis results using DFC approach is better 
 % than the corresponding synthesis result computed using the greedy approach.
@@ -283,25 +342,3 @@ extension of this approach to integer arithmetic circuits.
 % The experimental results demonstrate the efficacy of our approach for finite field 
 % arithmetic circuits. 
 
-\begin{table}[hbt]
-\centering
-\caption{{\footnotesize Synthesis results for mapped patch network; $\textit{I}$ = Benchmark Index, GFC = Greedy function computation,
-DFC = Function computation with don't cares, $A$ = Area in terms of number of gates , $D$ = Longest delay} }
-\label{tab_func_synth}
-\resizebox{\linewidth}{!}{
-\begin{tabular}
-{!{\vrule width 1pt} c !{\vrule width 1pt} c | c !{\vrule width 1pt} c | c !{\vrule width 1pt} c | c !{\vrule width 1pt} c | c !{\vrule width 1pt} c | c !{\vrule width 1pt} c | c !{\vrule width 1pt}}\noalign{\hrule height 1pt}
-\multicolumn{1}{!{\vrule width 1pt} c !{\vrule width 1pt}}{} & \multicolumn{4}{ c !{\vrule width 1pt}}{Mastrovito} & \multicolumn{4}{ c !{\vrule width 1pt}}{Montgomery}&\multicolumn{4}{ c !{\vrule width 1pt}}{Point Addition}\\ \noalign{\hrule height 1pt}
-\multicolumn{1}{!{\vrule width 1pt} c !{\vrule width 1pt}}{} & \multicolumn{2}{ c !{\vrule width 1pt}}{GFC} & \multicolumn{2}{ c !{\vrule width 1pt}}{DFC}& \multicolumn{2}{ c !{\vrule width 1pt}}{GFC}& \multicolumn{2}{ c !{\vrule width 1pt}}{DFC}& \multicolumn{2}{ c !{\vrule width 1pt}}{GFC}& \multicolumn{2}{ c !{\vrule width 1pt}}{DFC}\\ \noalign{\hrule height 1pt}
-$\textit{I}$ & {$A$} & {$D$} & {$A$} & {$D$} & {$A$} & {$D$}& {$A$} & {$D$} & {$A$} & {$D$} & {$A$} & {$D$} \\ \noalign{\hrule height 1pt}
-1  & 19   & 3  & 17  & 3  & 27788 & 50 & 27941* & 62* & 761   & 40 & 265   & 12  \\ \hline
-2  & 34   & 5  & 35  & 4  & 19340 & 65 & 19384* & 57* & 8882  & 69 & 9063* & 60* \\ \hline
-3  & 1675 & 29 & 1577& 46 & 1511  & 30 & 560    & 18  & 3040  & 32 & 3733  & 41  \\ \hline
-4  & 86   & 11 & 21  & 5  & 55085 & 50 & 55568* & 52* & 6642  & 89 & 6193  & 70  \\ \hline
-5  & 283  & 21 & 103 & 12 & 25819 & 44 & 26744* & 35* & 27544 & 36 & 27289*& 35* \\ \hline
-6  & 222  & 17 & 99  & 7  & 27035 & 68 & 27409* & 61* & 66    & 8  & 39    & 7   \\ \hline
-7  & 9    & 4  & 9   & 4  & 8094  & 25 & 4948   & 28  & 4345  & 30 & 5169  & 34  \\ \hline
-8  & 16   & 4  & 11  & 4  & 844   & 13 & 4      & 2   & 2707  & 24 & 2611* & 23* \\ \hline
-9  & 21   & 7  & 18  & 6  & 299   & 19 & 287    & 19  & 622   & 22 & 210   & 16  \\ \noalign{\hrule height 1pt}
-\end{tabular}}
-\end{table}

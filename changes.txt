@@ -1,0 +1,29 @@
+Introduction -
+
+
+Preliminaries -
+Added definitions for minimal grobner basis and reduced \Grobner basis
+
+
+Polynomial modeling - 
+
+
+Rectification Check -
+
+
+Rectification Function Computation -
+
+
+Implementation - 
+This section was introduced exclusively for this journal with detailed description 
+of the data structure and implementation of our approach.
+We describe how we interpret the polynomial functions
+as unate cube sets and harness the power of ZDDs to represent and perform efficient 
+operations on such sets. 
+
+
+Experiments -
+
+Added description of benchmarks used in the experiments
+Added experiments for Function computation with don't care simplification with complement of off-set
+

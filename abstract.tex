@@ -1,8 +1,10 @@
-% Title: Multi-fix Rectification of Finite Field Arithmetic Circuits using Symbolic Computer Algebra
-
-% Multi-Fix Rectification of buggy circuits requires deriving the necessary and sufficient conditions for the existence of rectification functions at multiple nets, and to subsequently compute the patch functions at these nets.  
-% Our experiments show that the contemporary models which utilize SAT solvers, fail to rectify finite field circuits beyond 16-bit operands.
-% Utilizing a polynomial model and techniques from Symbolic Computer Algebra, our approach rectifies buggy finite field arithmetic circuits with large operand widths. 
+% Multi-Fix Rectification of buggy circuits requires deriving the necessary and 
+% sufficient conditions for the existence of rectification functions at multiple nets, 
+% and to subsequently compute the patch functions at these nets.  
+% Our experiments show that the contemporary models which utilize SAT solvers, 
+% fail to rectify finite field circuits beyond 16-bit operands.
+% Utilizing a polynomial model and techniques from Symbolic Computer Algebra, 
+% our approach rectifies buggy finite field arithmetic circuits with large operand widths. 
 
 % Rectification of digital logic circuits with bugs often requires correction at 
 % multiple targets. This process can be broadly divided into three main phases.
@@ -20,20 +22,16 @@
 % computed patches, thus providing a framework for logic synthesis and optimization.
 
 
-% So: 
-% The first sentence - is there a better way to get across the importance of rectifying our circuits in general?
-% Is what I wrote about ODCs correct?
 \begin{abstract}
-This paper addresses the problem of rectification of faulty finite
-field arithmetic circuits that require computation of rectification
-patch functions at multiple nets. Contemporary approaches
+This paper presents a symbolic computer algebra based approach for rectification of faulty finite
+field arithmetic circuits at multiple nets. Contemporary approaches
 that utilize SAT solving and Craig interpolation are
 infeasible in rectifying arithmetic circuits. Our approach employs
 techniques from polynomial algebra to compute rectification
-patches. Given a set of $m$ nets as targets for rectification, prior
-algebra-based techniques can only ascertain whether the targets admit
-rectification, but cannot compute rectification functions. In this
-work, we show how the algebraic computing model allows to explore the
+patches. Given a set of $m$ nets as targets for rectification, first, we
+utilize algebra-based techniques to ascertain existence of a rectification 
+function at the targets, and subsequently compute a rectification function. 
+Further, we show how the algebraic computing model allows to explore the
 space of admissible rectification patches, collectively, for the $m$
 targets. The model also enables exploitation of don't care 
 conditions across the $m$ targets for synthesis of rectification patches. 

@@ -22,79 +22,82 @@ Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
 Reallocating 'global_strs' (item size: 1) to 4000000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Warning--empty address in gb_book
-Warning--empty publisher in abc
+Warning--empty publisher in crypto:bug_attacks
+Warning--empty address in crypto:bug_attacks
 Warning--empty address in abc
-Warning--page numbers missing in both pages and numpages fields in abc
-Warning--no number and no volume in pbori:JSC09
-Warning--page numbers missing in both pages and numpages fields in pbori:JSC09
-Warning--empty publisher in SS_Alan:DAC18
 Warning--empty address in SS_Alan:DAC18
 Warning--empty publisher in farimah:2017:1
 Warning--empty address in farimah:2017:1
-Warning--page numbers missing in both pages and numpages fields in farimah:2017:1
+Warning--empty publisher in SS_Fujita:ISQED17
+Warning--empty address in SS_Fujita:ISQED17
 Warning--empty publisher in scholl:2
 Warning--empty address in scholl:2
-Warning--page numbers missing in both pages and numpages fields in scholl:2
 Warning--empty publisher in Utkarsh:VLSI18
 Warning--empty address in Utkarsh:VLSI18
 Warning--empty publisher in SS_Fujita:ISCAS19
 Warning--empty address in SS_Fujita:ISCAS19
 Warning--empty publisher in SS_Roland:DAC19
 Warning--empty address in SS_Roland:DAC19
-Warning--can't use both volume and number fields in lv:tcad2013
+Warning--empty publisher in Sadowska:DAC95
+Warning--empty address in Sadowska:DAC95
 Warning--empty publisher in lv:tcad2013
 Warning--empty address in lv:tcad2013
 Warning--empty publisher in MF_Rolf:ISVLSI18
 Warning--empty address in MF_Rolf:ISVLSI18
 Warning--empty publisher in Vkrao:FMCAD18
 Warning--empty address in Vkrao:FMCAD18
-Warning--page numbers missing in both pages and numpages fields in Vkrao:FMCAD18
 Warning--empty publisher in Vkrao:ISQED21
 Warning--empty address in Vkrao:ISQED21
-Warning--page numbers missing in both pages and numpages fields in Vkrao:ISQED21
+Warning--empty publisher in Vkrao:GLSVLSI21
+Warning--empty address in Vkrao:GLSVLSI21
+Warning--empty publisher in scholl:1
+Warning--empty address in scholl:1
+Warning--page numbers missing in both pages and numpages fields in scholl:1
+Warning--no number and no volume in andreas:2005
+Warning--page numbers missing in both pages and numpages fields in andreas:2005
 Warning--empty publisher in MF_Huang:DATE12
 Warning--empty address in MF_Huang:DATE12
 Warning--empty publisher in SS_Roland:DAC18
 Warning--empty address in SS_Roland:DAC18
-You've used 16 entries,
+You've used 22 entries,
             5959 wiz_defined-function locations,
-            1426 strings with 17658 characters,
-and the built_in function-call counts, 19007 in all, are:
-= -- 1903
-> -- 796
+            1465 strings with 19086 characters,
+and the built_in function-call counts, 27575 in all, are:
+= -- 2912
+> -- 1068
 < -- 1
-+ -- 264
-- -- 272
-* -- 1388
-:= -- 1995
-add.period$ -- 77
-call.type$ -- 16
-change.case$ -- 121
-chr.to.int$ -- 16
-cite$ -- 51
-duplicate$ -- 1791
-empty$ -- 1249
-format.name$ -- 332
-if$ -- 4401
-int.to.chr$ -- 2
++ -- 357
+- -- 364
+* -- 1933
+:= -- 2808
+add.period$ -- 111
+call.type$ -- 22
+change.case$ -- 164
+chr.to.int$ -- 21
+cite$ -- 60
+duplicate$ -- 2622
+empty$ -- 1804
+format.name$ -- 447
+if$ -- 6517
+int.to.chr$ -- 3
 int.to.str$ -- 1
-missing$ -- 71
-newline$ -- 155
-num.names$ -- 128
-pop$ -- 817
+missing$ -- 100
+newline$ -- 198
+num.names$ -- 175
+pop$ -- 1125
 preamble$ -- 1
-purify$ -- 265
+purify$ -- 360
 quote$ -- 0
-skip$ -- 647
+skip$ -- 992
 stack$ -- 0
-substring$ -- 1207
-swap$ -- 155
+substring$ -- 1921
+swap$ -- 287
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 451
-warning$ -- 35
-while$ -- 105
+type$ -- 611
+warning$ -- 38
+while$ -- 156
 width$ -- 0
-write$ -- 293
-(There were 35 warnings)
+write$ -- 395
+(There were 38 warnings)

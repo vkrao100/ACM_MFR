@@ -188,52 +188,50 @@ to compute rectification functions in the following section.
 %% to check if $\prod_{l=1}^{2^m} rem_l\xrightarrow{J_{0}^{PI}}_+0$?  
 
 
-\vspace{-0.13in}
-\begin{algorithm}\label{rect_flow_alg}
-\caption{Rectification of finite field arithmetic circuits}\label{pseudocode}
-\begin{algorithmic}[1]
-\Require $\spec:f, buggy~\impl: C$ modeled as a polynomial ideal $F=\{f_1\dots,f_s\}$ under $RTTO >$ 
-\Assume {$C$ doesn't admit single-fix rectification} //~\cite{Vkrao:FMCAD18}
-\Ensure {Rectification of $C$ to match $f$}
-\Procedure{$rectification$}{} 
-\State {remainder = $verify(f,F+F_0)$} // Sec.\ref{sec:verify}
-\State {$\Oa = analyze$(remainder)} //Sec. V.1~\cite{Vkrao:FMCAD18}
-\State {$\In = PotentialNets()$} //Sec.\ref{subsec:target_nets}
-\State {$m = 2$; rectified = $False; \mathcal{O}_A = \emptyset ; F_w = \emptyset$}
-\Do %1
-\State {$\Oa^i = uniquePartition(\Oa,m)$}\label{prtn}
-\If {$\Oa^i \notin \mathcal{O}_A$}
-\State {$\mathcal{O}_A=\mathcal{O}_A \cup \Oa^i$}
-\State {$\M^i = intersectionCover(\Oa^i)$}  
-\State {$f_w=pickTargets(\M^i,m)$}\label{ptrgt}
-\If {$f_w \notin F_w$}
-\State {$F_w=F_w \cup f_w$}
-\State {$MFRSetup()$} //Sec.\ref{subsec:comp_fwrk}
-\If {$MFRCheck(F')==0$} //Sec.\ref{sec:rcheck}
-\State {rectified = $True$}
-\State {patch = $rectFunction$()} //Sec.\ref{sec:rfunc}
-\Else
-\State {$goto~\ref{ptrgt}$}
-\EndIf
-\Else
-\State {$goto~\ref{prtn}$}
-\EndIf
-\Else
-\State $m++$
-\EndIf
-\doWhile {((!rectified) $\&\&$ $m \le |\Oa|$)} %1
-\State \Return patch
-\EndProcedure
-\end{algorithmic}
-\end{algorithm}
+% \begin{algorithm}\label{rect_flow_alg}
+% \caption{Rectification of finite field arithmetic circuits}\label{pseudocode}
+% \begin{algorithmic}[1]
+% \Require $\spec:f, buggy~\impl: C$ modeled as a polynomial ideal $F=\{f_1\dots,f_s\}$ under $RTTO >$ 
+% \Assume {$C$ doesn't admit single-fix rectification} //~\cite{Vkrao:FMCAD18}
+% \Ensure {Rectification of $C$ to match $f$}
+% \Procedure{$rectification$}{} 
+% \State {remainder = $verify(f,F+F_0)$} // Sec.\ref{sec:verify}
+% \State {$\Oa = analyze$(remainder)} //Sec. V.1~\cite{Vkrao:FMCAD18}
+% \State {$\In = PotentialNets()$} //Sec.\ref{subsec:target_nets}
+% \State {$m = 2$; rectified = $False; \mathcal{O}_A = \emptyset ; F_w = \emptyset$}
+% \Do %1
+% \State {$\Oa^i = uniquePartition(\Oa,m)$}\label{prtn}
+% \If {$\Oa^i \notin \mathcal{O}_A$}
+% \State {$\mathcal{O}_A=\mathcal{O}_A \cup \Oa^i$}
+% \State {$\M^i = intersectionCover(\Oa^i)$}  
+% \State {$f_w=pickTargets(\M^i,m)$}\label{ptrgt}
+% \If {$f_w \notin F_w$}
+% \State {$F_w=F_w \cup f_w$}
+% \State {$MFRSetup()$} //Sec.\ref{subsec:comp_fwrk}
+% \If {$MFRCheck(F')==0$} //Sec.\ref{sec:rcheck}
+% \State {rectified = $True$}
+% \State {patch = $rectFunction$()} //Sec.\ref{sec:rfunc}
+% \Else
+% \State {$goto~\ref{ptrgt}$}
+% \EndIf
+% \Else
+% \State {$goto~\ref{prtn}$}
+% \EndIf
+% \Else
+% \State $m++$
+% \EndIf
+% \doWhile {((!rectified) $\&\&$ $m \le |\Oa|$)} %1
+% \State \Return patch
+% \EndProcedure
+% \end{algorithmic}
+% \end{algorithm}
 
- However, as discussed before, their variety 
-$V(rem_l)\subseteq \F_{2}^{|X_{PI}|}$. We can compute a polynomial $pr_l \in \F_{2}^{|X_{PI}|}$
- such that $V(pr_l) = V(rem_l)$~\cite{Utkarsh:VLSI18}. 
+%  However, as discussed before, their variety 
+% $V(rem_l)\subseteq \F_{2}^{|X_{PI}|}$. We can compute a polynomial $pr_l \in \F_{2}^{|X_{PI}|}$
+%  such that $V(pr_l) = V(rem_l)$~\cite{Utkarsh:VLSI18}. 
 
-The authors discuss how rectifiability of $C$ against its 
-$\spec$ at a given set of $m$-distinct targets 
-$W=(w_1,\dots,w_m)\subset \{\{X\}-\{X_{PI}\}\}$ can be ascertained
-algebraically. 
- 
- \vspace{-0.18in}  
+% The authors discuss how rectifiability of $C$ against its 
+% $\spec$ at a given set of $m$-distinct targets 
+% $W=(w_1,\dots,w_m)\subset \{\{X\}-\{X_{PI}\}\}$ can be ascertained
+% algebraically. 
+%  

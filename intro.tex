@@ -5,39 +5,47 @@ specification ($\spec$). The process constitutes identifying
 candidate nets in the circuit as targets for rectification, followed by  
 a check to determine whether the circuit can be patched at these
 targets. If the targets admit correction, corresponding rectification
-functions are computed and synthesized to fix the circuit at these targets. 
-% It is akin to performing synthesis for Engineering Change Order 
-% (ECO), wherein a highly optimized implementation is minimally modified to match the 
-% updated specification in a cost effective way. This is achieved by reusing prior design efforts and avoiding rerunning the entire synthesis flow, while adhering to the resource constraints and the physical design limitations.  
-% The problem has witnessed a lot of research over the years -- 
-% some of the earliest being~\cite{Sadowska:DAC95,scholl:1,andreas:2005}.
-% Owing to a manifold improvement in the efficiency of SAT solvers,
-% there has been a renewed interest in the problem over the last decade from 
-% the logic synthesis, testing and verification communities~\cite{
-% MF_Huang:DATE12,scholl:2,SS_Fujita:ISQED17,SS_Alan:DAC18}.
-% These techniques generally employ SAT, quantified Boolean formula (QBF) solving,
-% and Craig interpolation (CI) based techniques for rectification. While
-% successful for control-dominated applications, these techniques are
-% computationally infeasible for rectification of arithmetic circuits.
-% Symbolic computer algebra (SCA) techniques are found to be more
-% suitable for formal analysis and verification of arithmetic circuits.
-% However, utilization of the various facets and capabilities of the SCA
-% techniques for  post-verification debugging and rectification has only
-% recently begun to be addressed
-% \cite{farimah:2017:1,MF_Rolf:ISVLSI18,Utkarsh:VLSI18,Vkrao:FMCAD18,Vkrao:ISQED21}.  
+functions are computed and synthesized to fix the circuit at these targets.
+%Begin ACM journal
+{\red  
+It is akin to performing synthesis for Engineering Change Order 
+(ECO), wherein a highly optimized implementation is minimally modified to match the 
+updated specification in a cost effective way. This is achieved by reusing prior design 
+efforts and avoiding rerunning the entire synthesis flow, while adhering to the resource 
+constraints and the physical design limitations.
+
+The problem has witnessed a lot of research over the years -- 
+some of the earliest being~\cite{Sadowska:DAC95,scholl:1,andreas:2005}.
+Owing to a manifold improvement in the efficiency of SAT solvers,
+there has been a renewed interest in the problem over the last decade from 
+the logic synthesis, testing and verification communities~\cite{
+MF_Huang:DATE12,scholl:2,SS_Fujita:ISQED17,SS_Alan:DAC18}.
+These techniques generally employ SAT, Quantified Boolean Formula (QBF) solving,
+and Craig Interpolation (CI) based techniques for rectification. While
+successful for control-dominated applications, these techniques are
+computationally infeasible for rectification of arithmetic circuits.
+Symbolic computer algebra (SCA) techniques are found to be more
+suitable for formal analysis and verification of arithmetic circuits.
+However, utilization of the various facets and capabilities of the SCA
+techniques for post-verification debugging and rectification has only
+recently begun to be addressed
+\cite{farimah:2017:1,MF_Rolf:ISVLSI18,Utkarsh:VLSI18,
+Vkrao:FMCAD18,Vkrao:ISQED21,Vkrao:GLSVLSI21}. }
+%End ACM journal
+
 This paper addresses the problem of {\it multi-fix rectification (MFR)
   of faulty finite field arithmetic circuits} at a given set of $m$
 targets. Rectification is performed against a 
 given polynomial $\spec$ over finite
-fields. Such circuits find application in cryptography and
-error-control codes. 
-% As arithmetic bugs may lead to security
-% vulnerabilities in crypto-systems \cite{crypto:bug_attacks}, their
-% rectification is of utmost importance. 
-
-% Our approach uses Symbolic Computer Algebra (SCA) and
-% algebraic geometry based techniques to compute rectification patches
-% as polynomials, and synthesizes them into logic sub-circuits.
+fields. Such circuits find application in cryptography and error-control codes. 
+%Begin ACM journal
+{\red As arithmetic bugs may lead to security
+vulnerabilities in crypto-systems \cite{crypto:bug_attacks}, their
+rectification is of utmost importance. 
+%End ACM journal
+Our approach uses Symbolic Computer Algebra (SCA) and
+algebraic geometry based techniques to compute rectification patches
+as polynomials, and synthesizes them into logic sub-circuits.}
 
 %While successful for control-dominated applications, the SAT-based 
 %models~[4-10] however are infeasible for rectification of arithmetic circuits. 
@@ -52,15 +60,18 @@ with no assumptions on the number or the type of bugs present in
 $C$; and iv) a set $W = (w_1,\dots,w_m)$ of $m$ targets from $C$,
 pre-specified or selected using contemporary signal selection heuristics 
 ~\cite{SS_Alan:DAC18,SS_Fujita:ISCAS19,SS_Roland:DAC19}.
-We further assume that it has been ascertained that $C$ 
-admits rectification at these $m$ targets, using~\cite{MF_Huang:DATE12,Vkrao:ISQED21}. 
-The objective of our approach is to: i) compute a set
+% We further assume that it has been ascertained that $C$ 
+% admits rectification at these $m$ targets, using~\cite{MF_Huang:DATE12,Vkrao:ISQED21}. 
+The objective of our approach is to: 
+{\red i) ascertain that $C$ 
+admits rectification at these $m$ targets}
+ii) compute a set
 of individual rectification functions $U =
 (u_1,\dots,u_m)$ for the corresponding targets. Here, each $u_i$ is a 
 polynomial function $u_i:\F_2^{|X_{PI}|}\rightarrow\F_2$, where $\F_2=\{0,1\}$, 
 and $X_{PI}$ denotes the
-set of primary inputs; ii) derive {\it don't care conditions}
-corresponding to the $m$ rectification functions; and iii) synthesize
+set of primary inputs; iii) derive {\it don't care conditions}
+corresponding to the $m$ rectification functions; and iv) synthesize
 the rectification polynomials into logic sub-circuit patches.
 %Note that the cardinality of $|W|=|U|=|O|=m$.
 
@@ -72,42 +83,43 @@ The MFR techniques in
 \cite{SS_Fujita:ISCAS19,MF_Huang:DATE12,SS_Roland:DAC18} 
 iteratively and incrementally compute multiple single-fix functions
 that partially patch the circuit in each iteration.
-%They ensure that, in each iteration, erroneous minterms are resolved
-%and no new errors are introduced, eventually converging the circuit
-%to the given specification.
+{\red They ensure that, in each iteration, erroneous minterms are resolved
+and no new errors are introduced, eventually converging the circuit
+to the given specification.}
 The more recent techniques further
 include more resource awareness in patch generation by reusing
 existing logic \cite{SS_Alan:DAC18}, employ improved heuristics for
-target selection \cite{SS_Fujita:ISCAS19}, or resolve a combination of
-such objectives, such as the symbolic sampling approach of
-\cite{SS_Roland:DAC19}. While
-successful for control-dominated applications, these techniques are
+target selection \cite{SS_Fujita:ISCAS19}.
+% , or resolve a combination of
+% such objectives, such as the symbolic sampling approach of
+% \cite{SS_Roland:DAC19}.
+{\red A robust ECO approach to derive patches with minimal 
+impact on the heavily optimized existing implementation $\impl$ against 
+a structurally dissimilar ECO-evolved specification $\spec$ has been presented in
+\cite{SS_Roland:DAC19}. 
+The authors~\cite{SS_Roland:DAC19} propose enumerating rectification points 
+functionally by simulation and match the circuitry of patches implicitly to maximize reuse of 
+existing logic in the implementation. To achieve scalability, the method proposes 
+modeling and analyzing its computations in symbolic sampling domain. }
+While successful for control-dominated applications, these techniques are
 computationally infeasible for rectification of arithmetic circuits.
-% A robust ECO approach to derive patches with minimal 
-% impact on the heavily optimized existing implementation $\impl$ against 
-% a structurally dissimilar ECO-evolved specification $\spec$ has been presented in
-% \cite{SS_Roland:DAC19}. 
-%The authors~\cite{SS_Roland:DAC19} propose enumerating rectification points 
-%functionally by simulation and match the circuitry of patches implicitly to maximize reuse of 
-%existing logic in the implementation. To achieve scalability, the method proposes 
-%5modeling and analyzing its computations in symbolic sampling domain. 
 
 In the context of arithmetic circuits, Symbolic Computer Algebra (SCA) 
-techniques for integer arithmetic \cite{farimah:2017:1,MF_Rolf:ISVLSI18} and
+techniques for integer arithmetic~\cite{farimah:2017:1,MF_Rolf:ISVLSI18} and
 finite field circuits~\cite{Utkarsh:VLSI18,Vkrao:FMCAD18}
 have been considered for rectification. However, these algebraic
 approaches address only {\it single-fix rectification} -- where
 irrespective of the type or number of bugs in the circuit,
 rectification is attempted at a single net. This is too restrictive
 and depending on the nature of the bugs, the circuit may not admit
-single-fix rectification at all. In such cases,  correction has to be
+single-fix rectification at all. In such cases, correction has to be
 attempted at multiple targets, i.e. MFR is required.
 Recently,~\cite{Vkrao:ISQED21} proposes an SCA based approach to 
 {\it decide $m$-target rectifiability}. Given a set of $m$-targets,
-their approach can only ascertain whether {\it there exists} a set of
+the approach can only ascertain whether {\it there exists} a set of
 patch functions that can patch the circuit at those targets. As 
-theirs is only a decision
-procedure, it cannot {\it compute} rectification functions.
+it is only a decision procedure, the proposed approach cannot 
+{\it compute} rectification functions.
 Thus the problem of multi-fix rectification of data-path circuits
 remains unsolved, and theoretical and algorithmic solutions to compute
 and synthesize rectification patches for arithmetic circuits are still
@@ -131,7 +143,7 @@ which help in simplifying the rectification patches. Synthesis of the
 corresponding polynomial patch functions, along with don't cares,  
 demonstrates the efficacy of our approach in terms of improved area 
 and delay characteristics of the patches.
-Overall, the computation of rectification functions at multiple
+Overall, the  the computation of rectification functions at multiple
 targets, and modeling don't cares for MFR in
 polynomial algebra, are our novel contributions not presented
 in prior literature. 
@@ -194,35 +206,14 @@ in prior literature.
 % for finite field arithmetic circuit debug and rectification. The logic corrections 
 % are computed as polynomial functions in primary input variables, which are synthesized 
 % into rectification patches for the respective targets. 
-% Our algebraic approach provides a scalable solution into MFR checking
+% Our algebraic approach provides a scalable solution for rectification
 % of finite field arithmetic circuits.
-
-%% ZDDs
-% Taking inspiration from~\cite{Utkarsh:TCAD19}, we utilize 
-% PolyBori’s~\cite{pbori:JSC09} reduction procedure with 
-% ZDDs~\cite{Minato:DAC93,Minato:DAC94} as the underlying data structure 
-% to improve our proposed approach.
-% PolyBori proposed the use of ZDDs to compute
-% \Grobner bases for Boolean polynomials. PolyBori is a generic Boolean GB computational
-% engine that caters to many permissible term orders. Its division algorithm is also generally
-% based on the conventional concept of canceling one monomial in every step of reduction.
-% In contrast, our algorithms are tailored for GB-reduction under the RTTO > . The efficiency
-% of our approach stems from the observation that the RTTO > imposes a special structure
-% on the ZDDs, which allows for multiple monomials to be canceled in one division-step,
-% along with simplifying the search for divisors.
-% The efficiency is derived by treating the polynomials 
-% as unate cube sets and checking isomorphism between the implementation and specification 
-% graphs. We reason about the presence or absence of solutions and other properties of a 
-% system of polynomials without explicitly solving them. 
-% The Boolean values of the nets of a circuit for all possible input assignments is a set 
-% of points, which can be construed as solutions to a set of polynomials.
-% We further improve upon the rectification approach by exploiting the circuit 
-% topology and ZDD based GB reductions.
 
 {\it Paper Organization:} The following section covers preliminary
 background. Section~\ref{sec:pmodel} reviews the polynomial modeling
 concepts. Rectification check formulation is described in
 Section~\ref{sec:rcheck}, followed by the rectification function and
-don't care computations  in Section~\ref{sec:rfunc}. Experimental
+don't care computations in Section~\ref{sec:rfunc}. Section~\ref{impl}
+discusses the implementation details, and experimental
 results are described in Section \ref{sec:exp}, and
 Section~\ref{sec:conc} concludes the paper. 
