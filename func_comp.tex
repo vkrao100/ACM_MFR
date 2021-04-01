@@ -458,3 +458,22 @@ and '+1' as Boolean AND, XOR, and INV gates, respectively. Optimize the on-set $
 \end{Example}
 
 
+The techniques described in rectification check and function computation 
+predominantly involve \Grobner basis computations and polynomial reductions.
+By virtue of RTTO $>$, the complexity of remainder ($rem_l$) generation 
+in the rectification check was moved from one of computing GB to that of GB-reduction by way of multivariate polynomial division. 
+However, the function computation operation also involves computing
+a reduced GB, which can be especially prohibitive when applied to circuits with
+large size operands. Hence, there is a need for efficient representation
+and  to overcome the infeasibility of these operations using conventional 
+computer algebra tools. 
+ 
+
+ to overcome
+this complexity. As the GB algorithms are employed to compute rectification function
+patches via CI on the circuit, we analyze the circuit and its topology to derive specific
+information which we use to efficiently guide the computation of patches. Moreover, we
+further show how this information can be effectively utilized by our ZDD based algorithms
+to compute rectification patches. By combining our theories and algorithms we can explore
+the space of all possible rectification functions through their ON-set, OFF-set and DC-set
+of corresponding Boolean functions.

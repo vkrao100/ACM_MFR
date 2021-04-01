@@ -1,29 +1,32 @@
 \section{Preliminaries}
 \label{sec:prelim}
-% This section reviews some basic concepts from symbolic computer
-% algebra and associated algorithms that are utilized in this paper. 
+This section reviews some basic concepts from symbolic computer
+algebra and associated algorithms that are utilized in this paper. 
+
 %\subsection{Notation and Background}
 {\it Finite fields:} Let $\B$ denote the Boolean domain, and $\neg,
 \wedge,\vee, \oplus$ the NOT, AND, OR and XOR operators,
 respectively. Let $\F_2=\{0,1\}$ be the field of 2 elements, and let
-$\F_q = \F_{2^n}$ denote the finite field of $q=2^n$ elements, for a
+$\F_q = \Fkn$ denote the finite field of $q=2^n$ elements, for a
 given $n\in \Z_{> 0}$. $\Fn$ is the $n$-dimensional extension of
 $\F_2$, and it is constructed as $\Fn = \F_2[x]\pmod{ P_n(x)}$. Here
 $P_n(x) \in \F_2[x]$ is a given degree-$n$ polynomial, {\it
-  irreducible} in $\F_2$, with a root $\gamma$, i.e.  $P_n(\gamma)=0$.  
-%, which is a generator of
-% $\Fn$. Then $\gamma$ is called a primitive element (PE) of $\Fn$ and
-% it generates the entire field: $\Fn=\{0,1=\gamma^{2^n - 1}, \gamma,
-% \gamma^2,\dots,\gamma^{2^n - 2}\}$. Note: $\forall \gamma\in \Fkn, \gamma^{2^n-1}=1$.
-% An element $A \in \Fn$ can be written as $A = a_0 + a_1\cdot \gamma +
-% \dots + a_{n-1}\cdot\gamma^{n-1}$, where $a_0,\dots,a_{n-1} \in
-% \F_2$. 
-%% In $\Fq$, the addition ($''+''$) and multiplication
-%% ($''\cdot''$) operations are performed in the base field $\F_2$ and
-%% reduced modulo the corresponding primitive polynomial $P_n(x)$. For
-%% $n, k \in \Z_{> 0}$, if $n$ divides $k$, then $\Fn \subset
-%% \Fkk$.
-Thus, $\F_2 \subset \F_{2^n}, \forall n>1$. All fields of the type
+  irreducible} in $\F_2$, with a root $\gamma$, i.e.  $P_n(\gamma)=0$ 
+{\red , which is a generator of
+$\Fn$. Then $\gamma$ is called a primitive element (PE) of $\Fn$ and
+it generates the entire field: $\Fn=\{0,1=\gamma^{2^n - 1}, \gamma,
+\gamma^2,\dots,\gamma^{2^n - 2}\}$. Note: $\forall \gamma\in \Fkn, 
+\gamma^{2^n-1}=1$.
+An element $A \in \Fn$ can be written as $A = a_0 + a_1\cdot \gamma +
+\dots + a_{n-1}\cdot\gamma^{n-1}$, where $a_0,\dots,a_{n-1} \in
+\F_2$. 
+In $\Fn$, the addition ($''+''$) and multiplication
+($''\cdot''$) operations are performed in the base field $\F_2$ and
+reduced modulo the corresponding primitive polynomial $P_n(x)$. For
+$n, k \in \Z_{> 0}$, if $n$ divides $k$, then $\Fn \subset
+\Fkk$.}
+Thus, $\F_2 \subset \F_{2^n}, \forall n>1$. 
+All fields of the type
 $\Fkn$ have characteristic 2, and therefore $-1 = +1$ in $\Fkn$. 
 
 
@@ -34,15 +37,15 @@ written as a finite sum of terms  $f = c_1 M_1 +  c_2 M_2 + \dots +
 c_p M_p$, where $c_1, \dots, c_p$ are coefficients from $\F_q$ and
 $M_1, \dots, M_p$ are monomials, i.e. power products of the type
 $x_1^{e_{1}}\cdot x_2^{e_{2}}\cdots x_d^{e_{d}}$,  $e_j \in \Z_{\geq  0}$. 
-% To systematically manipulate the polynomials, a monomial order $>$ (or
-% a term order) is imposed on $R$ such that the monomials of all
-% polynomials are ordered according to $>$. 
-A monomial order $>$ (term order) is always imposed on $R$, and
-subject to $>$, we have that $M_1 >M_2 > \dots > M_p$. Then, $lm(f) =
+{\red To systematically manipulate the polynomials, a monomial order $>$ (or
+a term order) is imposed on $R$ such that the monomials of all
+polynomials are ordered according to $>$. }
+% A monomial order $>$ (term order) is always imposed on $R$, and
+Subject to $>$, we have that $M_1 >M_2 > \dots > M_p$. Then, $lm(f) =
 M_1$ denotes the {\it leading monomial} of $f$, and $lt(f) = c_1 M_1$
 the  {\it leading   term} of $f$. 
-%Also, for $f\in R$, $tail(f) = f - lt(f)$.
-%This work employs {\it lexicographic} (lex) term orders.  
+{\red Also, for $f\in R$, $tail(f) = f - lt(f)$.
+This work employs {\it lexicographic} (lex) term orders.}  
 
 %%%%%%%%%%%%%%%%%%%% PK
 %% A circuit with $n$-bit operands is modeled as a polynomial function in
@@ -68,44 +71,45 @@ a set of polynomials in $R$ and $f\in R$ be
 another polynomial. Then $f\xrightarrow{F}_+r$ denotes the {\it
   reduction} of $f$ modulo the set of polynomials $F$ resulting in a
 remainder $r$, obtained by iteratively canceling terms in $f$ by
-$lt(f_j), f_j\in F$, via polynomial division (cf. Algorithm
-1.5.1~\cite{gb_book}). 
-%The
-%remainder $r$ is said to be {\it reduced} such that no term in $r$ is
-%divisible by the leading term of any $f_j \in F$.
+$lt(f_j), f_j\in F$, via polynomial division. 
+{\red The remainder $r$ is said to be {\it reduced} such that no term in $r$ is
+divisible by the leading term of any $f_j \in F$.
 
-%Algorithm~\ref{algo:mv_reduce}
-% term of any polynomial $f_j$ in $F$.
-% Along with the remainder $r$, the algorithm also returns
-% the set of quotients $\{u_1,\dots,u_s\}$ of division of $f$ by
-% $\{f_1,\dots,f_s\}$, respectively, such that $f = u_1\cdot
-% f_1+\dots+u_s\cdot f_s + r$.}
+Algorithm~\ref{algo:mv_reduce} (Alg.
+1.5.1~\cite{gb_book}) presents the procedure which
+performs polynomial reduction by iteratively canceling
+one monomial at a time.
+Along with the remainder $r$, the algorithm also returns
+the set of quotients $\{u_1,\dots,u_s\}$ of division of $f$ by
+$\{f_1,\dots,f_s\}$, respectively, such that $f = u_1\cdot
+f_1+\dots+u_s\cdot f_s + r$.
 
-% {\small
-% \begin{algorithm}[hbt]
-%  \caption{Multivariate Reduction of $f$ by $F=\{f_1,\dots,f_s\}$}
-%  \label{algo:mv_reduce}
-%  \begin{algorithmic}[1]
-%  % \Procedure{$multi\_variate\_division$}{$f, f_1, \dots, f_s \in \F[x_1, \dots, x_d], f_i\neq 0$}
-%  \Procedure{$multi\_var\_division$}{$f,\{f_1,\dots,f_s\},f_j\neq0$}
-%  % \ENSURE $u_1,\dots, u_s, r$ s.t. $f = \sum f_i u_i+r$ where $r$ is
-%  % reduced w.r.t. $F = \{f_1,\dots, f_s\}$ and max($lp(u_1)lp(f_1), \dots, lp(u_s)lp(f_s), lp(r)$) = $lp(f)$
-%  \State $u_j \gets 0; ~r \gets 0, ~h \gets f $ 
-%  \While {  $h \neq 0$ }
-%  \If{ $\exists j$ s.t. $lm(f_j) ~|~ lm(h)$}
-%  \State choose $j$ least s.t. $lm(f_j) ~|~ lm(h)$
-%  \State $u_j = u_j + \frac{lt(h)}{lt(f_j)}$
-%  \State $h = h - \frac{lt(h)}{lt(f_j)} f_j$
-%  \Else
-%  \State $r = r+ lt(h)$
-%  \State $h = h - lt(h)$
-%  \EndIf
-%  \EndWhile
-%  \State \Return $(\{u_1,\dots,u_s\} , r)$
-%  \EndProcedure
-%  \end{algorithmic}
-%  \end{algorithm}
-% }
+{\small
+\begin{algorithm}[hbt]
+ \caption{Multivariate Reduction of $f$ by $F=\{f_1,\dots,f_s\}$}
+ \label{algo:mv_reduce}
+ \begin{algorithmic}[1]
+ % \Procedure{$multi\_variate\_division$}{$f, f_1, \dots, f_s \in \F[x_1, \dots, x_d], f_i\neq 0$}
+ \Procedure{$multi\_var\_division$}{$f,\{f_1,\dots,f_s\},f_j\neq0$}
+ % \ENSURE $u_1,\dots, u_s, r$ s.t. $f = \sum f_i u_i+r$ where $r$ is
+ % reduced w.r.t. $F = \{f_1,\dots, f_s\}$ and max($lp(u_1)lp(f_1), \dots, lp(u_s)lp(f_s), lp(r)$) = $lp(f)$
+ \State $u_j \gets 0; ~r \gets 0, ~h \gets f $ 
+ \While {  $h \neq 0$ }
+ \If{ $\exists j$ s.t. $lm(f_j) ~|~ lm(h)$}
+ \State choose $j$ least s.t. $lm(f_j) ~|~ lm(h)$
+ \State $u_j = u_j + \frac{lt(h)}{lt(f_j)}$
+ \State $h = h - \frac{lt(h)}{lt(f_j)} f_j$
+ \Else
+ \State $r = r+ lt(h)$
+ \State $h = h - lt(h)$
+ \EndIf
+ \EndWhile
+ \State \Return $(\{u_1,\dots,u_s\} , r)$
+ \EndProcedure
+ \end{algorithmic}
+ \end{algorithm}
+}
+}
 
 %% The algorithm initializes $h$ with the polynomial $f$ and cancels its
 %% leading term by some  polynomial $f_j$. If the leading term $lt(h)$
@@ -160,9 +164,10 @@ $V(J)$, where: $ V(J)= V_{\Fq}(J) = V_{\Fq}(f_1,\dots,f_s) = \{\bm{a}
 % and quantification problems.  
  % that is a canonical representation of the ideal. 
 
-An ideal may have many different bases. A {\it \Grobner basis} (GB) is
-a basis with special properties that allows to solve many polynomial
-decision and quantification problems. 
+An ideal may have many different sets of generators such that
+their varieties are the same. A {\it \Grobner basis} (GB) is
+one such generating set with special properties that allows 
+to solve many polynomial decision and quantification problems. 
 \begin{Definition}
 \label{def:gb}
 {\bf [\Grobner Basis]}~\cite{gb_book}: 
@@ -247,21 +252,42 @@ varieties. Thus, we use the above concepts of intersection, union, and
 complement of varieties to operate on functions; however, we compute
 them algebraically using the \Grobner bases of corresponding ideals.}
 
-GB computations in $\F_q$ exhibit exponential complexity. For
-efficient GB computations on polynomials derived from a circuit,
-\cite{lv:tcad2013} proposed the use of a specialized term order that
-exploits the topology of the circuit. 
-In this term order, the variables (nets of the circuit) are ordered
-based on a reverse topological traversal of the circuit from POs to
-PIs. This specific term order '$>$` is called the {\it Reverse
-  Topological Term Order (RTTO)}. Our MFR approach also uses RTTO $>$
-for polynomial representation and manipulation. 
+% GB computations in $\F_q$ exhibit exponential complexity. 
+% In this term order, the variables (nets of the circuit) are ordered
+% based on a reverse topological traversal of the circuit from POs to
+% PIs. This specific term order '$>$` is called the {\it Reverse
+%   Topological Term Order (RTTO)}. Our MFR approach also uses RTTO $>$
+% for polynomial representation and manipulation. 
 
+
+{\red
+The computational complexity of GB algorithm is exponential
+in the number of variables $d$.
+For efficient GB computations on polynomials derived from a circuit,
+\cite{lv:tcad2013} proposed the use of a specialized term order that
+exploits the topology of the circuit and renders the set of polynomials for 
+the gates of the circuit, a \Grobner basis itself. This term order '$>$`
+is called the {\it Reverse Topological Term Order (RTTO)}.
+
+\begin{Definition}\label{def:rtto}
+{\bf [Reverse Topological Term Order]}~\cite{lv:tcad2013}:
+Let $C$ be an arbitrary combinational
+circuit. Let $\{x_1, \dots$ $, x_d\}$ denote the set of all variables
+(signals) in $C$. Starting from the primary outputs, perform
+a {\it reverse topological traversal} of the circuit and order the
+variables such that $x_k > x_j$ if $x_k$ appears earlier in the
+reverse topological order. Impose a lex term order $>$ to represent each
+gate as a polynomial $f_j$, s.t. $f_j = x_k + tail(f_j)$. Then 
+set of polynomials $\{f_1,\dots,f_s\}$ corresponding to the gates of the circuits 
+is a \Grobner basis when RTTO is used for ordering.
+\end{Definition}}
 
 %To overcome the complexity of GB computations,
 % While the computations are based on GB theory, 
 %we use a specialized term order~\cite{lv:tcad2013} 
 %to exploit the topology of the circuit.
+%Our verification and rectification tests follow from the Strong Nullstellensatz
+%%%%% RTTO
 
 %% \begin{Definition}[Elimination Ideal]
 %% Given an ideal $J = \langle f_1, \dots, f_s\rangle \subset
@@ -284,28 +310,7 @@ for polynomial representation and manipulation.
 
 
 %using elimination ideals.  
-
-%Our verification and rectification tests follow from the Strong Nullstellensatz
-%%%%% RTTO
-%% \begin{Definition}
-%% \label{def:rtto}
-%% \par {\it Reverse Topological Term Order~\cite{lv:tcad2013}:}
-%% The computational complexity of Buchberger's algorithm is exponential
-%% in the number of variables $n$. As our work is focused on the circuits,
-%% we will describe a term order that renders the set of polynomials for 
-%% the gates of the circuit, a \Grobner basis itself. This term order 
-%% is called Reverse Topological Term Order (RTTO).
-
-%% \par Let $C$ be an arbitrary combinational
-%% circuit. Let $\{x_1, \dots$ $, x_d\}$ denote the set of all variables
-%% (signals) in $C$. Starting from the primary outputs, perform
-%% a {\it reverse topological traversal} of the circuit and order the
-%% variables such that $x_k > x_j$ if $x_k$ appears earlier in the
-%% reverse topological order. Impose a lex term order $>$ to represent each
-%% gate as a polynomial $f_j$, s.t. $f_j = x_k + tail(f_j)$. Then 
-%% set of polynomials $\{f_1,\dots,f_s\}$ corresponding to the gates of the circuits 
-%% is a \Grobner basis when RTTO is used for ordering.
-%% \end{Definition}
+%
 %% % \par {\bf Weak Nullstellensatz and Elimination Theory:} 
 %% \begin{Theorem}[{\it The Weak Nullstellensatz over finite fields (from
 %% Theorem 3.3 in~\cite{gao:gf-gb-ms})}]
