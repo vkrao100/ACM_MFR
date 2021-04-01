@@ -1,7 +1,7 @@
 \section{Introduction}
 Debugging and rectification of digital logic circuits aims to correct
-a given defective implementation ($\impl$) to match its intended
-specification ($\spec$). The process constitutes identifying
+a given defective circuit implementation to match its intended
+specification. The process constitutes identifying
 candidate nets in the circuit as targets for rectification, followed by  
 a check to determine whether the circuit can be patched at these
 targets. If the targets admit correction, corresponding rectification
@@ -14,7 +14,7 @@ updated specification in a cost effective way. This is achieved by reusing prior
 efforts and avoiding rerunning the entire synthesis flow, while adhering to the resource 
 constraints and the physical design limitations.
 
-The problem has witnessed a lot of research over the years -- 
+The rectification problem has witnessed a lot of research over the years -- 
 some of the earliest being~\cite{Sadowska:DAC95,scholl:1,andreas:2005}.
 Owing to a manifold improvement in the efficiency of SAT solvers,
 there has been a renewed interest in the problem over the last decade from 
@@ -24,7 +24,7 @@ These techniques generally employ SAT, Quantified Boolean Formula (QBF) solving,
 and Craig Interpolation (CI) based techniques for rectification. While
 successful for control-dominated applications, these techniques are
 computationally infeasible for rectification of arithmetic circuits.
-Symbolic computer algebra (SCA) techniques are found to be more
+Symbolic Computer Algebra (SCA) techniques are found to be more
 suitable for formal analysis and verification of arithmetic circuits.
 However, utilization of the various facets and capabilities of the SCA
 techniques for post-verification debugging and rectification has only
@@ -33,29 +33,30 @@ recently begun to be addressed
 Vkrao:FMCAD18,Vkrao:ISQED21,Vkrao:GLSVLSI21}. }
 %End ACM journal
 
-This paper addresses the problem of {\it multi-fix rectification (MFR)
+This paper addresses the problem of {\it rectification
   of faulty finite field arithmetic circuits} at a given set of $m$
 targets. Rectification is performed against a 
-given polynomial $\spec$ over finite
+given polynomial specification over finite
 fields. Such circuits find application in cryptography and error-control codes. 
 %Begin ACM journal
 {\red As arithmetic bugs may lead to security
 vulnerabilities in crypto-systems \cite{crypto:bug_attacks}, their
 rectification is of utmost importance. 
 %End ACM journal
-Our approach uses Symbolic Computer Algebra (SCA) and
-algebraic geometry based techniques to compute rectification patches
-as polynomials, and synthesizes them into logic sub-circuits.}
+Our approach uses Symbolic computer algebra and
+algebraic geometry based techniques to derive the necessary and sufficient condition
+for the existence of a rectification function, computes rectification patches
+as polynomials for the given targets, and synthesizes them into logic sub-circuits.}
 
 %While successful for control-dominated applications, the SAT-based 
 %models~[4-10] however are infeasible for rectification of arithmetic circuits. 
 
 {\it Problem Statement and Objective:}
-We are given the following: i) as the $\spec$, a multivariate
+We are given the following: i) as the specification, a multivariate
 polynomial $f$ with coefficients in a finite field of $2^n$ elements
 (denoted $\F_{2^n}$), for a given  $n\in \Z_{> 0}$; ii) an irreducible
 polynomial $P_n(x)$ of degree $n$ with coefficients in $\{0,1\}$ used 
-to construct $\Fkn$; iii) a faulty $\impl$ circuit $C$,
+to construct $\Fkn$; iii) a faulty circuit implementation $C$,
 with no assumptions on the number or the type of bugs present in
 $C$; and iv) a set $W = (w_1,\dots,w_m)$ of $m$ targets from $C$,
 pre-specified or selected using contemporary signal selection heuristics 
@@ -77,9 +78,9 @@ the rectification polynomials into logic sub-circuit patches.
 
 
 {\it Prior Work:} Contemporary approaches formulate rectification
-using QBF solving~\cite{scholl:2}, using Craig interpolation or iterative SAT
+using QBF solving~\cite{scholl:2}, using CI or iterative SAT
 solving~\cite{MF_Huang:DATE12}.  
-The MFR techniques in 
+The rectification techniques in 
 \cite{SS_Fujita:ISCAS19,MF_Huang:DATE12,SS_Roland:DAC18} 
 iteratively and incrementally compute multiple single-fix functions
 that partially patch the circuit in each iteration.
@@ -94,8 +95,8 @@ target selection \cite{SS_Fujita:ISCAS19}.
 % such objectives, such as the symbolic sampling approach of
 % \cite{SS_Roland:DAC19}.
 {\red A robust ECO approach to derive patches with minimal 
-impact on the heavily optimized existing implementation $\impl$ against 
-a structurally dissimilar ECO-evolved specification $\spec$ has been presented in
+impact on the heavily optimized existing implementation against 
+a structurally dissimilar ECO-evolved specification has been presented in
 \cite{SS_Roland:DAC19}. 
 The authors~\cite{SS_Roland:DAC19} propose enumerating rectification points 
 functionally by simulation and match the circuitry of patches implicitly to maximize reuse of 
@@ -104,7 +105,7 @@ modeling and analyzing its computations in symbolic sampling domain. }
 While successful for control-dominated applications, these techniques are
 computationally infeasible for rectification of arithmetic circuits.
 
-In the context of arithmetic circuits, Symbolic Computer Algebra (SCA) 
+In the context of arithmetic circuits, Symbolic computer algebra 
 techniques for integer arithmetic~\cite{farimah:2017:1,MF_Rolf:ISVLSI18} and
 finite field circuits~\cite{Utkarsh:VLSI18,Vkrao:FMCAD18}
 have been considered for rectification. However, these algebraic
@@ -129,7 +130,7 @@ desired.
 % In particular, we exploit the ideal-variety
 % correspondences to explore and compute rectification functions for the $m$-targets
 % collectively. 
-The $\spec$ and $\impl$ are modeled in terms of polynomial ideals, and
+The specification and implementation are modeled in terms of polynomial ideals, and
 the rectification functions are computed using the \Grobner bases of these ideals~\cite{gb_book}.
 We model this computation as a quantification procedure by utilizing
 concepts from computer algebra and algebraic geometry. 
@@ -198,16 +199,16 @@ in prior literature.
 % engines of {\sc Singular} \cite{DGPS_410} and {\sc PolyBori}
 % \cite{pbori:JSC09}.
 
-% We reason about the presence or absence of solutions 
-% and other properties of a system of polynomials without explicitly solving them. 
-% In contrast, the contemporary approaches explicitly solve for a solution at 
-% each step and hence are infeasible towards rectification of arithmetic circuits.
-% We present theoretical concepts and algorithms, and their efficient implementations, 
-% for finite field arithmetic circuit debug and rectification. The logic corrections 
-% are computed as polynomial functions in primary input variables, which are synthesized 
-% into rectification patches for the respective targets. 
-% Our algebraic approach provides a scalable solution for rectification
-% of finite field arithmetic circuits.
+{\red We reason about the presence or absence of solutions 
+and other properties of a system of polynomials without explicitly solving them. 
+In contrast, the contemporary approaches explicitly solve for a solution at 
+each step and hence are infeasible towards rectification of arithmetic circuits.
+We present theoretical concepts and algorithms, and their efficient implementations, 
+for finite field arithmetic circuit debug and rectification. The logic corrections 
+are computed as polynomial functions in primary input variables, which are synthesized 
+into rectification patches for the corresponding targets. 
+Our algebraic approach provides a scalable solution for rectification
+of finite field arithmetic circuits.}
 
 {\it Paper Organization:} The following section covers preliminary
 background. Section~\ref{sec:pmodel} reviews the polynomial modeling

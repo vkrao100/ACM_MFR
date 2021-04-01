@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{22}
+\begin{thebibliography}{25}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -144,6 +144,18 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Gupta, Kalla, and Rao}{Gupta
+  et~al\mbox{.}}{2019}]%
+        {Utkarsh:TCAD19}
+\bibfield{author}{\bibinfo{person}{Utkarsh Gupta}, \bibinfo{person}{Priyank
+  Kalla}, {and} \bibinfo{person}{Vikas Rao}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{{Boolean Gröbner Basis Reductions on Finite Field
+  Datapath Circuits Using the Unate Cube Set Algebra}}.
+\newblock \bibinfo{journal}{\emph{IEEE Trans. CAD (TCAD)}}
+  (\bibinfo{year}{2019}).
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{{Kimura}, {Gharehbaghi}, and
   {Fujita}}{{Kimura} et~al\mbox{.}}{2019}]%
         {SS_Fujita:ISCAS19}
@@ -202,6 +214,26 @@
   {B}oolean {S}atisfiability for {A}utomatic {D}ebugging and {F}ixing of
   {C}omplex {M}ultipliers}. In \bibinfo{booktitle}{\emph{IEEE Computer Society
   Annual Symposium on VLSI (ISVLSI)}}. \bibinfo{pages}{351--356}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Minato}{Minato}{1993}]%
+        {Minato:DAC93}
+\bibfield{author}{\bibinfo{person}{Shin-ichi Minato}.}
+  \bibinfo{year}{1993}\natexlab{}.
+\newblock \showarticletitle{Zero-suppressed BDDs for Set Manipulation in
+  Combinatorial Problems}. In \bibinfo{booktitle}{\emph{Design Automation
+  Conference (DAC)}}. \bibinfo{pages}{272--277}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Minato}{Minato}{1994}]%
+        {Minato:DAC94}
+\bibfield{author}{\bibinfo{person}{Shin-ichi Minato}.}
+  \bibinfo{year}{1994}\natexlab{}.
+\newblock \showarticletitle{Calculation of Unate Cube Set Algebra Using
+  Zero-suppressed BDDs}. In \bibinfo{booktitle}{\emph{Design Automation
+  Conference (DAC)}}. \bibinfo{pages}{420--424}.
 \newblock
 
 

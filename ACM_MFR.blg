@@ -34,6 +34,8 @@ Warning--empty publisher in scholl:2
 Warning--empty address in scholl:2
 Warning--empty publisher in Utkarsh:VLSI18
 Warning--empty address in Utkarsh:VLSI18
+Warning--no number and no volume in Utkarsh:TCAD19
+Warning--page numbers missing in both pages and numpages fields in Utkarsh:TCAD19
 Warning--empty publisher in SS_Fujita:ISCAS19
 Warning--empty address in SS_Fujita:ISCAS19
 Warning--empty publisher in SS_Roland:DAC19
@@ -44,6 +46,10 @@ Warning--empty publisher in lv:tcad2013
 Warning--empty address in lv:tcad2013
 Warning--empty publisher in MF_Rolf:ISVLSI18
 Warning--empty address in MF_Rolf:ISVLSI18
+Warning--empty publisher in Minato:DAC93
+Warning--empty address in Minato:DAC93
+Warning--empty publisher in Minato:DAC94
+Warning--empty address in Minato:DAC94
 Warning--empty publisher in Vkrao:FMCAD18
 Warning--empty address in Vkrao:FMCAD18
 Warning--empty publisher in Vkrao:ISQED21
@@ -59,45 +65,45 @@ Warning--empty publisher in MF_Huang:DATE12
 Warning--empty address in MF_Huang:DATE12
 Warning--empty publisher in SS_Roland:DAC18
 Warning--empty address in SS_Roland:DAC18
-You've used 22 entries,
+You've used 25 entries,
             5959 wiz_defined-function locations,
-            1465 strings with 19086 characters,
-and the built_in function-call counts, 27575 in all, are:
-= -- 2912
-> -- 1068
+            1480 strings with 19497 characters,
+and the built_in function-call counts, 30937 in all, are:
+= -- 3322
+> -- 1149
 < -- 1
-+ -- 357
-- -- 364
-* -- 1933
-:= -- 2808
-add.period$ -- 111
-call.type$ -- 22
-change.case$ -- 164
-chr.to.int$ -- 21
-cite$ -- 60
-duplicate$ -- 2622
-empty$ -- 1804
-format.name$ -- 447
-if$ -- 6517
++ -- 380
+- -- 392
+* -- 2129
+:= -- 3119
+add.period$ -- 126
+call.type$ -- 25
+change.case$ -- 181
+chr.to.int$ -- 24
+cite$ -- 69
+duplicate$ -- 2965
+empty$ -- 2044
+format.name$ -- 479
+if$ -- 7359
 int.to.chr$ -- 3
 int.to.str$ -- 1
-missing$ -- 100
-newline$ -- 198
-num.names$ -- 175
-pop$ -- 1125
+missing$ -- 114
+newline$ -- 220
+num.names$ -- 199
+pop$ -- 1268
 preamble$ -- 1
-purify$ -- 360
+purify$ -- 404
 quote$ -- 0
-skip$ -- 992
+skip$ -- 1111
 stack$ -- 0
-substring$ -- 1921
-swap$ -- 287
+substring$ -- 2177
+swap$ -- 320
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 611
-warning$ -- 38
-while$ -- 156
+type$ -- 687
+warning$ -- 44
+while$ -- 180
 width$ -- 0
-write$ -- 395
-(There were 38 warnings)
+write$ -- 443
+(There were 44 warnings)
