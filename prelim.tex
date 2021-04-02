@@ -186,12 +186,29 @@ $\forall f \in J$, $f\xrightarrow{g_1,\dots,g_t}_+0$.
 % The GB $G$ for an ideal $J$ can be computed using the  Buchberger's
 % algorithm  %\cite{buchberger_thesis}. 
 % (cf. Alg. 1.7.1 in~\cite{gb_book})
-A polynomial $f$ is a member of ideal $J$ iff division of $f$ by
-$GB(J)$ gives the remainder 0. If $f \notin J$,
-then division by $GB(J)$, $f\xrightarrow{GB(J)}_+r$, results in a
-non-zero remainder $r$ that is unique.
-A \Grobner basis can be computed using Buchberger's 
-algorithm (cf. Alg. 1.7.1 in~\cite{gb_book}). 
+The GB $G$ for an ideal $J$ can be computed using the Buchberger's
+algorithm  %\cite{buchberger_thesis}. 
+(cf. Alg. 1.7.1 in~\cite{gb_book}), which
+takes as input a set of polynomials $F = \{f_1,\dots, f_s\}$ and
+computes its GB $G = \{g_1,\dots,g_t\}$, such that $J = \langle
+F\rangle = \langle G\rangle$. Moreover, the polynomials of $F$ and $G$
+have the same solution-set, i.e. $V(J) = V(F) = V(G)$. 
+
+{\it Ideal Membership Test:} The above definition inherently provides
+a decision procedure to test for membership of a polynomial in an ideal:
+$f$ is a member of an ideal $J$ {\it if and only if} 
+% dividing $f$ by the \Grobner basis $G = GB(J)$ gives the remainder 0. 
+$f\xrightarrow{GB(J)}_+0$.
+When $f\notin J$,
+then division by $GB(J)$ results in a non-zero remainder $r$ that is
+unique/canonical. 
+
+% A polynomial $f$ is a member of ideal $J$ iff division of $f$ by
+% $GB(J)$ gives the remainder 0. If $f \notin J$,
+% then division by $GB(J)$, $f\xrightarrow{GB(J)}_+r$, results in a
+% non-zero remainder $r$ that is unique.
+% A \Grobner basis can be computed using Buchberger's 
+% algorithm (cf. Alg. 1.7.1 in~\cite{gb_book}). 
 A \Grobner basis can be further reduced. A reduced \Grobner basis
 (redGB) is canonical representation of the ideal $J$.
 
