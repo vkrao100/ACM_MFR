@@ -37,14 +37,14 @@ This paper addresses the problem of {\it rectification
   of faulty finite field arithmetic circuits} at a given set of $m$
 targets. Rectification is performed against a 
 given polynomial specification over finite
-fields. Such circuits find application in cryptography and error-control codes. 
+fields using SCA and algebraic geometry based techniques. 
+Such circuits find application in cryptography and error-control codes. 
 %Begin ACM journal
 {\red As arithmetic bugs may lead to security
 vulnerabilities in crypto-systems \cite{crypto:bug_attacks}, their
 rectification is of utmost importance. 
 %End ACM journal
-Our approach uses Symbolic computer algebra and
-algebraic geometry based techniques to derive the necessary and sufficient condition
+Our approach, derives the necessary and sufficient conditions
 for the existence of a rectification function, computes rectification patches
 as polynomials for the given targets, and synthesizes them into logic sub-circuits.}
 
@@ -105,16 +105,16 @@ modeling and analyzing its computations in symbolic sampling domain. }
 While successful for control-dominated applications, these techniques are
 computationally infeasible for rectification of arithmetic circuits.
 
-In the context of arithmetic circuits, Symbolic computer algebra 
+In the context of arithmetic circuits, symbolic computer algebra 
 techniques for integer arithmetic~\cite{farimah:2017:1,MF_Rolf:ISVLSI18} and
-finite field circuits~\cite{Utkarsh:VLSI18,Vkrao:FMCAD18}
+finite field circuits~\cite{Utkarsh:ETS19,Utkarsh:VLSI18,Vkrao:FMCAD18}
 have been considered for rectification. However, these algebraic
 approaches address only {\it single-fix rectification} -- where
 irrespective of the type or number of bugs in the circuit,
 rectification is attempted at a single net. This is too restrictive
 and depending on the nature of the bugs, the circuit may not admit
 single-fix rectification at all. In such cases, correction has to be
-attempted at multiple targets, i.e. MFR is required.
+attempted at multiple targets.
 Recently,~\cite{Vkrao:ISQED21} proposes an SCA based approach to 
 {\it decide $m$-target rectifiability}. Given a set of $m$-targets,
 the approach can only ascertain whether {\it there exists} a set of
@@ -125,6 +125,10 @@ Thus the problem of multi-fix rectification of data-path circuits
 remains unsolved, and theoretical and algorithmic solutions to compute
 and synthesize rectification patches for arithmetic circuits are still
 desired. 
+
+{\red 
+
+}
 
 {\it Approach and Contribution:}
 % In particular, we exploit the ideal-variety
