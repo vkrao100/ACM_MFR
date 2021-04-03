@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{26}
+\begin{thebibliography}{29}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -217,6 +217,16 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Magons}{Magons}{2016}]%
+        {ecc_app:2016}
+\bibfield{author}{\bibinfo{person}{K. Magons}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Applications and Benefits of Elliptic Curve
+  Cryptography}. In \bibinfo{booktitle}{\emph{International Conference on
+  Current Trends in Theory and Practice of Computer Science (SOFSEM)}}.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Mahzoon, Gro{\ss}e, and Drechsler}{Mahzoon
   et~al\mbox{.}}{2018}]%
         {MF_Rolf:ISVLSI18}
@@ -334,6 +344,29 @@
   {L}ogic {R}ectification by {I}nterpolation with {C}ofactor {R}eduction}. In
   \bibinfo{booktitle}{\emph{Design, Automation Test in Europe Conference
   Exhibition (DATE)}}. \bibinfo{pages}{1567--1572}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Tuyls and Batina}{Tuyls and Batina}{2006}]%
+        {crypto:counterfeit}
+\bibfield{author}{\bibinfo{person}{P. Tuyls} {and} \bibinfo{person}{L.
+  Batina}.} \bibinfo{year}{2006}\natexlab{}.
+\newblock \showarticletitle{RFID-Tags for Anti-counterfeiting}. In
+  \bibinfo{booktitle}{\emph{Topics in Cryptology -- CT-RSA 2006}}.
+  \bibinfo{pages}{115--131}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Wu, Yang, Huang, and Jiang}{Wu
+  et~al\mbox{.}}{2010}]%
+        {MF_Roland:ICCAD10}
+\bibfield{author}{\bibinfo{person}{B.~H. Wu}, \bibinfo{person}{C.~J. Yang},
+  \bibinfo{person}{C.~Y. Huang}, {and} \bibinfo{person}{J.~H.~R. Jiang}.}
+  \bibinfo{year}{2010}\natexlab{}.
+\newblock \showarticletitle{{A Robust Functional ECO Engine by SAT Proof
+  Minimization and Interpolation Techniques}}. In
+  \bibinfo{booktitle}{\emph{International Conference on Computer-Aided Design
+  (ICCAD)}}. \bibinfo{pages}{729--734}.
 \newblock
 
 

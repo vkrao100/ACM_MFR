@@ -1,11 +1,19 @@
 \section{Introduction}
-Debugging and rectification of digital logic circuits aims to correct
+\par Debugging and rectification of digital logic circuits aims to correct
 a given defective circuit implementation to match its intended
-specification. The process constitutes identifying
+specification. {\red As opposed to a complete redesign of the circuit, it
+is desirable to synthesize rectification sub-functions with
+minimal topological changes to the existing design -- a problem
+often termed as {\it partial synthesis}.} 
+The process constitutes identifying
 candidate nets in the circuit as targets for rectification, followed by  
 a check to determine whether the circuit can be patched at these
-targets. If the targets admit correction, corresponding rectification
+targets. 
+If the targets admit correction, corresponding rectification
 functions are computed and synthesized to fix the circuit at these targets.
+% {\red If the targets admit correction, corresponding rectification functions
+% are computed in terms of primary inputs, followed by re-basing wherein the 
+% computed function is synthesized in terms of prior design efforts}.
 %Begin ACM journal
 {\red  
 It is akin to performing synthesis for Engineering Change Order 
@@ -33,53 +41,74 @@ recently begun to be addressed
 Vkrao:FMCAD18,Vkrao:ISQED21,Vkrao:GLSVLSI21}. }
 %End ACM journal
 
-This paper addresses the problem of {\it rectification
-  of faulty finite field arithmetic circuits} at a given set of $m$
-targets. Rectification is performed against a 
-given polynomial specification over finite
-fields using SCA and algebraic geometry based techniques. 
-Such circuits find application in cryptography and error-control codes. 
-%Begin ACM journal
-{\red As arithmetic bugs may lead to security
-vulnerabilities in crypto-systems \cite{crypto:bug_attacks}, their
-rectification is of utmost importance. 
-%End ACM journal
-Our approach, derives the necessary and sufficient conditions
-for the existence of a rectification function, computes rectification patches
-as polynomials for the given targets, and synthesizes them into logic sub-circuits.}
 
+{\red
+\subsection{Motivation}
+This paper addresses the problem of {\it rectification
+of faulty finite field arithmetic circuits} at a given set of
+targets. Such circuits find applications in cryptography,
+error-control codes, RFID tags, testing of VLSI circuits, among 
+others. Specifically, Elliptic Curve Cryptography (ECC) is one of 
+the most important usage models where the public-key cryptography 
+is designed on the algebraic structure of elliptic curves over 
+finite fields. Due to its shorter key length and efficiency ~\cite{ecc_app:2016}, 
+ECC is fast becoming the encryption standard with applications 
+in cryptocurrency transaction signing and securing web traffic.
+Arithmetic circuits are mostly custom designed, thus 
+raising the potential for errors in the implementation, 
+which have to be eventually rectified. 
+It was shown~\cite{crypto:bug_attacks} that incorrect cryptography 
+hardware can lead to full leakage of the security key and even
+counterfeiting~\cite{crypto:counterfeit}.
+To secure data privacy and avoid vulnerabilities in crypto-systems, their
+rectification is of utmost importance.}
+
+
+%End ACM journal
 %While successful for control-dominated applications, the SAT-based 
 %models~[4-10] however are infeasible for rectification of arithmetic circuits. 
 
-{\it Problem Statement and Objective:}
-We are given the following: i) as the specification, a multivariate
+% {\it Problem Statement and Objective:}
+\subsection{Problem Statement and Objective}
+We are given the following: 
+\bi
+\item As the specification, a multivariate
 polynomial $f$ with coefficients in a finite field of $2^n$ elements
-(denoted $\F_{2^n}$), for a given  $n\in \Z_{> 0}$; ii) an irreducible
+(denoted $\F_{2^n}$), for a given  $n\in \Z_{> 0}$.
+\item An irreducible
 polynomial $P_n(x)$ of degree $n$ with coefficients in $\{0,1\}$ used 
-to construct $\Fkn$; iii) a faulty circuit implementation $C$,
+to construct $\Fkn$.
+\item A faulty circuit implementation $C$,
 with no assumptions on the number or the type of bugs present in
-$C$; and iv) a set $W = (w_1,\dots,w_m)$ of $m$ targets from $C$,
+$C$. 
+\item A set $W = (w_1,\dots,w_m)$ of $m$ targets from $C$,
 pre-specified or selected using contemporary signal selection heuristics 
 ~\cite{SS_Alan:DAC18,SS_Fujita:ISCAS19,SS_Roland:DAC19}.
+\ei
 % We further assume that it has been ascertained that $C$ 
 % admits rectification at these $m$ targets, using~\cite{MF_Huang:DATE12,Vkrao:ISQED21}. 
 The objective of our approach is to: 
-{\red i) ascertain that $C$ 
-admits rectification at these $m$ targets}
-ii) compute a set
+\bi
+{\red \item Ascertain that $C$ 
+admits rectification at these $m$ targets}.
+\item Compute a set
 of individual rectification functions $U =
 (u_1,\dots,u_m)$ for the corresponding targets. Here, each $u_i$ is a 
 polynomial function $u_i:\F_2^{|X_{PI}|}\rightarrow\F_2$, where $\F_2=\{0,1\}$, 
 and $X_{PI}$ denotes the
-set of primary inputs; iii) derive {\it don't care conditions}
-corresponding to the $m$ rectification functions; and iv) synthesize
+set of primary inputs.
+\item Derive {\it don't care conditions}
+corresponding to the $m$ rectification functions. 
+\item Synthesize
 the rectification polynomials into logic sub-circuit patches.
 %Note that the cardinality of $|W|=|U|=|O|=m$.
+\ei
 
+\subsection{Prior Work}
 
-{\it Prior Work:} Contemporary approaches formulate rectification
+Contemporary approaches formulate rectification
 using QBF solving~\cite{scholl:2}, using CI or iterative SAT
-solving~\cite{MF_Huang:DATE12}.  
+solving~\cite{MF_Roland:ICCAD10,MF_Huang:DATE12}.  
 The rectification techniques in 
 \cite{SS_Fujita:ISCAS19,MF_Huang:DATE12,SS_Roland:DAC18} 
 iteratively and incrementally compute multiple single-fix functions
@@ -101,9 +130,15 @@ a structurally dissimilar ECO-evolved specification has been presented in
 The authors~\cite{SS_Roland:DAC19} propose enumerating rectification points 
 functionally by simulation and match the circuitry of patches implicitly to maximize reuse of 
 existing logic in the implementation. To achieve scalability, the method proposes 
-modeling and analyzing its computations in symbolic sampling domain. }
-While successful for control-dominated applications, these techniques are
-computationally infeasible for rectification of arithmetic circuits.
+modeling and analyzing its computations in symbolic sampling domain. 
+However, circuits that implement polynomial computations over large
+bit-vector operands are hard to rectify using methods such as SAT/SMT-solvers
+, decision diagrams, etc.
+}
+% While successful for control-dominated applications, these techniques are
+% computationally infeasible for rectification of arithmetic circuits.
+
+\subsubsection{Symbolic Computer Algebra}
 
 In the context of arithmetic circuits, symbolic computer algebra 
 techniques for integer arithmetic~\cite{farimah:2017:1,MF_Rolf:ISVLSI18} and
@@ -130,7 +165,7 @@ desired.
 
 }
 
-{\it Approach and Contribution:}
+\subsection{Approach and Contribution}
 % In particular, we exploit the ideal-variety
 % correspondences to explore and compute rectification functions for the $m$-targets
 % collectively. 
@@ -152,6 +187,13 @@ Overall, the  the computation of rectification functions at multiple
 targets, and modeling don't cares for MFR in
 polynomial algebra, are our novel contributions not presented
 in prior literature. 
+
+% Rectification is performed 
+% against a given polynomial specification over finite
+% fields using SCA and algebraic geometry based techniques.
+% Our approach, derives the necessary and sufficient conditions
+% for the existence of a rectification function, computes rectification patches
+% as polynomials for the given targets, and synthesizes them into logic sub-circuits.
 
 %While these are computed as
 %polynomial ideals, the functions and don't care conditions correspond

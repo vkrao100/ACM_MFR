@@ -1,31 +1,31 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.1.21)  1 APR 2021 22:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.3.31)  3 APR 2021 11:15
 entering extended mode
-**C:/Users/vikas/Documents/ACM_MFR/ACM_MFR.tex
-(C:/Users/vikas/Documents/ACM_MFR/ACM_MFR.tex
+**./ACM_MFR.tex
+(ACM_MFR.tex
 LaTeX2e <2020-10-01> patch level 4
-L3 programming layer <2021-01-09> xparse <2020-03-03> (acmart.cls
+L3 programming layer <2021-02-18> (acmart.cls
 Document Class: acmart 2020/04/30 v1.71 Typesetting articles for the Associatio
 n for Computing Machinery
-("C:\Program Files\MiKTeX\tex/latex/xkeyval\xkeyval.sty"
+(C:\Program Files\MiKTeX 2.9\tex/latex/xkeyval\xkeyval.sty
 Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 
-("C:\Program Files\MiKTeX\tex/generic/xkeyval\xkeyval.tex"
-("C:\Program Files\MiKTeX\tex/generic/xkeyval\xkvutils.tex"
+(C:\Program Files\MiKTeX 2.9\tex/generic/xkeyval\xkeyval.tex
+(C:\Program Files\MiKTeX 2.9\tex/generic/xkeyval\xkvutils.tex
 \XKV@toks=\toks15
 \XKV@tempa@toks=\toks16
 
-("C:\Program Files\MiKTeX\tex/generic/xkeyval\keyval.tex"))
-\XKV@depth=\count177
+(C:\Program Files\MiKTeX 2.9\tex/generic/xkeyval\keyval.tex))
+\XKV@depth=\count179
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/xstring\xstring.sty
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/generic/xstring\xstring.tex
-\integerpart=\count178
-\decimalpart=\count179
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/xstring\xstring.sty
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/generic/xstring\xstring.tex
+\integerpart=\count180
+\decimalpart=\count181
 )
 Package: xstring 2019/02/06 v1.83 String manipulations (CT)
 )
-("C:\Program Files\MiKTeX\tex/generic/iftex\iftex.sty"
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/generic/iftex\iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 )
 Package acmart Info: Not using screen mode on input line 73.
@@ -43,38 +43,38 @@ Package acmart Info: Using review mode on input line 165.
 Class acmart Info: Using format acmsmall, number 1 on input line 165.
 Class acmart Info: Using fontsize 10pt on input line 249.
 
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/amscls\amsart.cls
+(C:\Program Files\MiKTeX 2.9\tex/latex/amscls\amsart.cls
 Document Class: amsart 2020/05/29 v2.20.6
 \linespacing=\dimen138
 \normalparindent=\dimen139
 \normaltopskip=\skip47
-("C:\Program Files\MiKTeX\tex/latex/amsmath\amsmath.sty"
+(C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2020/09/23 v2.17i AMS math features
 \@mathmargin=\skip48
 
 For additional information on amsmath, use the `?' option.
-("C:\Program Files\MiKTeX\tex/latex/amsmath\amstext.sty"
+(C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
 
-("C:\Program Files\MiKTeX\tex/latex/amsmath\amsgen.sty"
+(C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks17
 \ex@=\dimen140
 ))
-("C:\Program Files\MiKTeX\tex/latex/amsmath\amsbsy.sty"
+(C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen141
 )
-("C:\Program Files\MiKTeX\tex/latex/amsmath\amsopn.sty"
+(C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count180
+\inf@bad=\count182
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count181
-\leftroot@=\count182
+\uproot@=\count183
+\leftroot@=\count184
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count183
-\DOTSCASE@=\count184
+\classnum@=\count185
+\DOTSCASE@=\count186
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
@@ -83,15 +83,15 @@ LaTeX Info: Redefining \cdots on input line 620.
 \big@size=\dimen142
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count185
-\c@MaxMatrixCols=\count186
+\macc@depth=\count187
+\c@MaxMatrixCols=\count188
 \dotsspace@=\muskip16
-\c@parentequation=\count187
-\dspbrk@lvl=\count188
+\c@parentequation=\count189
+\dspbrk@lvl=\count190
 \tag@help=\toks18
-\row@=\count189
-\column@=\count190
-\maxfields@=\count191
+\row@=\count191
+\column@=\count192
+\maxfields@=\count193
 \andhelp@=\toks19
 \eqnshift@=\dimen143
 \alignsep@=\dimen144
@@ -109,10 +109,10 @@ LaTeX Info: Redefining \] on input line 2924.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 397
 .
 
-("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd"
+(C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-("C:\Program Files\MiKTeX\tex/latex/amsfonts\amsfonts.sty"
+(C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
@@ -123,14 +123,14 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 \copyins=\insert199
 \abstractbox=\box49
 \listisep=\skip51
-\c@part=\count192
-\c@section=\count193
-\c@subsection=\count194
-\c@subsubsection=\count195
-\c@paragraph=\count196
-\c@subparagraph=\count197
-\c@figure=\count198
-\c@table=\count266
+\c@part=\count194
+\c@section=\count195
+\c@subsection=\count196
+\c@subsubsection=\count197
+\c@paragraph=\count198
+\c@subparagraph=\count266
+\c@figure=\count267
+\c@table=\count268
 \abovecaptionskip=\skip52
 \belowcaptionskip=\skip53
 \captionindent=\dimen149
@@ -144,16 +144,17 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 \thm@headsep=\skip56
 \dth@everypar=\toks27
 )
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/microtype\microtype.sty
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/microtype\microtype.sty
 Package: microtype 2021/03/14 v2.8c Micro-typographical refinements (RS)
 \MT@toks=\toks28
-\MT@count=\count267
+\MT@count=\count269
 LaTeX Info: Redefining \textls on input line 790.
 \MT@outer@kern=\dimen150
 LaTeX Info: Redefining \textmicrotypecontext on input line 1374.
-\MT@listname@count=\count268
+\MT@listname@count=\count270
 
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/microtype\microtype-pdftex.def
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/microtype\microtype-pdftex
+.def
 File: microtype-pdftex.def 2021/03/14 v2.8c Definitions specific to pdftex (RS)
 
 LaTeX Info: Redefining \lsstyle on input line 915.
@@ -161,14 +162,15 @@ LaTeX Info: Redefining \lslig on input line 915.
 \MT@outer@space=\skip57
 )
 Package microtype Info: Loading configuration file microtype.cfg.
- (C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/microtype\microtype.cfg
+
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/microtype\microtype.cfg
 File: microtype.cfg 2021/03/14 v2.8c microtype main configuration file (RS)
 ))
-("C:\Program Files\MiKTeX\tex/latex/etoolbox\etoolbox.sty"
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count269
+\etb@tempcnta=\count271
 )
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/booktabs\booktabs.sty
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen151
 \lightrulewidth=\dimen152
@@ -180,197 +182,200 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen158
 \cmidrulekern=\dimen159
 \defaultaddspace=\dimen160
-\@cmidla=\count270
-\@cmidlb=\count271
+\@cmidla=\count272
+\@cmidlb=\count273
 \@aboverulesep=\dimen161
 \@belowrulesep=\dimen162
-\@thisruleclass=\count272
-\@lastruleclass=\count273
+\@thisruleclass=\count274
+\@lastruleclass=\count275
 \@thisrulewidth=\dimen163
 )
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/refcount\refcount.sty
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/refcount\refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/generic/ltxcmds\ltxcmds.sty
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 )
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/generic/infwarerr\infwarerr.sty
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/generic/infwarerr\infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-))
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/totpages\totpages.sty
+)) (C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/totpages\totpages.sty
 Package: totpages 2005/09/19 v2.00 Totpages Package (muewi)
 
-("C:\Program Files\MiKTeX\tex/latex/base\everyshi-ltx.sty"
+(C:\Program Files\MiKTeX 2.9\tex/latex/base\everyshi-ltx.sty
 Package: everyshi-ltx 2020/08/17 v1.0a Emulation of the original everyshi packa
 ge
 with kernel methods
 ))
-("C:\Program Files\MiKTeX\tex/latex/environ\environ.sty"
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/environ\environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
 
-("C:\Program Files\MiKTeX\tex/latex/trimspaces\trimspaces.sty"
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/trimspaces\trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
-))
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/textcase\textcase.sty
+)) (C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/textcase\textcase.sty
 Package: textcase 2019/09/14 v1.00 Text only upper/lower case changing (DPC)
 )
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/natbib\natbib.sty
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/natbib\natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip58
 \bibsep=\skip59
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count274
+\c@NAT@ctr=\count276
 )
-("C:\Program Files\MiKTeX\tex/latex/hyperref\hyperref.sty"
-Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
+(C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2021-02-27 v7.00k Hypertext links for LaTeX
 
-("C:\Program Files\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty"
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/generic/pdftexcmds\pdftexcmds.st
+y
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/generic/kvsetkeys\kvsetkeys.sty
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/generic/kvsetkeys\kvsetkeys.sty
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
 )
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.st
-y
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/generic/kvdefinekeys\kvdefinekey
+s.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-) (C:\Users\vikas\AppData\Roaming\MiKTeX\tex/generic/pdfescape\pdfescape.sty
-Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
 )
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/hycolor\hycolor.sty
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/generic/pdfescape\pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/hycolor\hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 )
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/letltxmacro\letltxmacro.sty
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/letltxmacro\letltxmacro.st
+y
 Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
-)
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/auxhook\auxhook.sty
+) (C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/auxhook\auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
 \@linkdim=\dimen164
-\Hy@linkcounter=\count275
-\Hy@pagecounter=\count276
+\Hy@linkcounter=\count277
+\Hy@pagecounter=\count278
 
-("C:\Program Files\MiKTeX\tex/latex/hyperref\pd1enc.def"
-File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
+(C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2021-02-27 v7.00k Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/generic/intcalc\intcalc.sty
+(C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\hyperref-langpatches.def
+File: hyperref-langpatches.def 2021-02-27 v7.00k Hyperref: patches for babel la
+nguages
+)
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/generic/etexcmds\etexcmds.sty
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/generic/etexcmds\etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count277
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 4338
-.
-Package hyperref Info: Option `unicode' set `true' on input line 4338.
+\Hy@SavedSpaceFactor=\count279
 
-("C:\Program Files\MiKTeX\tex/latex/hyperref\puenc.def"
-File: puenc.def 2020-05-15 v7.00e Hyperref: PDF Unicode definition (HO)
+(C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\puenc.def
+File: puenc.def 2021-02-27 v7.00k Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Hyper figures OFF on input line 4464.
-Package hyperref Info: Link nesting OFF on input line 4469.
-Package hyperref Info: Hyper index ON on input line 4472.
-Package hyperref Info: Plain pages OFF on input line 4479.
-Package hyperref Info: Backreferencing OFF on input line 4484.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 4073
+.
+Package hyperref Info: Option `unicode' set `true' on input line 4073.
+Package hyperref Info: Hyper figures OFF on input line 4192.
+Package hyperref Info: Link nesting OFF on input line 4197.
+Package hyperref Info: Hyper index ON on input line 4200.
+Package hyperref Info: Plain pages OFF on input line 4207.
+Package hyperref Info: Backreferencing OFF on input line 4212.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4717.
-\c@Hy@tempcnt=\count278
+Package hyperref Info: Bookmarks ON on input line 4445.
+\c@Hy@tempcnt=\count280
 
-("C:\Program Files\MiKTeX\tex/latex/url\url.sty"
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/url\url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5076.
+LaTeX Info: Redefining \url on input line 4804.
 \XeTeXLinkMargin=\dimen165
 
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/generic/bitset\bitset.sty
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/generic/bigintcalc\bigintcalc.st
+y
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count279
+\Fld@menulength=\count281
 \Field@Width=\dimen166
 \Fld@charsize=\dimen167
-Package hyperref Info: Hyper figures OFF on input line 6347.
-Package hyperref Info: Link nesting OFF on input line 6352.
-Package hyperref Info: Hyper index ON on input line 6355.
-Package hyperref Info: backreferencing OFF on input line 6362.
-Package hyperref Info: Link coloring OFF on input line 6367.
-Package hyperref Info: Link coloring with OCG OFF on input line 6372.
-Package hyperref Info: PDF/A mode OFF on input line 6377.
-LaTeX Info: Redefining \ref on input line 6417.
-LaTeX Info: Redefining \pageref on input line 6421.
-
-("C:\Program Files\MiKTeX\tex/latex/base\atbegshi-ltx.sty"
+Package hyperref Info: Hyper figures OFF on input line 6075.
+Package hyperref Info: Link nesting OFF on input line 6080.
+Package hyperref Info: Hyper index ON on input line 6083.
+Package hyperref Info: backreferencing OFF on input line 6090.
+Package hyperref Info: Link coloring OFF on input line 6095.
+Package hyperref Info: Link coloring with OCG OFF on input line 6100.
+Package hyperref Info: PDF/A mode OFF on input line 6105.
+LaTeX Info: Redefining \ref on input line 6145.
+LaTeX Info: Redefining \pageref on input line 6149.
+ (C:\Program Files\MiKTeX 2.9\tex/latex/base\atbegshi-ltx.sty
 Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
 ge
 with kernel methods
 )
-\Hy@abspage=\count280
-\c@Item=\count281
-\c@Hfootnote=\count282
+\Hy@abspage=\count282
+\c@Item=\count283
+\c@Hfootnote=\count284
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
-("C:\Program Files\MiKTeX\tex/latex/hyperref\hpdftex.def"
-File: hpdftex.def 2020-05-15 v7.00e Hyperref driver for pdfTeX
+(C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\hpdftex.def
+File: hpdftex.def 2021-02-27 v7.00k Hyperref driver for pdfTeX
 
-("C:\Program Files\MiKTeX\tex/latex/base\atveryend-ltx.sty"
+(C:\Program Files\MiKTeX 2.9\tex/latex/base\atveryend-ltx.sty
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
 e
 with kernel methods
 )
-\Fld@listcount=\count283
-\c@bookmark@seq@number=\count284
+\Fld@listcount=\count285
+\c@bookmark@seq@number=\count286
 
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.
-sty
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/rerunfilecheck\rerunfilech
+eck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
 
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/generic/uniquecounter\uniquecounter.
-sty
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/generic/uniquecounter\uniquecoun
+ter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 86.
 )
 \Hy@SectionHShift=\skip60
-) ("C:\Program Files\MiKTeX\tex/latex/graphics\graphicx.sty"
+) (C:\Program Files\MiKTeX 2.9\tex/latex/graphics\graphicx.sty
 Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX\tex/latex/graphics\graphics.sty"
+(C:\Program Files\MiKTeX 2.9\tex/latex/graphics\graphics.sty
 Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX\tex/latex/graphics\trig.sty"
+(C:\Program Files\MiKTeX 2.9\tex/latex/graphics\trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-("C:\Program Files\MiKTeX\tex/latex/graphics-cfg\graphics.cfg"
+(C:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
 
-("C:\Program Files\MiKTeX\tex/latex/graphics-def\pdftex.def"
+(C:\Program Files\MiKTeX 2.9\tex/latex/graphics-def\pdftex.def
 File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen168
 \Gin@req@width=\dimen169
 )
-("C:\Program Files\MiKTeX\tex/latex/xcolor\xcolor.sty"
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/xcolor\xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-("C:\Program Files\MiKTeX\tex/latex/graphics-cfg\color.cfg"
+(C:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -384,15 +389,15 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/geometry\geometry.sty
+(C:\Program Files\MiKTeX 2.9\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
-("C:\Program Files\MiKTeX\tex/generic/iftex\ifvtex.sty"
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count285
-\Gm@cntv=\count286
-\c@Gm@tempcnt=\count287
+\Gm@cnth=\count287
+\Gm@cntv=\count288
+\c@Gm@tempcnt=\count289
 \Gm@bindingoffset=\dimen170
 \Gm@wd@mp=\dimen171
 \Gm@odd@mp=\dimen172
@@ -403,44 +408,44 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutvoffset=\dimen177
 \Gm@dimlist=\toks29
 
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/geometry\geometry.cfg))
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/ncctools\manyfoot.sty
+(C:\Program Files\MiKTeX 2.9\tex/latex/geometry\geometry.cfg))
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/ncctools\manyfoot.sty
 Package: manyfoot 2019/08/03 v1.11 Many Footnote Levels Package (NCC)
 
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/ncctools\nccfoots.sty
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/ncctools\nccfoots.sty
 Package: nccfoots 2005/02/03 v1.2 NCC Footnotes Package (NCC)
 )
 \MFL@columnwidth=\dimen178
 )
 \footinsauthorsaddresses=\insert252
-\c@footnoteauthorsaddresses=\count288
+\c@footnoteauthorsaddresses=\count290
 \footinscopyrightpermission=\insert251
-\c@footnotecopyrightpermission=\count289
+\c@footnotecopyrightpermission=\count291
 
-("C:\Program Files\MiKTeX\tex/generic/pdftex\glyphtounicode.tex")
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/cmap\cmap.sty
+(C:\Program Files\MiKTeX 2.9\tex/generic/pdftex\glyphtounicode.tex)
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/cmap\cmap.sty
 Package: cmap 2021/02/06 v1.0j CMap support: searchable PDF
 )
-("C:\Program Files\MiKTeX\tex/latex/base\fontenc.sty"
+(C:\Program Files\MiKTeX 2.9\tex/latex/base\fontenc.sty
 Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
 <<t1.cmap>>)
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/libertine\libertine.sty
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/libertine\libertine.sty
 Package: libertine 2020/03/26 (Bob Tennent) Supports Libertine and Biolinum fon
 ts for all LaTeX engines.
 
-("C:\Program Files\MiKTeX\tex/generic/iftex\ifxetex.sty"
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/generic/iftex\ifxetex.sty
 Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
 )
-("C:\Program Files\MiKTeX\tex/generic/iftex\ifluatex.sty"
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/generic/iftex\ifluatex.sty
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 )
-("C:\Program Files\MiKTeX\tex/latex/base\textcomp.sty"
+(C:\Program Files\MiKTeX 2.9\tex/latex/base\textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 )
-("C:\Program Files\MiKTeX\tex/latex/base\fontenc.sty"
+(C:\Program Files\MiKTeX 2.9\tex/latex/base\fontenc.sty
 Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
 )
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/fontaxes\fontaxes.sty
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/fontaxes\fontaxes.sty
 Package: fontaxes 2020/07/21 v1.0e Font selection axes
 LaTeX Info: Redefining \upshape on input line 29.
 LaTeX Info: Redefining \itshape on input line 31.
@@ -455,28 +460,28 @@ LaTeX Info: Redefining \textulc on input line 49.
 )
 LaTeX Info: Redefining \oldstylenums on input line 484.
 
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/libertine\LinLibertine_I.tex))
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/inconsolata\zi4.sty
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/libertine\LinLibertine_I.t
+ex)) (C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/inconsolata\zi4.sty
 Package: zi4 2019/05/17 v1.12
 
 `inconsolata-zi4' v1.12, 2019/05/17 Text macros for Inconsolata (msharpe)
-\zifour@ocount=\count290
+\zifour@ocount=\count292
 )
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/newtx\newtxmath.sty
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/newtx\newtxmath.sty
 Package: newtxmath 2020/12/20 v1.640
 
 `newtxmath' v1.640, 2020/12/20 Math macros based originally on txfonts (msharpe
-) ("C:\Program Files\MiKTeX\tex/latex/base\ifthen.sty"
+) (C:\Program Files\MiKTeX 2.9\tex/latex/base\ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-("C:\Program Files\MiKTeX\tex/latex/oberdiek\centernot.sty"
+(C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\centernot.sty
 Package: centernot 2016/05/16 v1.4 Centers the not symbol horizontally (HO)
 )
-\tx@cntz=\count291
+\tx@cntz=\count293
 
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/generic/binhex\binhex.tex)
-\tx@Isdigit=\count292
-\tx@IsAlNum=\count293
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/generic/binhex\binhex.tex)
+\tx@Isdigit=\count294
+\tx@IsAlNum=\count295
 \tx@tA=\toks30
 \tx@tB=\toks31
 \tx@su=\read2
@@ -594,10 +599,10 @@ LaTeX Info: Redefining \not on input line 2929.
 LaTeX Info: Redefining \textsquare on input line 2959.
 LaTeX Info: Redefining \openbox on input line 2961.
 )
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/caption\caption.sty
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/caption\caption.sty
 Package: caption 2020/10/26 v3.5g Customizing captions (AR)
 
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/caption\caption3.sty
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/caption\caption3.sty
 Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
 \captionmargin=\dimen179
 \captionmargin@=\dimen180
@@ -608,28 +613,29 @@ Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
 \caption@hangindent=\dimen185
 Package caption Info: AMS or SMF document class detected.
 
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/caption\caption-ams-smf.sto
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/caption\caption-ams-smf.st
+o
 File: caption-ams-smf.sto 2020/08/22 v2.0 Adaption of the caption package to th
 e AMS and SMF document classes (AR)
 ))
-\c@caption@flags=\count294
-\c@continuedfloat=\count295
+\c@caption@flags=\count296
+\c@continuedfloat=\count297
 Package caption Info: hyperref package is loaded.
-) (C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/float\float.sty
+) (C:\Program Files\MiKTeX 2.9\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count296
+\c@float@type=\count298
 \float@exts=\toks33
 \float@box=\box50
 \@float@everytoks=\toks34
 \@floatcapt=\box51
 )
 \@float@every@sidebar=\toks35
-\c@sidebar=\count297
+\c@sidebar=\count299
 \fulltextwidth=\dimen186
 \@ACM@labelwidth=\dimen187
 \listisep=\skip61
-\num@authorgroups=\count298
-\num@authors=\count299
+\num@authorgroups=\count300
+\num@authors=\count301
 \@ACM@badge@width=\skip62
 \@ACM@title@width=\skip63
 \@ACM@badge@skip=\skip64
@@ -638,18 +644,18 @@ Class acmart Info: Printing bibformat on input line 1469.
 Class acmart Info: Printing folios on input line 1474.
 Class acmart Info: Setting authorsperrow to 0 on input line 1479.
 
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/comment\comment.sty
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/comment\comment.sty
 \CommentStream=\write3
 
 Excluding comment 'comment') Excluding comment 'CCSXML'
-\c@@concepts=\count300
+\c@@concepts=\count302
 \mktitle@bx=\box52
 \@ACM@commabox=\box53
 \author@bx=\box54
 \author@bx@wd=\dimen188
 \author@bx@sep=\skip65
 
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and foote
 rs
 \f@nch@headwidth=\skip66
@@ -664,7 +670,7 @@ rs
 )
 \ACM@linecount@bx=\box55
 \ACM@linecount@bxht=\skip75
-\ACM@linecount=\count301
+\ACM@linecount=\count303
 \@folio@wd=\dimen189
 \@folio@ht=\dimen190
 \@folio@voffset=\dimen191
@@ -673,8 +679,8 @@ Special comment 'acks'
 LaTeX Font Info:    Trying to load font information for T1+LinuxLibertineT-TLF 
 on input line 2956.
 
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/libertine\t1linuxlibertinet-tl
-f.fd
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/libertine\t1linuxlibertine
+t-tlf.fd
 File: T1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for T1/Li
 nuxLibertineT-TLF.
 )
@@ -682,78 +688,82 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 10.0pt on input line 2956.
 )
 Class acmart Info: Suppressing bibformat on input line 5.
- (C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/preprint\balance.sty
+
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/preprint\balance.sty
 Package: balance 1999/02/23 4.3 (PWD)
 \oldvsize=\dimen192
 )
-("C:\Program Files\MiKTeX\tex/latex/latex-tools\xspace.sty"
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/latex-tools\xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/algorithms\algorithm.sty
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/algorithms\algorithm.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
 nment
 \@float@every@algorithm=\toks36
-\c@algorithm=\count302
+\c@algorithm=\count304
 )
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/algorithmicx\algpseudocode.sty
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/algorithmicx\algpseudocode
+.sty
 Package: algpseudocode 
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/algorithmicx\algorithmicx.sty
+
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/algorithmicx\algorithmicx.
+sty
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count303
-\c@ALG@rem=\count304
-\c@ALG@nested=\count305
+\c@ALG@line=\count305
+\c@ALG@rem=\count306
+\c@ALG@nested=\count307
 \ALG@tlm=\skip76
 \ALG@thistlm=\skip77
-\c@ALG@Lnr=\count306
-\c@ALG@blocknr=\count307
-\c@ALG@storecount=\count308
-\c@ALG@tmpcounter=\count309
+\c@ALG@Lnr=\count308
+\c@ALG@blocknr=\count309
+\c@ALG@storecount=\count310
+\c@ALG@tmpcounter=\count311
 \ALG@tmplength=\skip78
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
-) (C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/psnfss\helvet.sty
+) (C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\helvet.sty
 Package: helvet 2020/03/25 PSNFSS-v9.3 (WaS) 
 )
-("C:\Program Files\MiKTeX\tex/latex/latex-tools\enumerate.sty"
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/latex-tools\enumerate.sty
 Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 \@enLab=\toks37
-)
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/multirow\multirow.sty
-Package: multirow 2021/01/02 v2.6 Span multiple rows of a table
+) (C:\Program Files\MiKTeX 2.9\tex/latex/multirow\multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@colwidth=\skip79
-\multirow@cntb=\count310
+\multirow@cntb=\count312
 \multirow@dima=\skip80
 \bigstrutjot=\dimen193
 )
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/subfig\subfig.sty
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/subfig\subfig.sty
 Package: subfig 2005/06/28 ver: 1.3 subfig package
-\c@KVtest=\count311
+\c@KVtest=\count313
 \sf@farskip=\skip81
 \sf@captopadj=\dimen194
 \sf@capskip=\skip82
 \sf@nearskip=\skip83
-\c@subfigure=\count312
-\c@subfigure@save=\count313
-\c@lofdepth=\count314
-\c@subtable=\count315
-\c@subtable@save=\count316
-\c@lotdepth=\count317
+\c@subfigure=\count314
+\c@subfigure@save=\count315
+\c@lofdepth=\count316
+\c@subtable=\count317
+\c@subtable@save=\count318
+\c@lotdepth=\count319
 \sf@top=\skip84
 \sf@bottom=\skip85
 )
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/cases\cases.sty
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/cases\cases.sty
 Package: cases 2020/03/29 ver 3.2
 \numc@numwid=\dimen195
 )
-("C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf.sty"
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/epstopdf-pkg\epstopdf.sty
 Package: epstopdf 2020-01-24 v2.11 Conversion with epstopdf on the fly (HO)
 
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/grfext\grfext.sty
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/grfext\grfext.sty
 Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
 )
-("C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty"
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/epstopdf-pkg\epstopdf-base
+.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
@@ -761,32 +771,34 @@ Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 504.
-))
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/ulem\ulem.sty
+ (C:\Program Files\MiKTeX 2.9\tex/latex/00miktex\epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+)))
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/ulem\ulem.sty
 \UL@box=\box56
 \UL@hyphenbox=\box57
 \UL@skip=\skip86
 \UL@hook=\toks38
 \UL@height=\dimen196
-\UL@pe=\count318
+\UL@pe=\count320
 \UL@pixel=\dimen197
 \ULC@box=\box58
 Package: ulem 2019/11/18
 \ULdepth=\dimen198
 )
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/diagbox\diagbox.sty
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/diagbox\diagbox.sty
 Package: diagbox 2020/02/09 v2.3 Making table heads with diagonal lines
 
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/pict2e\pict2e.sty
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/pict2e\pict2e.sty
 Package: pict2e 2020/09/30 v0.4b Improved picture commands (HjG,RN,JT)
 
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/pict2e\pict2e.cfg
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/pict2e\pict2e.cfg
 File: pict2e.cfg 2016/02/05 v0.1u pict2e configuration for teTeX/TeXLive
 )
 Package pict2e Info: Driver file: pdftex.def on input line 112.
 Package pict2e Info: Driver file for pict2e: p2e-pdftex.def on input line 114.
 
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/pict2e\p2e-pdftex.def
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/pict2e\p2e-pdftex.def
 File: p2e-pdftex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
 )
 \pIIe@GRAPH=\toks39
@@ -799,20 +811,20 @@ File: p2e-pdftex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
 \pIIe@tempdime=\dimen262
 \pIIe@tempdimf=\dimen263
 )
-("C:\Program Files\MiKTeX\tex/latex/latex-tools\calc.sty"
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/latex-tools\calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count319
-\calc@Bcount=\count320
+\calc@Acount=\count321
+\calc@Bcount=\count322
 \calc@Adimen=\dimen264
 \calc@Bdimen=\dimen265
 \calc@Askip=\skip87
 \calc@Bskip=\skip88
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count321
+\calc@Ccount=\count323
 \calc@Cskip=\skip89
 )
-("C:\Program Files\MiKTeX\tex/latex/latex-tools\array.sty"
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/latex-tools\array.sty
 Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
 \col@sep=\dimen266
 \ar@mcellbox=\box59
@@ -832,7 +844,7 @@ Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
 \diagbox@outsepl=\dimen272
 \diagbox@outsepr=\dimen273
 )
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/cleveref\cleveref.sty
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/cleveref\cleveref.sty
 Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
 Package cleveref Info: `hyperref' support loaded on input line 2370.
 LaTeX Info: Redefining \cref on input line 2370.
@@ -849,7 +861,7 @@ Package cleveref Info: `amsthm' support loaded on input line 3026.
 Package cleveref Info: `algorithmicx' support loaded on input line 3120.
 Package cleveref Info: `subfig' support loaded on input line 3164.
 )
-("C:\Program Files\MiKTeX\tex/latex/latex-tools\bm.sty"
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/latex-tools\bm.sty
 Package: bm 2019/07/24 v1.2d Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup10
 \symboldletters=\mathgroup11
@@ -858,41 +870,41 @@ Package: bm 2019/07/24 v1.2d Bold Symbol Support (DPC/FMi)
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
 LaTeX Info: Redefining \bm on input line 209.
 )
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/setspace\setspace.sty
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/setspace\setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
 (myformulae.tex)
-\c@Algorithm=\count322
-\c@Definition=\count323
-\c@Example=\count324
-\c@Proposition=\count325
-\c@Lemma=\count326
-\c@Theorem=\count327
-\c@Proof=\count328
-\c@Corollary=\count329
-\c@Conjecture=\count330
-\c@Problem=\count331
-\c@Notation=\count332
-\c@Setup=\count333
+\c@Algorithm=\count324
+\c@Definition=\count325
+\c@Example=\count326
+\c@Proposition=\count327
+\c@Lemma=\count328
+\c@Theorem=\count329
+\c@Proof=\count330
+\c@Corollary=\count331
+\c@Conjecture=\count332
+\c@Problem=\count333
+\c@Notation=\count334
+\c@Setup=\count335
 Package hyperref Info: Option `colorlinks' set `true' on input line 94.
 Package hyperref Info: Option `pdfdisplaydoctitle' set `true' on input line 94.
 
-\c@theorem=\count334
+\c@theorem=\count336
  Include comment 'screenonly' Excluding comment 'printonly'
 Include comment 'anonsuppress'
-("C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def"
-File: l3backend-pdftex.def 2021-01-09 L3 backend support: PDF output (pdfTeX)
-\l__kernel_color_stack_int=\count335
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/l3backend\l3backend-pdftex
+.def
+File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count337
 \l__pdf_internal_box=\box64
-)
-(ACM_MFR.aux)
+) (ACM_MFR.aux)
 \openout1 = `ACM_MFR.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/nxlmi/m/it on input line 94.
 LaTeX Font Info:    Trying to load font information for OML+nxlmi on input line
  94.
 
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/newtx\omlnxlmi.fd
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/newtx\omlnxlmi.fd
 File: omlnxlmi.fd 2013/11/19 Fontinst v1.933 font definitions for OML/nxlmi.
 )
 LaTeX Font Info:    ... okay on input line 94.
@@ -910,7 +922,7 @@ LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 94.
 LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 
 94.
 
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/newtx\untxexa.fd
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/newtx\untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
 LaTeX Font Info:    ... okay on input line 94.
@@ -922,7 +934,7 @@ LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 94.
 LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line
  94.
 
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/newtx\lmsntxsy.fd
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/newtx\lmsntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
 LaTeX Font Info:    ... okay on input line 94.
@@ -930,7 +942,7 @@ LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 94.
 LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input lin
 e 94.
 
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/newtx\lmxntxexx.fd
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/newtx\lmxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
 LaTeX Font Info:    ... okay on input line 94.
@@ -939,8 +951,8 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 LaTeX Font Info:    Trying to load font information for OT1+LinuxLibertineT-TLF
  on input line 94.
 
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/libertine\ot1linuxlibertinet-t
-lf.fd
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/libertine\ot1linuxlibertin
+et-tlf.fd
 File: OT1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for OT1/
 LinuxLibertineT-TLF.
 )
@@ -955,31 +967,31 @@ LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
 LaTeX Font Info:    Trying to load font information for U+msa on input line 94.
 
 
-("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd"
+(C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 94.
 
 
-("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd"
+(C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 
 94.
 
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/newtx\untxmia.fd
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/newtx\untxmia.fd
 File: untxmia.fd 2018/04/14 Fontinst v1.933 font definitions for U/ntxmia.
 )
 LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 
 94.
 
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/newtx\untxsym.fd
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/newtx\untxsym.fd
 File: untxsym.fd 2015/03/20 Fontinst v1.933 font definitions for U/ntxsym.
 )
 LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 
 94.
 
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/newtx\untxsyc.fd
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/newtx\untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
@@ -1005,14 +1017,14 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 Package hyperref Info: Link coloring ON on input line 94.
 
-("C:\Program Files\MiKTeX\tex/latex/hyperref\nameref.sty"
-Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+(C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/generic/gettitlestring\gettitlestrin
-g.sty
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/generic/gettitlestring\gettitles
+tring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count336
+\c@section@level=\count338
 )
 LaTeX Info: Redefining \ref on input line 94.
 LaTeX Info: Redefining \pageref on input line 94.
@@ -1022,18 +1034,18 @@ LaTeX Info: Redefining \nameref on input line 94.
 \openout4 = `ACM_MFR.out'.
 
 
-("C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii"
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count337
+\scratchcounter=\count339
 \scratchdimen=\dimen274
 \scratchbox=\box65
-\nofMPsegments=\count338
-\nofMParguments=\count339
+\nofMPsegments=\count340
+\nofMParguments=\count341
 \everyMPshowfont=\toks41
-\MPscratchCnt=\count340
+\MPscratchCnt=\count342
 \MPscratchDim=\dimen275
-\MPnumerator=\count341
-\makeMPintoPDFobject=\count342
+\MPnumerator=\count343
+\makeMPintoPDFobject=\count344
 \everyMPtoPDFconversion=\toks42
 )
 *geometry* driver: auto-detecting
@@ -1070,9 +1082,9 @@ LaTeX Info: Redefining \nameref on input line 94.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@mv@tabular=\count343
-\c@mv@boldtabular=\count344
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/upquote\upquote.sty
+\c@mv@tabular=\count345
+\c@mv@boldtabular=\count346
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/upquote\upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
 )
@@ -1086,7 +1098,7 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 14.4pt on input line 144.
 LaTeX Font Info:    Trying to load font information for T1+phv on input line 14
 4.
- (C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/psnfss\t1phv.fd
+ (C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -1105,10 +1117,11 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 7.3pt on input line 144.
- (C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-msa.cfg
+
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-msb.cfg
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
@@ -1123,8 +1136,8 @@ surrounding objects on input line 144.
 LaTeX Font Info:    Trying to load font information for TS1+LinuxLibertineT-TLF
  on input line 144.
 
-(C:\Users\vikas\AppData\Roaming\MiKTeX\tex/latex/libertine\ts1linuxlibertinet-t
-lf.fd
+(C:\Users\vikas\AppData\Roaming\MiKTeX\2.9\tex/latex/libertine\ts1linuxlibertin
+et-tlf.fd
 File: TS1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for TS1/
 LinuxLibertineT-TLF.
 )
@@ -1143,21 +1156,18 @@ surrounding objects on input line 144.
 
 (intro.tex
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 10.0pt on input line 36.
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 37.
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
-(Font)              scaled to size 10.0pt on input line 37.
+(Font)              scaled to size 10.0pt on input line 7.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 50.
- [1.1{C:/Users/vikas/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [2.2])
-(prelim.tex
-Underfull \vbox (badness 1931) has occurred while \output is active []
-
- [3.3]
+(Font)              scaled to size 7.0pt on input line 46.
+ [1.1{C:/Users/vikas/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 10.0pt on input line 75.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
+(Font)              scaled to size 10.0pt on input line 75.
+ [2.2]
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 143.
+) (prelim.tex [3.3]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 89.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
@@ -1168,8 +1178,7 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
 (Font)              scaled to size 7.3pt on input line 93.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
 (Font)              scaled to size 5.5pt on input line 93.
-
-[4.4]) (pmodel.tex [5.5]
+ [4.4] [5.5]) (pmodel.tex
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 10.0pt on input line 94.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/it' will be
@@ -1180,11 +1189,12 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 9.0pt on input line 167.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 9.0pt on input line 169.
-<mas_3_ddc_mfr_a.pdf, id=182, 675.86174pt x 751.09pt>
+ [6.6]
+<mas_3_ddc_mfr_a.pdf, id=214, 675.86174pt x 751.09pt>
 File: mas_3_ddc_mfr_a.pdf Graphic file (type pdf)
 <use mas_3_ddc_mfr_a.pdf>
 Package pdftex.def Info: mas_3_ddc_mfr_a.pdf  used on input line 247.
-(pdftex.def)             Requested size: 195.99487pt x 217.81052pt.
+(pdftex.def)             Requested size: 236.55515pt x 262.88542pt.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 8.0pt on input line 260.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/it' will be
@@ -1192,8 +1202,8 @@ LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/it' will be
 ) (rectify.tex
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/it' will be
 (Font)              scaled to size 10.0pt on input line 50.
- [6.6] [7.7 <./mas_3_ddc_mfr_a.pdf>])
-(func_comp.tex
+
+[7.7 <./mas_3_ddc_mfr_a.pdf>]) (func_comp.tex
 Overfull \hbox (7.44073pt too wide) in paragraph at lines 93--94
 \T1/LinuxLibertineT-TLF/m/n/10 (-20) To il-lus-trate the greedy ap-proach, con-
 sider the case with $\OML/nxlmi/m/it/10 m \U/ntxmia/m/it/10 = \OT1/LinuxLiberti
@@ -1214,10 +1224,7 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 7.3pt on input line 156.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 5.5pt on input line 156.
- [9.9]
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 294.
- [10.10]) (impl.tex [11.11]) (experiments.tex
+ [9.9] [10.10] [11.11]) (impl.tex) (experiments.tex [12.12]
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <8> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 133.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
@@ -1228,7 +1235,7 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/it' will be
 (Font)              scaled to size 8.0pt on input line 148.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 (Font)              scaled to size 8.0pt on input line 148.
- [12.12] [13.13])
+ [13.13])
 (ACM_MFR.bbl [14.14])
 
 Class acmart Warning: ACM reference format is mandatory for papers over one pag
@@ -1236,47 +1243,49 @@ e.
 
 [15.15] (ACM_MFR.aux)
 Package rerunfilecheck Info: File `ACM_MFR.out' has not changed.
-(rerunfilecheck)             Checksum: 36ABA3910D16E1711233B4F6FC4BBF16;2390.
+(rerunfilecheck)             Checksum: 82E8694AB5E87DA5845F77307AE84E31;3112.
  ) 
 Here is how much of TeX's memory you used:
- 23593 strings out of 479618
- 374304 string characters out of 2874902
- 744278 words of memory out of 3000000
- 39262 multiletter control sequences out of 15000+200000
- 681971 words of font info for 626 fonts, out of 3000000 for 9000
+ 23100 strings out of 479287
+ 371287 string characters out of 2863087
+ 733910 words of memory out of 3000000
+ 39058 multiletter control sequences out of 15000+600000
+ 682593 words of font info for 630 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 96i,16n,131p,1371b,671s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/vikas/AppData/Roaming/MiKTeX/fonts/enc/dvips/libertine/lbtn_fygcup.
-enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc}{C:/Users/vikas/AppDat
-a/Roaming/MiKTeX/fonts/enc/dvips/libertine/lbtn_ki75ao.enc}{C:/Users/vikas/AppD
-ata/Roaming/MiKTeX/fonts/enc/dvips/libertine/lbtn_kijugd.enc}{C:/Users/vikas/Ap
-pData/Roaming/MiKTeX/fonts/enc/dvips/libertine/lbtn_ncsllp.enc}{C:/Users/vikas/
-AppData/Roaming/MiKTeX/fonts/enc/dvips/libertine/lbtn_oexx6f.enc}{C:/Users/vika
-s/AppData/Roaming/MiKTeX/fonts/enc/dvips/libertine/lbtn_7grukw.enc}{C:/Users/vi
-kas/AppData/Roaming/MiKTeX/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{C:/Users/
-vikas/AppData/Roaming/MiKTeX/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{C:/User
-s/vikas/AppData/Roaming/MiKTeX/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}<C:/Us
-ers/vikas/AppData/Roaming/MiKTeX/fonts/type1/public/newtx/LibertineMathBMI.pfb>
-<C:/Users/vikas/AppData/Roaming/MiKTeX/fonts/type1/public/newtx/LibertineMathMI
-.pfb><C:/Users/vikas/AppData/Roaming/MiKTeX/fonts/type1/public/newtx/LibertineM
-athMI5.pfb><C:/Users/vikas/AppData/Roaming/MiKTeX/fonts/type1/public/newtx/Libe
-rtineMathMI7.pfb><C:/Users/vikas/AppData/Roaming/MiKTeX/fonts/type1/public/libe
-rtine/LinLibertineT.pfb><C:/Users/vikas/AppData/Roaming/MiKTeX/fonts/type1/publ
-ic/libertine/LinLibertineTB.pfb><C:/Users/vikas/AppData/Roaming/MiKTeX/fonts/ty
-pe1/public/libertine/LinLibertineTBI.pfb><C:/Users/vikas/AppData/Roaming/MiKTeX
-/fonts/type1/public/libertine/LinLibertineTI.pfb><C:/Users/vikas/AppData/Roamin
-g/MiKTeX/fonts/type1/public/libertine/LinLibertineTZ.pfb><C:/Users/vikas/AppDat
-a/Roaming/MiKTeX/fonts/type1/public/newtx/NewTXMI.pfb><C:/Users/vikas/AppData/R
-oaming/MiKTeX/fonts/type1/public/newtx/NewTXMI7.pfb><C:/Users/vikas/AppData/Roa
-ming/MiKTeX/fonts/type1/public/newtx/txexs.pfb><C:/Users/vikas/AppData/Roaming/
-MiKTeX/fonts/type1/public/newtx/txmiaX.pfb><C:/Users/vikas/AppData/Roaming/MiKT
-eX/fonts/type1/public/txfonts/txsyb.pfb><C:/Users/vikas/AppData/Roaming/MiKTeX/
-fonts/type1/public/newtx/txsys.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/hel
-vetic/uhvb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><
-C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on ACM_MFR.pdf (15 pages, 660703 bytes).
+ 96i,16n,131p,1340b,671s stack positions out of 5000i,500n,10000p,200000b,80000s
+{C:/Users/vikas/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/libertine/lbtn_fyg
+cup.enc}{C:/Users/vikas/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/libertine/lb
+tn_ki75ao.enc}{C:/Users/vikas/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/libert
+ine/lbtn_kijugd.enc}{C:/Users/vikas/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/
+libertine/lbtn_ncsllp.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.
+enc}{C:/Users/vikas/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/libertine/lbtn_o
+exx6f.enc}{C:/Users/vikas/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/libertine/
+lbtn_7grukw.enc}{C:/Users/vikas/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/libe
+rtine/lbtn_nh77jq.enc}{C:/Users/vikas/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvip
+s/libertine/lbtn_naooyc.enc}{C:/Users/vikas/AppData/Roaming/MiKTeX/2.9/fonts/en
+c/dvips/libertine/lbtn_76gpa5.enc}<C:/Users/vikas/AppData/Roaming/MiKTeX/2.9/fo
+nts/type1/public/newtx/LibertineMathBMI.pfb><C:/Users/vikas/AppData/Roaming/MiK
+TeX/2.9/fonts/type1/public/newtx/LibertineMathMI.pfb><C:/Users/vikas/AppData/Ro
+aming/MiKTeX/2.9/fonts/type1/public/newtx/LibertineMathMI5.pfb><C:/Users/vikas/
+AppData/Roaming/MiKTeX/2.9/fonts/type1/public/newtx/LibertineMathMI7.pfb><C:/Us
+ers/vikas/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/libertine/LinLibertineT
+.pfb><C:/Users/vikas/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/libertine/Li
+nLibertineTB.pfb><C:/Users/vikas/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/
+libertine/LinLibertineTBI.pfb><C:/Users/vikas/AppData/Roaming/MiKTeX/2.9/fonts/
+type1/public/libertine/LinLibertineTI.pfb><C:/Users/vikas/AppData/Roaming/MiKTe
+X/2.9/fonts/type1/public/libertine/LinLibertineTZ.pfb><C:/Users/vikas/AppData/R
+oaming/MiKTeX/2.9/fonts/type1/public/newtx/NewTXMI.pfb><C:/Users/vikas/AppData/
+Roaming/MiKTeX/2.9/fonts/type1/public/newtx/NewTXMI7.pfb><C:/Users/vikas/AppDat
+a/Roaming/MiKTeX/2.9/fonts/type1/public/newtx/txexs.pfb><C:/Users/vikas/AppData
+/Roaming/MiKTeX/2.9/fonts/type1/public/newtx/txmiaX.pfb><C:/Users/vikas/AppData
+/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/txsyb.pfb><C:/Users/vikas/AppDat
+a/Roaming/MiKTeX/2.9/fonts/type1/public/newtx/txsys.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvet
+ic/uhvro8a.pfb>
+Output written on ACM_MFR.pdf (15 pages, 667058 bytes).
 PDF statistics:
- 407 PDF objects out of 1000 (max. 8388607)
- 86 named destinations out of 1000 (max. 500000)
- 176250 words of extra memory for PDF output out of 184870 (max. 10000000)
+ 431 PDF objects out of 1000 (max. 8388607)
+ 94 named destinations out of 1000 (max. 500000)
+ 176282 words of extra memory for PDF output out of 184870 (max. 10000000)
 

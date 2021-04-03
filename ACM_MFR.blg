@@ -46,6 +46,9 @@ Warning--empty publisher in Sadowska:DAC95
 Warning--empty address in Sadowska:DAC95
 Warning--empty publisher in lv:tcad2013
 Warning--empty address in lv:tcad2013
+Warning--empty publisher in ecc_app:2016
+Warning--empty address in ecc_app:2016
+Warning--page numbers missing in both pages and numpages fields in ecc_app:2016
 Warning--empty publisher in MF_Rolf:ISVLSI18
 Warning--empty address in MF_Rolf:ISVLSI18
 Warning--empty publisher in Minato:DAC93
@@ -65,47 +68,51 @@ Warning--no number and no volume in andreas:2005
 Warning--page numbers missing in both pages and numpages fields in andreas:2005
 Warning--empty publisher in MF_Huang:DATE12
 Warning--empty address in MF_Huang:DATE12
+Warning--empty publisher in crypto:counterfeit
+Warning--empty address in crypto:counterfeit
+Warning--empty publisher in MF_Roland:ICCAD10
+Warning--empty address in MF_Roland:ICCAD10
 Warning--empty publisher in SS_Roland:DAC18
 Warning--empty address in SS_Roland:DAC18
-You've used 26 entries,
+You've used 29 entries,
             5959 wiz_defined-function locations,
-            1485 strings with 19724 characters,
-and the built_in function-call counts, 32098 in all, are:
-= -- 3430
-> -- 1200
+            1502 strings with 20265 characters,
+and the built_in function-call counts, 35630 in all, are:
+= -- 3788
+> -- 1310
 < -- 1
-+ -- 398
-- -- 408
-* -- 2218
-:= -- 3242
-add.period$ -- 131
-call.type$ -- 26
-change.case$ -- 189
-chr.to.int$ -- 24
-cite$ -- 72
-duplicate$ -- 3077
-empty$ -- 2123
-format.name$ -- 498
-if$ -- 7633
++ -- 433
+- -- 448
+* -- 2442
+:= -- 3587
+add.period$ -- 145
+call.type$ -- 29
+change.case$ -- 208
+chr.to.int$ -- 27
+cite$ -- 82
+duplicate$ -- 3443
+empty$ -- 2377
+format.name$ -- 546
+if$ -- 8469
 int.to.chr$ -- 4
 int.to.str$ -- 1
-missing$ -- 119
-newline$ -- 227
-num.names$ -- 206
-pop$ -- 1324
+missing$ -- 134
+newline$ -- 248
+num.names$ -- 230
+pop$ -- 1488
 preamble$ -- 1
-purify$ -- 419
+purify$ -- 465
 quote$ -- 0
-skip$ -- 1147
+skip$ -- 1282
 stack$ -- 0
-substring$ -- 2247
-swap$ -- 330
+substring$ -- 2506
+swap$ -- 364
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 711
-warning$ -- 46
-while$ -- 186
+type$ -- 801
+warning$ -- 53
+while$ -- 211
 width$ -- 0
-write$ -- 459
-(There were 46 warnings)
+write$ -- 506
+(There were 53 warnings)
