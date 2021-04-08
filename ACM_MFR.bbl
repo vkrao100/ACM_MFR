@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{29}
+\begin{thebibliography}{33}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -95,6 +95,29 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Decker, Greuel, Pfister, and
+  Sch\"onemann}{Decker et~al\mbox{.}}{2016}]%
+        {DGPS_410}
+\bibfield{author}{\bibinfo{person}{Wolfram Decker},
+  \bibinfo{person}{Gert-Martin Greuel}, \bibinfo{person}{Gerhard Pfister},
+  {and} \bibinfo{person}{Hans Sch\"onemann}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \bibinfo{title}{{\sc Singular} {4-1-0} --- {A} computer algebra
+  system for polynomial computations}.
+\newblock \bibinfo{howpublished}{\url{http://www.singular.uni-kl.de}}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Farahmandi and Mishra}{Farahmandi and
+  Mishra}{2016}]%
+        {farimah:2016:1}
+\bibfield{author}{\bibinfo{person}{F. Farahmandi} {and} \bibinfo{person}{P.
+  Mishra}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{{A}utomated {T}est {G}eneration for {D}ebugging
+  {A}rithmetic {C}ircuits}. In \bibinfo{booktitle}{\emph{Design, Automation
+  Test in Europe Conference Exhibition (DATE)}}.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Farahmandi and Mishra}{Farahmandi and
   Mishra}{2017}]%
         {farimah:2017:1}
@@ -104,6 +127,16 @@
   {U}sing {I}ncremental {G}r\"obner {B}asis {R}eduction}. In
   \bibinfo{booktitle}{\emph{International Conference on Computer Design
   (ICCD)}}. \bibinfo{pages}{193--200}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Fujita}{Fujita}{2015}]%
+        {fujita:2015}
+\bibfield{author}{\bibinfo{person}{M. Fujita}.}
+  \bibinfo{year}{2015}\natexlab{}.
+\newblock \showarticletitle{{T}oward {U}nification of {S}ynthesis and
+  {V}erification in {T}opologically {C}onstrained {L}ogic {D}esign}.
+\newblock \bibinfo{journal}{\emph{Proc. IEEE}} (\bibinfo{year}{2015}).
 \newblock
 
 
@@ -257,6 +290,14 @@
 \newblock \showarticletitle{Calculation of Unate Cube Set Algebra Using
   Zero-suppressed BDDs}. In \bibinfo{booktitle}{\emph{Design Automation
   Conference (DAC)}}. \bibinfo{pages}{420--424}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Rao}{Rao}{2018}]%
+        {farimah_cex}
+\bibfield{author}{\bibinfo{person}{Vikas Rao}.}
+  \bibinfo{year}{2018}\natexlab{}.
+\newblock \bibinfo{howpublished}{\url{http://eng.utah.edu/~utkarshg/cex.pdf},}.
 \newblock
 
 

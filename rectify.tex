@@ -50,6 +50,55 @@ Then, the circuit $C$ is rectifiable at the target set $W$ {\bf\textit{if
    and only if}} union of varieties $\bigcup\limits_{l=1}^{2^m}V(rem_l) = \Ftwo^{|X_{PI}|}$. 
 \end{Theorem}
 
+{\red
+To synthesize a patch, a desired $u_i$ corresponds
+to a polynomial function $u_i:\F_2^{|X_{PI}|} \mapsto \F_2$. 
+\begin{Proof}
+As the correction at target $W$ makes $C$ match $f$, $f$ should vanish on
+$V_{\Fkk}(J')$.
+Moreover, each $rem_l$ comprises only $X_{PI}$ variables. This is
+because WRTO $>_R$ ensures that each non primary input variable (each gate
+output and  word-level variable) appears as the leading term of some
+polynomial in $F'$. Thus each non primary input variable is canceled
+in the reduction $f\xrightarrow{F'_l, F'_{0}}_+ rem_l$. Furthermore,
+as $X_{PI}$ take values in $\F_2$, $x^2=x, \forall x \in
+X_{PI}$. Hence, 
+% even though $V_{\Fkk}(J')$ is evaluated in $\Fkk$,
+$V(rem_l) \subseteq \F_{2}^{|X_{PI}|}$. Thus, the rectification theorem
+ can be equivalently stated as: ``$f$ vanishes on
+\begin{small}
+$V_{\Fkk}(J') \iff \bigcup\limits_{l=1}^{2^m}V(rem_l) = \Ftwo^{|X_{PI}|}$''.
+\end{small} 
+
+(i) {\bf To prove ``$\Rightarrow$''}: Let $x_{PI} \in \Ftwo^{|X_{PI}|}$ be an
+assignment to the primary input variables of $C$. Every assignment
+$x_{PI}$ results in a corresponding assignment $x_{int}$ 
+to rest of the variables in $C$. For each such point $(x_{PI},x_{int})\in \Fkk$,
+the target $W$ evaluates to one of the values in the list $\delta$,
+i.e. $(0,1,\be,\dots,\beta^{2^m-2})$. When $W = 0$, $J'_1$ vanishes on
+the point $(x_{PI},x_{int})$. Likewise, $J'_2$ vanishes on
+$(x_{PI},x_{int})$ when $W = 1$, and so on. Since
+$f\xrightarrow{F'_l\cup F'_0}_+rem_l,1 \leq l \leq 2^m$, and $f$ vanishes
+on the point $(x_{PI},x_{int})$ to begin with, we obtain that for
+every  primary input assignment $x_{PI}$, one of the $rem_l$ vanishes. This
+implies that $ \bigcup\limits_{l=1}^{2^m}V(rem_l) = \Ftwo^{|X_{PI}|}$.
+
+(ii) {\bf To prove ``$\Leftarrow$''}: Say there exists an assignment to the
+primary inputs $x_{PI} \in \Ftwo^{|X_{PI}|}$ such that $rem_1$ vanishes on
+$x_{PI}$, i.e. $rem_1(x_{PI})=0$. For the given point $x_{PI}$, the rest of the variables 
+of $C$ get a corresponding assignment $x_{int}$. 
+As $f\xrightarrow{F'_1\cup F'_0}_+ rem_1$, we have that $f$ is a member of the
+ideal $J'_1 + J'_0 + \langle rem_1 \rangle$. Therefore, when
+$rem_1(x_{PI})=0$, the ideal $J'_1$ also vanishes on $(x_{PI},x_{int}) \in \Fkk$
+because the tuple $(x_{PI},x_{int})$ is a valid evaluation of the circuit.
+Further, $J'_0$ by definition vanishes everywhere in $R'$. This implies that
+$f(x_{PI},x_{int})=0$. The argument similarly holds for each
+$rem_{l}$ vanishing on some $x_{PI}$. This proves that for all primary
+inputs, if any $rem_l:1 \leq l \leq 2^m$ vanishes, then $f$ vanishes too; and 
+that completes the proof.
+\end{Proof}
+ }
+
 The above check for union of varieties can be performed 
 % as $\prod_{l=1}^{2^m} rem_l\xrightarrow{J_{0}^{X_{PI}}}_+0?$ (cf. Section \ref{sec:prelim}).
 as product of ideals, i.e. by checking if $\prod_{l=1}^{2^m} 
@@ -123,6 +172,8 @@ assignment $W_c[l]$ to $W$ such that $f$ and $C$ match. Consequently, there
 exists a set of functions $U = (u_1,\dots,u_m)$ that can be computed to 
 rectify every error minterm. We exploit and explore this concept 
 to compute rectification functions in the following section.
+
+
 % To synthesize a patch, a desired $u_i$ corresponds
 % to a polynomial function $u_i:\F_2^{|X_{PI}|} \mapsto \F_2$. 
 % \begin{Proof}

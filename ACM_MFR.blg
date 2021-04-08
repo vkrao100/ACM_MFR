@@ -13,6 +13,10 @@ Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Database file #1: vikas.bib
 Database file #2: utkarsh.bib
+Repeated entry---line 503 of file utkarsh.bib
+ : @misc{DGPS_410
+ :               ,
+I'm skipping whatever remains of this entry
 Database file #3: tim.bib
 Database file #4: xiaojun.bib
 Database file #5: logic.bib
@@ -26,8 +30,13 @@ Warning--empty publisher in crypto:bug_attacks
 Warning--empty address in crypto:bug_attacks
 Warning--empty address in abc
 Warning--empty address in SS_Alan:DAC18
+Warning--empty publisher in farimah:2016:1
+Warning--empty address in farimah:2016:1
+Warning--page numbers missing in both pages and numpages fields in farimah:2016:1
 Warning--empty publisher in farimah:2017:1
 Warning--empty address in farimah:2017:1
+Warning--no number and no volume in fujita:2015
+Warning--page numbers missing in both pages and numpages fields in fujita:2015
 Warning--empty publisher in SS_Fujita:ISQED17
 Warning--empty address in SS_Fujita:ISQED17
 Warning--empty publisher in scholl:2
@@ -74,45 +83,45 @@ Warning--empty publisher in MF_Roland:ICCAD10
 Warning--empty address in MF_Roland:ICCAD10
 Warning--empty publisher in SS_Roland:DAC18
 Warning--empty address in SS_Roland:DAC18
-You've used 29 entries,
+You've used 33 entries,
             5959 wiz_defined-function locations,
-            1502 strings with 20265 characters,
-and the built_in function-call counts, 35630 in all, are:
-= -- 3788
-> -- 1310
+            1516 strings with 20761 characters,
+and the built_in function-call counts, 39243 in all, are:
+= -- 4194
+> -- 1440
 < -- 1
-+ -- 433
-- -- 448
-* -- 2442
-:= -- 3587
-add.period$ -- 145
-call.type$ -- 29
-change.case$ -- 208
-chr.to.int$ -- 27
-cite$ -- 82
-duplicate$ -- 3443
-empty$ -- 2377
-format.name$ -- 546
-if$ -- 8469
++ -- 473
+- -- 496
+* -- 2676
+:= -- 3982
+add.period$ -- 163
+call.type$ -- 33
+change.case$ -- 232
+chr.to.int$ -- 31
+cite$ -- 91
+duplicate$ -- 3780
+empty$ -- 2617
+format.name$ -- 602
+if$ -- 9300
 int.to.chr$ -- 4
 int.to.str$ -- 1
-missing$ -- 134
-newline$ -- 248
-num.names$ -- 230
-pop$ -- 1488
+missing$ -- 143
+newline$ -- 278
+num.names$ -- 262
+pop$ -- 1628
 preamble$ -- 1
-purify$ -- 465
+purify$ -- 525
 quote$ -- 0
-skip$ -- 1282
+skip$ -- 1401
 stack$ -- 0
-substring$ -- 2506
-swap$ -- 364
+substring$ -- 2730
+swap$ -- 385
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 801
-warning$ -- 53
-while$ -- 211
+type$ -- 907
+warning$ -- 58
+while$ -- 239
 width$ -- 0
-write$ -- 506
-(There were 53 warnings)
+write$ -- 569
+(There was 1 error message)
