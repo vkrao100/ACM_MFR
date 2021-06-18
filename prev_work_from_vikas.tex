@@ -1,0 +1,40 @@
+
+% Introducing SCA for verification
+Symbolic Computer Algebra (SCA) techniques are found to be more
+suitable for formal analysis and verification of arithmetic circuits.
+However, utilization of the various facets and capabilities of the SCA
+techniques for post-verification debugging and rectification has only
+recently begun to be addressed~\cite{farimah:2017:1,MF_Rolf:ISVLSI18,Utkarsh:VLSI18,
+Vkrao:FMCAD18,Utkarsh:ETS19,Vkrao:ISQED21}. }
+
+% Latest prior work related to rectification 
+Contemporary approaches formulate rectification
+using QBF solving~\cite{scholl:2}, using CI or iterative SAT
+solving~\cite{MF_Roland:ICCAD10,MF_Huang:DATE12}.  
+The rectification techniques in~\cite{MF_Huang:DATE12,SS_Roland:DAC18} iteratively 
+and incrementally compute multiple single-fix functions that partially patch the 
+circuit in each iteration. The more recent techniques further include more resource 
+awareness in patch generation by reusing existing logic~\cite{SS_Alan:DAC18}, 
+employing improved heuristics for target selection~\cite{SS_Fujita:ISCAS19}, 
+adding reconfigurable components to scale the problem at a higher abstraction level
+~\cite{SS_Fujita:ISCAS19_2}, or enumerate rectification points and their drivers 
+by a combination of simulation and rewiring strategy~\cite{SS_Roland:DAC19}. 
+Interested readers can refer~\cite{SS_Roland:DATE20} for a comprehensive analysis
+of the contemporary rectification techniques, their limitations, and future direction. 
+
+%%%%%     Include the below paragraph if required - or can cut down if short on space
+
+% In~\cite{SS_Roland:DAC19} the authors propose a robust ECO approach to derive 
+% patches with minimal impact on the heavily optimized existing implementation 
+% against a structurally dissimilar ECO-evolved specification. 
+% They enumerate rectification points 
+% functionally by simulation and match the circuitry of patches implicitly 
+% to maximize reuse of existing logic in the implementation. To achieve 
+% scalability, the method proposes modeling and analyzing its computations 
+% in symbolic sampling domain. 
+
+
+However, circuits that implement polynomial 
+computations over large bit-vector operands are hard to rectify using 
+models based on Boolean function, SAT/SMT-solvers, etc.
+
