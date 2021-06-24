@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{32}
+\begin{thebibliography}{34}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -82,6 +82,18 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Buchberger}{Buchberger}{1965}]%
+        {buchberger_thesis}
+\bibfield{author}{\bibinfo{person}{B. Buchberger}.}
+  \bibinfo{year}{1965}\natexlab{}.
+\newblock \emph{\bibinfo{title}{{E}in {A}lgorithmus zum {A}uffinden der
+  {B}asiselemente des {R}estklassenringes nach einem nulldimensionalen
+  {P}olynomideal}}.
+\newblock \bibinfo{thesistype}{Ph.D. Dissertation}. \bibinfo{school}{University
+  of Innsbruck}.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Dao, Lee, Chen, Lin, Jiang, Mishchenko, and
   Brayton}{Dao et~al\mbox{.}}{2018}]%
         {SS_Alan:DAC18}
@@ -125,6 +137,17 @@
 \newblock \showarticletitle{{T}oward {U}nification of {S}ynthesis and
   {V}erification in {T}opologically {C}onstrained {L}ogic {D}esign}.
 \newblock \bibinfo{journal}{\emph{Proc. IEEE}} (\bibinfo{year}{2015}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Gao, Platzer, and Clarke}{Gao
+  et~al\mbox{.}}{2011}]%
+        {gao:qe-gf-gb}
+\bibfield{author}{\bibinfo{person}{S. Gao}, \bibinfo{person}{A. Platzer}, {and}
+  \bibinfo{person}{E. Clarke}.} \bibinfo{year}{2011}\natexlab{}.
+\newblock \showarticletitle{Quantifier {E}limination over {F}inite {F}ields
+  with {G}r\"obner {B}ases}. In \bibinfo{booktitle}{\emph{Intl. Conf. Algebraic
+  Informatics}}.
 \newblock
 
 

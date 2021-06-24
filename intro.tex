@@ -6,32 +6,28 @@ is desirable to synthesize rectification sub-functions with
 minimal topological changes to the existing design -- a problem
 often termed as {\it partial synthesis}. 
 The process constitutes identifying
-candidate nets in the circuit as targets for rectification, followed by  
-a check to determine whether the circuit can be patched at these
-targets. 
-If the targets admit correction, corresponding rectification
-functions are computed and synthesized to fix the circuit at these targets.
+candidate nets in the circuit as potential targets for rectification, followed by  
+a check to ascertain the rectifiability of the circuit at these targets. 
+If the check confirms that the targets admit correction, corresponding rectification
+functions are computed and synthesized to patch the circuit at these targets.
 %  If the targets admit correction, corresponding rectification functions
 % are computed in terms of primary inputs, followed by re-basing wherein the 
 % computed function is synthesized in terms of prior design efforts}.
 %Begin ACM journal
   
 It is akin to performing synthesis for Engineering Change Order 
-(ECO), wherein a highly optimized implementation is minimally modified to match the 
-updated specification in a cost effective way. This is achieved by reusing prior design 
-efforts and avoiding rerunning the entire synthesis flow, while adhering to the resource 
-constraints and the physical design limitations.
+(ECO), wherein a highly optimized implementation is minimally modified to match the updated specification in a cost-effective way. This is achieved by reusing prior design efforts and avoiding rerunning the entire synthesis flow while adhering to the resource constraints and the physical design limitations.
 
-The rectification problem has witnessed a lot of research over the years -- 
+The rectification problem has witnessed much research over the years -- 
 some of the earliest being~\cite{Sadowska:DAC95,scholl:1,andreas:2005}.
 Owing to a manifold improvement in the efficiency of SAT solvers,
 there has been a renewed interest in the problem over the last decade from 
-the logic synthesis, testing and verification communities~\cite{
+the logic synthesis, testing, and verification communities~\cite{
 MF_Huang:DATE12,scholl:2,SS_Fujita:ISQED17,SS_Alan:DAC18}.
 These techniques generally employ SAT, Quantified Boolean Formula (QBF) solving,
 and Craig Interpolation (CI) based techniques for rectification. While
 successful for control-dominated applications, these techniques are
-computationally infeasible for rectification of arithmetic circuits.
+computationally infeasible for the rectification of arithmetic circuits.
 Symbolic Computer Algebra (SCA) techniques are found to be more
 suitable for formal analysis and verification of arithmetic circuits.
 However, utilization of the various facets and capabilities of the SCA
@@ -44,29 +40,25 @@ Vkrao:FMCAD18,Utkarsh:ETS19,Vkrao:ISQED21,Vkrao:GLSVLSI21}.
 
 
 \subsection{Motivation}
-This paper addresses the problem of {\it multi-target rectification
+This article addresses the problem of {\it multi-target rectification
 of faulty finite field arithmetic circuits}.
 Such circuits find applications in cryptography,
-error-control codes, RFID tags, testing of VLSI circuits, among 
-others. Specifically, Elliptic Curve Cryptography (ECC) is one of 
-the most important usage models where the public-key cryptography 
-is designed on the algebraic structure of elliptic curves over 
-finite fields. Due to its shorter key length and efficiency ~\cite{ecc_app:2016}, 
-ECC is fast becoming the encryption standard with applications 
-in cryptocurrency transaction signing and securing web traffic.
-Arithmetic circuits are mostly custom designed, thus 
-raising the potential for errors in the implementation, 
+error-control codes, RFID tags, testing of VLSI circuits, among others. Specifically, Elliptic Curve Cryptography (ECC) is one of the most important usage models where the public-key cryptography is designed on the algebraic structure of elliptic curves over finite fields. Due to its shorter key length and efficiency ~\cite{ecc_app:2016}, 
+ECC is fast becoming the encryption standard with applications in cryptocurrency transaction signing and securing web traffic.
+The main building blocks of ECC hardware implementations 
+are fast, custom-built finite field arithmetic circuits, 
+thus raising the potential for errors in the implementation, 
 which have to be eventually rectified. 
 It was shown~\cite{crypto:bug_attacks} that incorrect cryptography 
 hardware can lead to full leakage of the security key and even
 counterfeiting~\cite{crypto:counterfeit}.
 To secure data privacy and avoid vulnerabilities in crypto-systems, their
-rectification is of utmost importance.
+rectification is imperative.
 
 
 %End ACM journal
 %While successful for control-dominated applications, the SAT-based 
-%models~[4-10] however are infeasible for rectification of arithmetic circuits. 
+%models~[4-10], however, are infeasible for rectification of arithmetic circuits. 
 
 % {\it Problem Statement and Objective:}
 \subsection{Problem Statement and Objective}
@@ -81,7 +73,7 @@ to construct $\Fkn$.
 \item A faulty circuit implementation $C$,
 with no assumptions on the number or the type of bugs present in
 $C$. 
-\item A set $W = \{w_1,\dots,w_m\}$ of $m$ targets from $C$,
+\item A set $W = \{w_1,\dots,w_m\}$ of $m$ candidate targets from $C$,
 pre-specified or selected using contemporary signal selection heuristics 
 ~\cite{SS_Alan:DAC18,SS_Fujita:ISCAS19,SS_Roland:DAC19}.
 \ei
@@ -94,19 +86,102 @@ admits rectification at these $m$ targets.
 \item Compute a set
 of individual rectification functions $U =
 \{u_1,\dots,u_m\}$ for the corresponding targets. 
-\bi 
-\item Here, each $u_i$ is a 
-polynomial function $u_i:\F_2^{|X_{PI}|}\rightarrow\F_2$, where $\F_2=\{0,1\}$, 
-and $X_{PI}$ denotes the set of primary input variables.
-\ei
 \item Derive {\it don't care conditions}
 corresponding to the $m$ rectification functions. 
 \item Synthesize
 the rectification polynomials into logic sub-circuit patches.
-%Note that the cardinality of $|W|=|U|=|O|=m$.
+%Note thatn the cardinality of $|W|=|U|=|O|=m$.
 \ei
 
-\subsection{Prior Work}
+\subsection{Approach and Contribution}
+% In particular, we exploit the ideal-variety
+% correspondences to explore and compute rectification functions for the $m$-targets
+% collectively. 
+We model the rectification problem using concepts from algebraic geometry and
+use symbolic computer algebra algorithms to determine rectifiability and to 
+compute rectification functions. 
+The specification $f$ and implementation $C$ are modeled in terms of polynomial ideals. 
+The rectifiability check is formulated on these ideals using the Strong Nullstellensatz over finite fields. Subsequently, 
+the rectification functions are computed using the \Grobner bases~\cite{gb_book} of these ideals.
+In this regard, our approach goes beyond the Nullstellensatz-based 
+results produced from the $m$-target rectifiability check presented 
+in~\cite{Vkrao:ISQED21}, and {\it computes} $m$ individual rectification 
+functions, altogether. We show how, in our algebraic model the don't cares correspond to {\it varieties of polynomial ideals}, and how they can be computed with \Grobner bases. The rectification functions are computed as polynomials whose common zeros correspond to the minterms of the functions.
+Overall, our contributions are as follows:
+
+\bi
+\item Formulate a check to determine the rectifiability of $C$ at
+the $m$ targets.
+\bi
+    \item This check implies the existence of a polynomial function over $\Fkn$ with
+    mapping $u_i:\F_2^{|X_{PI}|}\rightarrow\F_2$ at individual targets $w_i$. Here, 
+    $1 \leq i \leq m$, $\F_2=\{0,1\}$, and $X_{PI}$ denotes the set of primary input variables of $C$. 
+    \item Substituting the polynomial function at the corresponding targets, $w_i = u_i[X_{PI}]$, rectifies the circuit.
+\ei
+
+\item While there may exist multiple rectification functions for each of the $m$ targets, we compute one such individual function for each of the targets. 
+We present two approaches for patch function computation:
+
+\bi 
+\item First, a heuristic which greedily resolves the rectification functions 
+for the targets.
+\item A second heuristic which explores a subset of {\it don't care conditions} for the targets.
+\bi
+    \item We present efficient techniques to explore the space of various admissible rectification
+functions, in turn, computing subsets of don't care conditions
+which helps in simplifying the rectification patches.
+
+    \item Synthesis of the corresponding polynomial patch functions along with don't cares, demonstrates the efficacy of our approach in terms of improved area and delay characteristics of the patches.
+
+\ei
+\ei
+
+\item  We further propose a synthesis
+procedure that can translate such polynomial functions to Boolean rectification 
+functions. Subsequently, these functions are translated to Boolean logic by converting the algebraic multiplication and addition operations to the Boolean AND and XOR operations, respectively.
+
+\item We present theoretical concepts and algorithms, and their implementations, 
+to provide a scalable and efficient solution for the rectification of finite field arithmetic circuits.
+
+\item We substantiate the efficacy of our techniques by rectifying 
+large operand-width finite field arithmetic circuits, where conventional SAT-solver based 
+rectification approaches are infeasible.
+\bi
+
+\item We reason about the presence or absence of solutions and other properties of a system of polynomials without explicitly solving them. 
+In contrast, the contemporary approaches explicitly solve for a solution at each step and hence are infeasible towards rectification of arithmetic circuits.
+\ei
+
+ 
+\ei
+
+
+
+% Our approach is implemented using the polynomial algebra computational
+% engines of {\sc Singular} \cite{DGPS_410} and {\sc PolyBori}\cite{pbori:JSC09}.
+
+% Derive the necessary and sufficient conditions
+% for the existence of a rectification function at multiple targets.
+% We compute logic corrections as polynomial functions in primary input variables
+% for the given targets, which are synthesized into rectification patches for the corresponding targets.
+% We introduce the notion of word-level don't 
+% cares in a polynomial algebra setting.
+
+
+%% However, exploiting symbolic algebra techniques on generating low-cost patches and
+%% computing a patch function in terms of internal nets needs further investigation and 
+%% tuning, which is beyond the scope of this paper.
+
+The article is organized as follows: The following section covers preliminary
+background. Section~\ref{sec:pmodel} reviews the polynomial modeling
+concepts. Rectification check formulation is described in
+Section~\ref{sec:rcheck}, followed by the rectification function and
+don't care computations in Section~\ref{sec:rfunc}. Section~\ref{impl}
+discusses the implementation details, and experimental
+results are described in Section \ref{sec:exp}, and
+Section~\ref{sec:conc} concludes the article. 
+
+\section{Review of Prior Work}
 
 Contemporary approaches formulate rectification
 using QBF solving~\cite{scholl:2}, using CI or iterative SAT
@@ -126,9 +201,7 @@ such objectives, such as the symbolic sampling approach of~\cite{SS_Roland:DAC19
  In~\cite{SS_Roland:DAC19} the authors propose a robust ECO approach to derive 
 patches with minimal impact on the heavily optimized existing implementation 
 against a structurally dissimilar ECO-evolved specification. 
-They enumerate rectification points 
-functionally by simulation and match the circuitry of patches implicitly 
-to maximize reuse of existing logic in the implementation. To achieve 
+They enumerate rectification points functionally by simulation and match the circuitry of patches implicitly to maximize the reuse of existing logic in the implementation. To achieve 
 scalability, the method proposes modeling and analyzing its computations 
 in symbolic sampling domain. However, circuits that implement polynomial 
 computations over large bit-vector operands are hard to rectify using 
@@ -139,7 +212,7 @@ finite field circuits beyond 16-bit operands.
 % While successful for control-dominated applications, these techniques are
 % computationally infeasible for rectification of arithmetic circuits.
 
-\subsubsection{Symbolic Computer Algebra}
+\subsection{Symbolic Computer Algebra}
 
 In the context of arithmetic circuits, symbolic computer algebra 
 techniques for integer arithmetic~\cite{farimah:2016:1,farimah:2017:1,
@@ -147,114 +220,52 @@ MF_Rolf:ISVLSI18} and finite field circuits~\cite{Utkarsh:ETS19,
 Utkarsh:VLSI18,Vkrao:FMCAD18} have been considered for rectification. 
 The rectification approaches presented in~\cite{farimah:2016:1,farimah:2017:1} 
 rely heavily on the structure of the arithmetic circuit. Further,
-if the arithmetic circuits contain redundancies, then their approach 
+if the circuit contains redundancies, their approach 
 fails~\cite{farimah_cex} to resolve the rectification question. 
+Further, the approach of~\cite{MF_Rolf:ISVLSI18} is limited by the fault model,
+which addresses only a gate misplacement fault.
 The authors in~\cite{Utkarsh:ETS19,Utkarsh:VLSI18} present a Weak 
-Nullstellensatz based rectification formulation to determine existence 
-of rectification functions and solve them using GB-based techniques. 
-Subsequently, rectification function is computed by application of 
+Nullstellensatz based rectification formulation to determine the existence of 
+rectification functions and solve them using GB-based techniques. 
+Subsequently, the rectification function is computed by the application of 
 Craig Interpolation in polynomial algebra over finite fields. 
+The authors show how the lattice of all algebraic interpolants 
+correspond to don't care conditions for the rectification function, and synthesize
+rectification functions from algebraic interpolants.
+As an alternative to CI, in~\cite{Vkrao:FMCAD18} we presented an approach where
+rectification was formulated using ideal membership and extended GB theory.
+% The authors introduce a complete theory of Craig Interpolation in polynomial
+% algebra over finite fields using Hilbert's Nullstellensatz, and device GB-algorithms
+% to compute them.
 However, all these algebraic approaches address only {\it single-fix 
-rectification} -- where irrespective of the type or number of bugs 
-in the circuit, rectification is attempted at a single net. This is 
-too restrictive and depending on the nature of the bugs, the circuit 
-may not admit single-fix rectification at all. In such cases, 
-correction has to be attempted at multiple targets.
+rectification} -- where irrespective of the type or number of bugs in the circuit, rectification is attempted at a single net. This is too restrictive, and depending on the nature of the bugs, the circuit may not admit single-fix rectification at all. In such cases, 
+the correction has to be attempted at multiple targets.
 
 Recently, we proposed a word-level SCA based approach~\cite{Vkrao:ISQED21} 
 to {\it decide multi-target rectifiability} in finite field circuits. 
 Given a set of $m$-targets within a $n$-bit operand width circuit, 
 the approach presents a Strong Nullstellensatz based decision procedure
-to determine existence of rectification functions at these targets.
+to determine the existence of rectification functions at these targets.
 The efficiency of the approach is derived by interpreting the $m$-targets
-as a $m$-bit-vector. Enabling such a word-level reasoning might induce 
+as a $m$-bit-vector. The problem was modeled at a word-level to enable the use of 
+higher level abstraction in rectification and synthesis. 
+However, enabling such word-level reasoning might induce 
 computation issues across elements from the $n$-bit-vector space (circuit) 
 and the $m$-bit-vector space (rectification patch). To resolve this
 incompatibility, we presented theory and mathematical derivations that
 facilitate algebraic computations over a unified domain modeled over 
 $k=LCM(n,m)$. However, for finite field circuits, with practical applications 
-in cryptography, the operand width $n$ as recommended by the National 
-Institute of Standards and Technology (NIST), is generally a prime number. 
+in cryptography, the operand width $n$ as dictated by the National 
+Institute of Standards and Technology (NIST) is generally a prime number. 
 For example, NIST-ECC recommends $n$ to be 163 or larger 
 ($n$= 163, 233, 283, 409, 571, etc.). Thus, for any given target size $m$, 
-$k=LCM(n,m)=n*m$ becomes extremely large. This results in algebraic 
-computations involving extremely large primitive elements and constants.
+$k=LCM(n,m)=n*m$ becomes extremely large. This results in algebraic computations 
+involving substantially large primitive elements and constants.
 The large size coupled with the complicated arithmetic nature of these 
 circuits increases the complexity of the rectification problem.
-Moreover, the proposed approach~\cite{Vkrao:ISQED21} can only ascertain 
-whether {\it there exists} a set of patch functions that can patch the 
-circuit at those targets. As it is only a decision procedure, the 
+Moreover, the proposed approach~\cite{Vkrao:ISQED21} can only ascertain whether {\it there exists} a set of 
+functions that can patch the circuit at the targets. As it is only a decision procedure, the 
 approach cannot {\it compute} rectification functions. Thus the problem 
 of multi-fix rectification of data-path circuits remains unsolved, and 
 theoretical and algorithmic solutions to compute and synthesize 
 rectification patches for arithmetic circuits are still desired.
-
-\subsection{Approach and Contribution}
-% In particular, we exploit the ideal-variety
-% correspondences to explore and compute rectification functions for the $m$-targets
-% collectively. 
- Our techniques and algorithms are based on symbolic computer algebra
-and algebraic geometry -- particularly on the concepts of the Strong
-Nullstellensatz and \Grobner bases \cite{gb_book}. Rectification is 
-performed against a given polynomial specification over finite fields, 
-with the specification and implementation modeled in terms of polynomial 
-ideals~\cite{gb_book}. The rectifiability check is formulated on these 
-ideals using the Strong Nullstellensatz over finite fields. Subsequently, 
-the rectification functions are computed using the \Grobner bases of these ideals. 
-We model the rectifiability check as a decision procedure and the rectification 
-function computation as a quantification procedure. 
-In this regard, our approach goes beyond the Nullstellensatz-based 
-results produced from the $m$-target rectifiability check presented 
-in~\cite{Vkrao:ISQED21}, and {\it computes} $m$ individual rectification 
-functions altogether. While there may exist multiple rectification functions 
-for each of the $m$ targets, we compute and synthesize one such individual 
-function for each of the targets. Further, we show how in our algebraic model 
-the don't cares correspond to {\it varieties of polynomial ideals}, and how 
-they can be computed with \Grobner bases.
-We reason about the presence or absence of solutions 
-and other properties of a system of polynomials without explicitly solving them. 
-In contrast, the contemporary approaches explicitly solve for a solution at 
-each step and hence are infeasible towards rectification of arithmetic circuits.
-% Our approach is implemented using the polynomial algebra computational
-% engines of {\sc Singular} \cite{DGPS_410} and {\sc PolyBori}\cite{pbori:JSC09}.
-
-\subsubsection{Contributions}:
-\bi
-\item We derive the necessary and sufficient conditions
-for the existence of a rectification function at multiple targets.
-
-\item We compute logic corrections as polynomial functions in primary input variables
-for the given targets, which are synthesized into rectification patches for the corresponding targets.
-
-\item We introduce the notion of word-level (or multi-target??) don't 
-cares in a polynomial algebra setting.
-
-\item We present efficient techniques to explore the space of various admissible rectification
-functions, in turn, computing subsets of don't care conditions
-which help in simplifying the rectification patches.
-	\bi
-	\item Synthesis of the corresponding polynomial patch functions, along with don't cares, demonstrates 
-	the efficacy of our approach in terms of improved area and delay characteristics of the patches.
-	\ei
-
-\item We present theoretical concepts and algorithms, and their implementations, 
-to provide a scalable and efficient solution for rectification of finite field arithmetic circuits.
-
-\item We substantiate the efficacy of our techniques by rectifying 
-large operand-width finite field arithmetic circuits, where conventional SAT-solver based 
-rectification approaches are infeasible.
-
-\ei
-
-%% However, exploiting symbolic algebra techniques on generating low-cost patches and
-%% computing a patch function in terms of internal nets needs further investigation and 
-%% tuning, which is beyond the scope of this paper.
-
-{\it Paper Organization:} The following section covers preliminary
-background. Section~\ref{sec:pmodel} reviews the polynomial modeling
-concepts. Rectification check formulation is described in
-Section~\ref{sec:rcheck}, followed by the rectification function and
-don't care computations in Section~\ref{sec:rfunc}. Section~\ref{impl}
-discusses the implementation details, and experimental
-results are described in Section \ref{sec:exp}, and
-Section~\ref{sec:conc} concludes the paper. 

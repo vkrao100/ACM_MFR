@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  23 JUN 2021 20:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  24 JUN 2021 17:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1256,29 +1256,71 @@ surrounding objects on input line 144.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 10.0pt on input line 7.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 43.
+(Font)              scaled to size 7.0pt on input line 39.
  [1.1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 75.
+(Font)              scaled to size 10.0pt on input line 67.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
-(Font)              scaled to size 10.0pt on input line 75.
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 98.
+(Font)              scaled to size 10.0pt on input line 67.
  [2.2]
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 144.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
+(Font)              scaled to size 10.0pt on input line 116.
  [3.3])
 (/home/vikas/Documents/course_docs/spring_21/ACM_MFR/prelim.tex [4.4]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 89.
+put line 97.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
-(Font)              scaled to size 10.0pt on input line 93.
+(Font)              scaled to size 10.0pt on input line 101.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
-(Font)              scaled to size 7.3pt on input line 93.
+(Font)              scaled to size 7.3pt on input line 101.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
-(Font)              scaled to size 5.5pt on input line 93.
- [5.5])
-(/home/vikas/Documents/course_docs/spring_21/ACM_MFR/pmodel.tex [6.6]
+(Font)              scaled to size 5.5pt on input line 101.
+
+Underfull \vbox (badness 1546) has occurred while \output is active []
+
+ [5.5]
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
+(Font)              scaled to size 7.0pt on input line 188.
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.272   \State
+               $G:= F$;pdfTeX warning (ext4): destination with the same identif
+ier (name{ALG@line.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.273   \While
+              {$G' \neq G$}pdfTeX warning (ext4): destination with the same ide
+ntifier (name{ALG@line.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.274     \State
+                 $G' := G$pdfTeX warning (ext4): destination with the same iden
+tifier (name{ALG@line.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.275     \For
+               {each pair $\{f_i, f_j\}, i \neq j$ in $G'$}pdfTeX warning (ext4
+): destination with the same identifier (name{ALG@line.5}) has been already use
+d, duplicate ignored
+<to be read again> 
+                   \relax 
+l.276       \State
+                   $Spoly(f_i, f_j) \stackrel{G'}{\textstyle\longrightarrow}...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.277       \If
+                {$h \neq 0$} \State $G:= G \cup \{h\}$ \EndIfpdfTeX warning (ex
+t4): destination with the same identifier (name{ALG@line.7}) has been already u
+sed, duplicate ignored
+<to be read again> 
+                   \relax 
+l.277       \If {$h \neq 0$} \State
+                                    $G:= G \cup \{h\}$ \EndIf [6.6])
+(/home/vikas/Documents/course_docs/spring_21/ACM_MFR/pmodel.tex [7.7]
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 10.0pt on input line 94.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/it' will be
@@ -1289,7 +1331,7 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 9.0pt on input line 167.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 9.0pt on input line 169.
-<mas_3_ddc_mfr_a.pdf, id=229, 675.86174pt x 751.09pt>
+<mas_3_ddc_mfr_a.pdf, id=246, 675.86174pt x 751.09pt>
 File: mas_3_ddc_mfr_a.pdf Graphic file (type pdf)
 <use mas_3_ddc_mfr_a.pdf>
 Package pdftex.def Info: mas_3_ddc_mfr_a.pdf  used on input line 247.
@@ -1299,12 +1341,12 @@ LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/it' will be
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 6.2pt on input line 260.
 )
-(/home/vikas/Documents/course_docs/spring_21/ACM_MFR/rectify.tex [7.7]
+(/home/vikas/Documents/course_docs/spring_21/ACM_MFR/rectify.tex [8.8]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/it' will be
 (Font)              scaled to size 10.0pt on input line 50.
- [8.8 </home/vikas/Documents/course_docs/spring_21/ACM_MFR/mas_3_ddc_mfr_a.pdf>
+ [9.9 </home/vikas/Documents/course_docs/spring_21/ACM_MFR/mas_3_ddc_mfr_a.pdf>
 ]
-[9.9]) (/home/vikas/Documents/course_docs/spring_21/ACM_MFR/func_comp.tex
+[10.10]) (/home/vikas/Documents/course_docs/spring_21/ACM_MFR/func_comp.tex
 Overfull \hbox (5.81398pt too wide) in paragraph at lines 93--94
 \T1/LinuxLibertineT-TLF/m/n/10 (-20) To il-lus-trate the greedy ap-proach, con-
 sider the case with $\OML/nxlmi/m/it/10 m \U/ntxmia/m/it/10 = \OT1/LinuxLiberti
@@ -1320,14 +1362,17 @@ txsy/m/n/10 º\OML/nxlmi/m/it/10 ; \LMS/ntxsy/m/n/10 ¹\OT1/LinuxLibertineT-TLF/m
 txsy/m/n/10 ºg$\T1/LinuxLibertineT-TLF/m/n/10 (-20) ,
  []
 
-[10.10]
+[11.11]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 7.3pt on input line 156.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 5.5pt on input line 156.
- [11.11] [12.12])
-(/home/vikas/Documents/course_docs/spring_21/ACM_MFR/impl.tex)
-(/home/vikas/Documents/course_docs/spring_21/ACM_MFR/experiments.tex [13.13]
+ [12.12]
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 294.
+ [13.13])
+(/home/vikas/Documents/course_docs/spring_21/ACM_MFR/impl.tex [14.14])
+(/home/vikas/Documents/course_docs/spring_21/ACM_MFR/experiments.tex
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <8> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 133.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
@@ -1338,39 +1383,36 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/it' will be
 (Font)              scaled to size 8.0pt on input line 148.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 (Font)              scaled to size 8.0pt on input line 148.
-
-[14.14]) (/home/vikas/Documents/course_docs/spring_21/ACM_MFR/ACM_MFR.bbl
-[15.15]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [16.16])
+ [15.15])
+(/home/vikas/Documents/course_docs/spring_21/ACM_MFR/ACM_MFR.bbl [16.16]
+[17.17])
 
 Class acmart Warning: ACM reference format is mandatory for papers over one pag
 e.
 
-[17.17]
+[18.18]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 191.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 191.
  (/home/vikas/Documents/course_docs/spring_21/ACM_MFR/ACM_MFR.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 191.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 191.
 Package rerunfilecheck Info: File `ACM_MFR.out' has not changed.
-(rerunfilecheck)             Checksum: 82E8694AB5E87DA5845F77307AE84E31;3112.
+(rerunfilecheck)             Checksum: DB576342BB4B3456CAAB05226B3E7A2A;3356.
  ) 
 Here is how much of TeX's memory you used:
- 22820 strings out of 492982
- 358024 string characters out of 6134895
- 516749 words of memory out of 5000000
- 25025 multiletter control sequences out of 15000+600000
- 280940 words of font info for 567 fonts, out of 8000000 for 9000
+ 22874 strings out of 492982
+ 359131 string characters out of 6134895
+ 518749 words of memory out of 5000000
+ 25052 multiletter control sequences out of 15000+600000
+ 288407 words of font info for 581 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 60i,16n,94p,1337b,675s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,16n,94p,1337b,646s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/libertine/lbtn_fygcup.enc}{/us
-r/share/texlive/texmf-dist/fonts/enc/dvips/libertine/lbtn_ki75ao.enc}{/usr/shar
-e/texlive/texmf-dist/fonts/enc/dvips/libertine/lbtn_kijugd.enc}{/usr/share/texl
-ive/texmf-dist/fonts/enc/dvips/newtx/libertinealt.enc}{/usr/share/texlive/texmf
--dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvip
-s/libertine/lbtn_ncsllp.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/libe
+r/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texlive/texm
+f-dist/fonts/enc/dvips/libertine/lbtn_ki75ao.enc}{/usr/share/texlive/texmf-dist
+/fonts/enc/dvips/libertine/lbtn_kijugd.enc}{/usr/share/texlive/texmf-dist/fonts
+/enc/dvips/libertine/lbtn_ncsllp.enc}{/usr/share/texlive/texmf-dist/fonts/enc/d
+vips/newtx/libertinealt.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/libe
 rtine/lbtn_oexx6f.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/libertine/
 lbtn_7grukw.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/libertine/lbtn_n
 h77jq.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/libertine/lbtn_naooyc.
@@ -1394,10 +1436,10 @@ s/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
 helvetic/uhvro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/zx
 lri.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/zxlzi.pfb>
 Output written on /home/vikas/Documents/course_docs/spring_21/ACM_MFR/ACM_MFR.p
-df (17 pages, 804980 bytes).
+df (18 pages, 812798 bytes).
 PDF statistics:
- 479 PDF objects out of 1000 (max. 8388607)
- 401 compressed objects within 5 object streams
- 101 named destinations out of 1000 (max. 500000)
- 93850 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 497 PDF objects out of 1000 (max. 8388607)
+ 418 compressed objects within 5 object streams
+ 108 named destinations out of 1000 (max. 500000)
+ 94370 words of extra memory for PDF output out of 106986 (max. 10000000)
 
