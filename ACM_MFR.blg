@@ -1,30 +1,19 @@
-This is BibTeX, Version 0.99d
-Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: ACM_MFR.aux
-Reallocating 'name_of_file' (item size: 1) to 21 items.
 The style file: ACM-Reference-Format.bst
-Reallocating 'name_of_file' (item size: 1) to 6 items.
-Reallocating 'name_of_file' (item size: 1) to 8 items.
-Reallocating 'name_of_file' (item size: 1) to 4 items.
-Reallocating 'name_of_file' (item size: 1) to 8 items.
-Reallocating 'name_of_file' (item size: 1) to 6 items.
-Reallocating 'singl_function' (item size: 4) to 100 items.
-Reallocating 'singl_function' (item size: 4) to 100 items.
-Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: vikas.bib
 Database file #2: utkarsh.bib
-Repeated entry---line 503 of file utkarsh.bib
- : @misc{DGPS_410
- :               ,
-I'm skipping whatever remains of this entry
 Database file #3: tim.bib
 Database file #4: xiaojun.bib
 Database file #5: logic.bib
-Reallocating 'singl_function' (item size: 4) to 100 items.
-Reallocating 'glb_str_end' (item size: 4) to 20 items.
-Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
-Reallocating 'global_strs' (item size: 1) to 4000000 items.
-Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
 Warning--empty address in gb_book
 Warning--empty publisher in crypto:bug_attacks
 Warning--empty address in crypto:bug_attacks
@@ -83,45 +72,45 @@ Warning--empty publisher in MF_Roland:ICCAD10
 Warning--empty address in MF_Roland:ICCAD10
 Warning--empty publisher in SS_Roland:DAC18
 Warning--empty address in SS_Roland:DAC18
-You've used 33 entries,
-            5959 wiz_defined-function locations,
-            1516 strings with 20761 characters,
-and the built_in function-call counts, 39243 in all, are:
-= -- 4194
-> -- 1440
+You've used 32 entries,
+            5733 wiz_defined-function locations,
+            1474 strings with 20359 characters,
+and the built_in function-call counts, 38191 in all, are:
+= -- 4098
+> -- 1388
 < -- 1
-+ -- 473
-- -- 496
-* -- 2676
-:= -- 3982
-add.period$ -- 163
-call.type$ -- 33
-change.case$ -- 232
-chr.to.int$ -- 31
-cite$ -- 91
-duplicate$ -- 3780
-empty$ -- 2617
-format.name$ -- 602
-if$ -- 9300
++ -- 456
+- -- 480
+* -- 2606
+:= -- 3868
+add.period$ -- 158
+call.type$ -- 32
+change.case$ -- 224
+chr.to.int$ -- 30
+cite$ -- 90
+duplicate$ -- 3686
+empty$ -- 2544
+format.name$ -- 582
+if$ -- 9059
 int.to.chr$ -- 4
 int.to.str$ -- 1
 missing$ -- 143
-newline$ -- 278
-num.names$ -- 262
-pop$ -- 1628
+newline$ -- 270
+num.names$ -- 254
+pop$ -- 1582
 preamble$ -- 1
-purify$ -- 525
+purify$ -- 508
 quote$ -- 0
-skip$ -- 1401
+skip$ -- 1348
 stack$ -- 0
-substring$ -- 2730
-swap$ -- 385
+substring$ -- 2674
+swap$ -- 380
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 907
+type$ -- 877
 warning$ -- 58
-while$ -- 239
+while$ -- 235
 width$ -- 0
-write$ -- 569
-(There was 1 error message)
+write$ -- 553
+(There were 58 warnings)

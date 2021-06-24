@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{33}
+\begin{thebibliography}{32}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -92,18 +92,6 @@
 \newblock \showarticletitle{{Efficient Computation of ECO Patch Functions}}. In
   \bibinfo{booktitle}{\emph{Design Automation Conference (DAC)}}.
   \bibinfo{publisher}{ACM}, \bibinfo{pages}{51:1--51:6}.
-\newblock
-
-
-\bibitem[\protect\citeauthoryear{Decker, Greuel, Pfister, and
-  Sch\"onemann}{Decker et~al\mbox{.}}{2016}]%
-        {DGPS_410}
-\bibfield{author}{\bibinfo{person}{Wolfram Decker},
-  \bibinfo{person}{Gert-Martin Greuel}, \bibinfo{person}{Gerhard Pfister},
-  {and} \bibinfo{person}{Hans Sch\"onemann}.} \bibinfo{year}{2016}\natexlab{}.
-\newblock \bibinfo{title}{{\sc Singular} {4-1-0} --- {A} computer algebra
-  system for polynomial computations}.
-\newblock \bibinfo{howpublished}{\url{http://www.singular.uni-kl.de}}.
 \newblock
 
 
@@ -298,6 +286,7 @@
 \bibfield{author}{\bibinfo{person}{Vikas Rao}.}
   \bibinfo{year}{2018}\natexlab{}.
 \newblock \bibinfo{howpublished}{\url{http://eng.utah.edu/~utkarshg/cex.pdf},}.
+    (\bibinfo{year}{2018}).
 \newblock
 
 

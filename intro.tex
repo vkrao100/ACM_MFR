@@ -1,21 +1,21 @@
 \section{Introduction}
 \par Debugging and rectification of digital logic circuits aims to correct
 a given defective circuit implementation to match its intended
-specification. {\red As opposed to a complete redesign of the circuit, it
+specification. As opposed to a complete redesign of the circuit, it
 is desirable to synthesize rectification sub-functions with
 minimal topological changes to the existing design -- a problem
-often termed as {\it partial synthesis}.} 
+often termed as {\it partial synthesis}. 
 The process constitutes identifying
 candidate nets in the circuit as targets for rectification, followed by  
 a check to determine whether the circuit can be patched at these
 targets. 
 If the targets admit correction, corresponding rectification
 functions are computed and synthesized to fix the circuit at these targets.
-% {\red If the targets admit correction, corresponding rectification functions
+%  If the targets admit correction, corresponding rectification functions
 % are computed in terms of primary inputs, followed by re-basing wherein the 
 % computed function is synthesized in terms of prior design efforts}.
 %Begin ACM journal
-{\red  
+  
 It is akin to performing synthesis for Engineering Change Order 
 (ECO), wherein a highly optimized implementation is minimally modified to match the 
 updated specification in a cost effective way. This is achieved by reusing prior design 
@@ -38,15 +38,15 @@ However, utilization of the various facets and capabilities of the SCA
 techniques for post-verification debugging and rectification has only
 recently begun to be addressed
 \cite{farimah:2017:1,MF_Rolf:ISVLSI18,Utkarsh:VLSI18,
-Vkrao:FMCAD18,Utkarsh:ETS19,Vkrao:ISQED21,Vkrao:GLSVLSI21}. }
+Vkrao:FMCAD18,Utkarsh:ETS19,Vkrao:ISQED21,Vkrao:GLSVLSI21}. 
 %End ACM journal
 
 
-{\red
+
 \subsection{Motivation}
-This paper addresses the problem of {\it rectification
-of faulty finite field arithmetic circuits} at a given set of
-targets. Such circuits find applications in cryptography,
+This paper addresses the problem of {\it multi-target rectification
+of faulty finite field arithmetic circuits}.
+Such circuits find applications in cryptography,
 error-control codes, RFID tags, testing of VLSI circuits, among 
 others. Specifically, Elliptic Curve Cryptography (ECC) is one of 
 the most important usage models where the public-key cryptography 
@@ -61,7 +61,7 @@ It was shown~\cite{crypto:bug_attacks} that incorrect cryptography
 hardware can lead to full leakage of the security key and even
 counterfeiting~\cite{crypto:counterfeit}.
 To secure data privacy and avoid vulnerabilities in crypto-systems, their
-rectification is of utmost importance.}
+rectification is of utmost importance.
 
 
 %End ACM journal
@@ -81,7 +81,7 @@ to construct $\Fkn$.
 \item A faulty circuit implementation $C$,
 with no assumptions on the number or the type of bugs present in
 $C$. 
-\item A set $W = (w_1,\dots,w_m)$ of $m$ targets from $C$,
+\item A set $W = \{w_1,\dots,w_m\}$ of $m$ targets from $C$,
 pre-specified or selected using contemporary signal selection heuristics 
 ~\cite{SS_Alan:DAC18,SS_Fujita:ISCAS19,SS_Roland:DAC19}.
 \ei
@@ -89,15 +89,15 @@ pre-specified or selected using contemporary signal selection heuristics
 % admits rectification at these $m$ targets, using~\cite{MF_Huang:DATE12,Vkrao:ISQED21}. 
 The objective of our approach is to: 
 \bi
-{\red \item Ascertain that $C$ 
-admits rectification at these $m$ targets}.
+ \item Ascertain that $C$ 
+admits rectification at these $m$ targets.
 \item Compute a set
 of individual rectification functions $U =
-(u_1,\dots,u_m)$ for the corresponding targets. 
+\{u_1,\dots,u_m\}$ for the corresponding targets. 
 \bi 
 \item Here, each $u_i$ is a 
 polynomial function $u_i:\F_2^{|X_{PI}|}\rightarrow\F_2$, where $\F_2=\{0,1\}$, 
-and $X_{PI}$ denotes the set of primary inputs.
+and $X_{PI}$ denotes the set of primary input variables.
 \ei
 \item Derive {\it don't care conditions}
 corresponding to the $m$ rectification functions. 
@@ -115,15 +115,15 @@ The rectification techniques in
 \cite{fujita:2015,SS_Fujita:ISCAS19,MF_Huang:DATE12,SS_Roland:DAC18} 
 iteratively and incrementally compute multiple single-fix functions
 that partially patch the circuit in each iteration.
-{\red They ensure that, in each iteration, erroneous minterms are resolved
+ They ensure that, in each iteration, erroneous minterms are resolved
 and no new errors are introduced, eventually converging the circuit
-to the given specification.}
-The more recent techniques further
-include more resource awareness in patch generation by re-expressing the obtained Skolem functions 
+to the given specification.
+Recent techniques incorporate resource awareness in 
+patch generation by re-expressing the obtained Skolem functions 
 in terms of internal signals~\cite{SS_Alan:DAC18}, employ improved heuristics for
 target selection~\cite{SS_Fujita:ISCAS19}, or resolve a combination of
 such objectives, such as the symbolic sampling approach of~\cite{SS_Roland:DAC19}.
-{\red In~\cite{SS_Roland:DAC19} the authors propose a robust ECO approach to derive 
+ In~\cite{SS_Roland:DAC19} the authors propose a robust ECO approach to derive 
 patches with minimal impact on the heavily optimized existing implementation 
 against a structurally dissimilar ECO-evolved specification. 
 They enumerate rectification points 
@@ -134,13 +134,13 @@ in symbolic sampling domain. However, circuits that implement polynomial
 computations over large bit-vector operands are hard to rectify using 
 models based on Boolean function, SAT/SMT-solvers, etc.
 Our experiments show that the contemporary SAT solvers fail to rectify 
-finite field circuits beyond 16-bit operands.}
+finite field circuits beyond 16-bit operands.
 
 % While successful for control-dominated applications, these techniques are
 % computationally infeasible for rectification of arithmetic circuits.
 
 \subsubsection{Symbolic Computer Algebra}
-{\red
+
 In the context of arithmetic circuits, symbolic computer algebra 
 techniques for integer arithmetic~\cite{farimah:2016:1,farimah:2017:1,
 MF_Rolf:ISVLSI18} and finite field circuits~\cite{Utkarsh:ETS19,
@@ -176,7 +176,7 @@ $k=LCM(n,m)$. However, for finite field circuits, with practical applications
 in cryptography, the operand width $n$ as recommended by the National 
 Institute of Standards and Technology (NIST), is generally a prime number. 
 For example, NIST-ECC recommends $n$ to be 163 or larger 
-($n$= 163,233,283,409,571, etc.). Thus, for any given target size $m$, 
+($n$= 163, 233, 283, 409, 571, etc.). Thus, for any given target size $m$, 
 $k=LCM(n,m)=n*m$ becomes extremely large. This results in algebraic 
 computations involving extremely large primitive elements and constants.
 The large size coupled with the complicated arithmetic nature of these 
@@ -187,13 +187,13 @@ circuit at those targets. As it is only a decision procedure, the
 approach cannot {\it compute} rectification functions. Thus the problem 
 of multi-fix rectification of data-path circuits remains unsolved, and 
 theoretical and algorithmic solutions to compute and synthesize 
-rectification patches for arithmetic circuits are still desired.}
+rectification patches for arithmetic circuits are still desired.
 
 \subsection{Approach and Contribution}
 % In particular, we exploit the ideal-variety
 % correspondences to explore and compute rectification functions for the $m$-targets
 % collectively. 
-{\red Our techniques and algorithms are based on symbolic computer algebra
+ Our techniques and algorithms are based on symbolic computer algebra
 and algebraic geometry -- particularly on the concepts of the Strong
 Nullstellensatz and \Grobner bases \cite{gb_book}. Rectification is 
 performed against a given polynomial specification over finite fields, 
