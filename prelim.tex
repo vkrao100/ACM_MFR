@@ -1,14 +1,16 @@
 \section{Preliminaries}
 \label{sec:prelim}
 This section reviews some basic concepts from symbolic computer
-algebra and associated algorithms that are utilized in this article. 
+algebra and associated algorithms utilized in this article. \\
 
 %\subsection{Notation and Background}
-{\it Finite fields:} Let $\B$ denote the Boolean domain, and $\neg,
+\bif{Finite fields:} Let $\B$ denote the Boolean domain, and $\neg,
 \wedge,\vee, \oplus$ the NOT, AND, OR and XOR operators,
 respectively. Let $\F_2=\{0,1\}$ be the field of 2 elements, and let
-$\F_q = \Fkn$ denote the finite field of $q=2^n$ elements, for a
-given $n\in \Z_{> 0}$. We denote $\Fqbar$ as the algebraic closure of $\Fq$. 
+$\F_q = \Fkn$ denote the {\it finite field} of $q=2^n$ elements, for a
+given $n\in \Z_{> 0}$. We denote $\Fqbar$ as the {\it algebraic closure} of $\Fq$. 
+The algebraic closure of the finite field $\Fkn$ is the union of all fields $\Fkk$
+such that $n | k$ ($n$ divides $k$).
 $\Fn$ is the $n$-dimensional extension of
 $\F_2$, and it is constructed as $\Fn = \F_2[x]\pmod{ P_n(x)}$. Here
 $P_n(x) \in \F_2[x]$ is a given degree-$n$ polynomial, {\it
@@ -24,16 +26,16 @@ An element $A \in \Fn$ can be written as $A = a_0 + a_1\cdot \gamma +
 In $\Fn$, the addition ($''+''$) and multiplication
 ($''\cdot''$) operations are performed in the base field $\F_2$ and
 reduced modulo the corresponding primitive polynomial $P_n(x)$. For
-$n, k \in \Z_{> 0}$, if $n$ divides $k$, then $\Fn \subset
+$n, k \in \Z_{> 0}$, if $n | k$, then $\Fn \subset
 \Fkk$.
 Thus, $\F_2 \subset \F_{2^n}, \forall n>1$. 
 All fields of the type
-$\Fkn$ have characteristic 2, and therefore $-1 = +1$ in $\Fkn$. 
+$\Fkn$ have characteristic 2, and therefore $-1 = +1$ in $\Fkn$. \\
 
 
-{\it Polynomial representation:} Let $R=\F_q[x_1,\dots,x_d]$ be the
+\bif {Polynomial representation:} Let $R=\F_q[x_1,\dots,x_d]$ be the
 polynomial ring in variables $x_1,\dots,x_d$ with coefficients in
-$\F_q$. A polynomial $p \in R$ is 
+$\F_q$. A polynomial $f \in R$ is 
 written as a finite sum of terms  $f = c_1 M_1 +  c_2 M_2 + \dots +
 c_r M_r$, where $c_1, \dots, c_r$ are coefficients from $\F_q$ and
 $M_1, \dots, M_r$ are monomials, i.e. power products of the type
@@ -42,11 +44,11 @@ $x_1^{e_{1}}\cdot x_2^{e_{2}}\cdots x_d^{e_{d}}$,  $e_j \in \Z_{\geq  0}$.
 a term order) is imposed on $R$ such that the monomials of all
 polynomials are ordered according to $>$. 
 % A monomial order $>$ (term order) is always imposed on $R$, and
-Subject to $>$, we have that $M_1 >M_2 > \dots > M_r$. Then, $lc(p) = c_1$, $lm(p) =
-M_1$, and $lt(p) = c_1 M_1$ denote the {\it leading coefficient, leading monomial}, 
-and {\it leading   term} of $p$, respectively. 
- Also, for $p\in R$, $tail(p) = p - lt(p)$.
-This work employs {\it lexicographic} (lex) term orders.  
+Subject to $>$, we have that $M_1 >M_2 > \dots > M_r$. Then, $lc(f) = c_1$, $lm(f) =
+M_1$, and $lt(f) = c_1 M_1$ denote the {\it leading coefficient, leading monomial}, 
+and {\it leading   term} of $f$, respectively. 
+ Also, for $f\in R$, $tail(f) = f - lt(f)$.
+This work employs {\it lexicographic} (lex) term orders.  \\
 
 %%%%%%%%%%%%%%%%%%%% PK
 %% A circuit with $n$-bit operands is modeled as a polynomial function in
@@ -67,41 +69,59 @@ This work employs {\it lexicographic} (lex) term orders.
 %% \end{split}
 %% \end{equation}
 
-{\it Polynomial Reduction via division:} 
-Let $p,~g$ be polynomials. If
-$lm(p)$ is divisible by $lm(g)$, then we say that $p$ {\it is
-reducible to} $r$ modulo $g$, denoted $p
-\stackrel{g}{\textstyle\longrightarrow} r$, where $r = p - \frac{lt(p)}{lt(g)} 
+\bif{Polynomial Reduction via division:} 
+Let $f,~g$ be polynomials. If
+$lm(f)$ is divisible by $lm(g)$, then we say that $f$ {\it is
+reducible to} $r$ modulo $g$, denoted $f
+\stackrel{g}{\textstyle\longrightarrow} r$, where $r = f - \frac{lt(f)}{lt(g)} 
 \cdot g$. This operation forms the core  of polynomial
 division algorithms and it has the effect of canceling the 
-leading term of $p$ to obtain $r$. Similarly, 
-$p$ can be reduced w.r.t a set of polynomials $F=\{f_1,\dots,f_s\}$. 
-Then $p\xrightarrow{F}_+r$ denotes the {\it
-  reduction} of $p$ modulo the set of polynomials $F$ resulting in a
-remainder $r$, obtained by iteratively canceling terms in $p$ by
+leading term of $f$ to obtain $r$. Similarly, 
+$f$ can be {\it reduced} w.r.t a set of polynomials $F=\{f_1,\dots,f_s\}$. 
+Then $f\xrightarrow{F}_+r$ denotes the {\it
+  reduction} of $f$ modulo the set of polynomials $F$ resulting in a
+remainder $r$, obtained by iteratively canceling terms in $f$ by
 $lt(f_j), f_j\in F$, via polynomial division. 
  The remainder $r$ is said to be {\it reduced} such that no term in $r$ is
 divisible by the leading term of any $f_j \in F$.
 
-Algorithm~\ref{algo:mv_reduce} (Alg.
-1.5.1~\cite{gb_book}) presents the procedure which
-performs polynomial reduction by iteratively canceling
+Algorithm~\ref{algo:mv_reduce}~\cite{gb_book} presents the procedure which
+performs polynomial {\it reduction} by iteratively canceling
 one monomial at a time.
+The algorithm initializes $h$ with the polynomial $f$ and cancels its
+leading term by some polynomial $f_j$. If the leading term $lt(h)$
+cannot be canceled by any $lt(f_j)$, then it is added to the final
+remainder $r$. We repeat this process until all the terms in $h$
+are analyzed.  
+%% We represent the given circuit by way of a set of polynomials
+%% $F=\{f_1,\dots,f_s\}$, and for verification and rectification, we
+%% analyze the solutions to the polynomial equations $f_1=\dots=f_s=0$. 
+%% For this purpose, we
+%% consider the {\it ideal} generated by the polynomials, and their {\it
+%%   variety.} 
 Along with the remainder $r$, the algorithm also returns
-the set of quotients $\{u_1,\dots,u_s\}$ of division of $p$ by
-$\{f_1,\dots,f_s\}$, respectively, such that $p = u_1\cdot
+the set of quotients $\{u_1,\dots,u_s\}$ of division of $f$ by
+$\{f_1,\dots,f_s\}$, respectively, such that $f = u_1\cdot
 f_1+\dots+u_s\cdot f_s + r$.
 
-{\small
+Section \ref{sec:pmodel} in the sequel describes how to represent a circuit $C$ as a set of 
+polynomials $F=\{f_1,\dots,f_s\}$ contained in $R$. We analyze the solutions 
+to the polynomial equations $f_1=\dots=f_s=0$ and the multivariate polynomial specification $f=0$ 
+to formulate verification and rectification.
+For this purpose, we consider the {\it ideal} generated by the polynomials and their {\it
+  variety.} 
+% The specification for $C$, denoted by $f$ is also modeled as a multivariate
+% polynomial over $R$.
+
 \begin{algorithm}[hbt]
- \caption{Multivariate Reduction of $p$ by $F=\{f_1,\dots,f_s\}$}
+ \caption{Multivariate Reduction of $f$ by $F=\{f_1,\dots,f_s\}$}
  \label{algo:mv_reduce}
  \begin{algorithmic}[1]
  % \Procedure{$multi\_variate\_division$}{$f, f_1, \dots, f_s \in \F[x_1, \dots, x_d], f_i\neq 0$}
- \Procedure{$multi\_var\_division$}{$p,\{f_1,\dots,f_s\},f_j\neq0$}
+ \Procedure{$multi\_variate\_division$}{$f,\{f_1,\dots,f_s\},f_j\neq0$}
  % \ENSURE $u_1,\dots, u_s, r$ s.t. $f = \sum f_i u_i+r$ where $r$ is
  % reduced w.r.t. $F = \{f_1,\dots, f_s\}$ and max($lp(u_1)lp(f_1), \dots, lp(u_s)lp(f_s), lp(r)$) = $lp(f)$
- \State $u_j \gets 0; ~r \gets 0, ~h \gets p $ 
+ \State $u_j \gets 0; ~r \gets 0, ~h \gets f $ 
  \While {  $h \neq 0$ }
  \If{ $\exists j$ s.t. $lm(f_j) ~|~ lm(h)$}
  \State choose $j$ least s.t. $lm(f_j) ~|~ lm(h)$
@@ -116,27 +136,16 @@ f_1+\dots+u_s\cdot f_s + r$.
  \EndProcedure
  \end{algorithmic}
  \end{algorithm}
-}
 
 
-%% The algorithm initializes $h$ with the polynomial $f$ and cancels its
-%% leading term by some  polynomial $f_j$. If the leading term $lt(h)$
-%% cannot be canceled by any $lt(f_j)$, then it is added to the  final
-%% remainder $r$ and the process is repeated until all the terms in $h$
-%% are analyzed.  
-%% We represent the given circuit by way of a set of polynomials
-%% $F=\{f_1,\dots,f_s\}$, and for verification and rectification, we
-%% analyze the solutions to the polynomial equations $f_1=\dots=f_s=0$. 
-%% For this purpose, we
-%% consider the {\it ideal} generated by the polynomials, and their {\it
-%%   variety.} 
+%% 
 
 %\begin{Definition}$\bf{\left[Ideal\right]}$
-{\it Ideals and varieties:} A given set of polynomials 
-$F=\{f_1,\dots,f_s\}$ from $R$, generates the {\bf ideal} $J = \langle
+\bif{ Ideals and varieties:} A given set of polynomials 
+$F=\{f_1,\dots,f_s\}$ from $R$, generates the {\it ideal} $J = \langle
 F \rangle \subseteq R$, defined as $J = \langle f_1,\dots,$ $ f_s \rangle = \{
-h_1\cdot f_1 + \dots+h_s\cdot f_s~|~h_1,\dots,h_s\in R\}$. 
-Polynomials $f_1,\dots,f_s$ form the generators or the {\it basis} of ideal $J$.
+h_1\cdot f_1 + \dots+h_s\cdot f_s~:~h_1,\dots,h_s\in R\}$. 
+Polynomials $f_1,\dots,f_s$ form the {\it generators} or the {\it basis} of ideal $J$.
 
 
 % {\it Ideals and Varieties:} A set of polynomials 
@@ -155,25 +164,24 @@ Polynomials $f_1,\dots,f_s$ form the generators or the {\it basis} of ideal $J$.
 %\end{Definition}
 
 Let $\bm{a} = (a_1,\dots,a_d) \in \Fq^d$ be a point in the affine
-space, and $p$ a polynomial in $R$. If $p(\bm{a}) = 0$, we say
-that $p$ {\it vanishes} on $\bm{a}$, or $\bm{a}$ is a {\it zero} of the polynomial $p$.
+space, and $f$ a polynomial in $R$. If $f(\bm{a}) = 0$, we say
+that $f$ {\it vanishes} on $\bm{a}$, or $\bm{a}$ is a {\it zero} of the polynomial $f$.
  In this work, we have to analyze
 the {\it set of all common zeros} of the polynomials of $F = 
 \{f_1,\dots,f_s\}$  that lie within the field $\Fq$ -- i.e. the set of
 all point $\bm{a} \in \Fq^d$ such that
-$f_1(\bm{a})=\dots=f_s(\bm{a})=0$. This zero set is called the {\bf
+$f_1(\bm{a})=\dots=f_s(\bm{a})=0$. This zero set is called the {\it 
   variety}, which depends not just on the given set of polynomials in
 $F$, but rather on the ideal generated by polynomials. We denote it by
 $V(J)$, where: $ V(J)= V_{\Fq}(J) = V_{\Fq}(\langle f_1,\dots,f_s \rangle) = \{\bm{a} 
 \in \Fq^d: \forall f \in J, f(\bm{a}) = 0\}.$
 
-Boolean functions comprise a finite set of points, so we can model them as varieties. If a point is an element of a variety, then that point can be considered either an on-, off-, or DC-set minterm of a corresponding Boolean function. 
+Boolean functions comprise a finite set of points. Hence, we can reason about them as varieties. If a point is an element of a variety, then that point can be considered either an on-, off-, or DC-set minterm of a corresponding Boolean function. 
 % We model rectification check and subsequent function computation by reasoning about its ON-set, OFF-set, and DC-set by means of varieties. 
 % Explicitly computing the set of common zeros is practically infeasible. 
-Algebraic geometry analyzes ideals to reason about varieties without explicitly computing the varieties, which is infeasible in practice.
-In this paper, we compute the union, intersection, and set difference of functions, represented by varieties, by performing corresponding operations on ideals. 
-The first two columns of \autoref{tab:var_ideal_corr} describe the correspondence between operations on Boolean functions and operations on varieties. We utilize this correspondence to formulate rectification check and to construct rectification functions by modeling the on-, off-, and DC-sets as varieties. 
-
+Algebraic geometry analyzes the variety of ideals without explicitly computing them, which is infeasible in practice.
+Thus, to compute the union, intersection, and set difference of functions, operations are performed on the represented ideals by analyzing their corresponding varieties.
+~\autoref{tab:var_ideal_corr} describes the correspondence between operations on Boolean functions, its variety interpretation, and the computation on ideals. We interpret the points within on-, off-, and DC-sets as varieties and utilize the correspondences from~\autoref{tab:var_ideal_corr} for rectification formulations. 
 
 \def\arraystretch{2}
 \begin{table}[hbt!]
@@ -181,11 +189,11 @@ The first two columns of \autoref{tab:var_ideal_corr} describe the correspondenc
   {\scriptsize
   % \captionsetup{font=scriptsize}
   \caption{Correspondences between algebraic operations and Boolean operations. 
-  % Here, $J_1 = \langle f \rangle$, and $J_2 = \langle g \rangle$.
+  Here, $J_1$ and $J_2$ correspond to the ideal generated by $\langle f \rangle$ and $\langle g \rangle$, respectively.
   }\label{tab:var_ideal_corr}
   \begin{tabular} 
     {!{\vrule width 1pt} c !{\vrule width 1pt} c !{\vrule width 1pt} c !{\vrule width 1pt}}  \noalign{\hrule height 1pt}
-    {\it {Boolean Functions}} & {\it{Varieties}} & {\it{Ideal operations}} \\                                   \noalign{\hrule height 1pt}
+    {\it {Boolean Function}} & {\it{Variety interpretation}} & {\it{Ideal operation}} \\                                   \noalign{\hrule height 1pt}
     $f \lor g$              & $V(J_1) \cup V(J_2)$            & $J_1 * J_2$           \\ \hline
     $f \land g$              & $V(J_1) \cap V(J_2)$            & $J_1 + J_2$               \\ \hline
     $f - g$                 & $V(J_1) \setminus V(J_2)$       & $J_1 : J_2$               \\ \hline
@@ -194,18 +202,19 @@ The first two columns of \autoref{tab:var_ideal_corr} describe the correspondenc
 \end{table}
 
 Given two ideals $J_1 = \langle
-f_1,\dots,f_s\rangle,$ $J_2=\langle h_1,\dots,h_r\rangle$, the {\bf
+f_1,\dots,f_s\rangle,$ $J_2=\langle h_1,\dots,h_r\rangle$, the {\it 
   sum of ideals} is denoted as $J_1 + J_2 = \langle
-f_1,\dots,$ $f_s,h_1,\dots,h_r\rangle$, their {\bf product} is
+f_1,\dots,$ $f_s,h_1,\dots,h_r\rangle$, their {\it  product} is
 given as $J_1 * J_2 = \langle f_i\cdot h_j: 1\leq i\leq s, 1\leq
-j\leq r\rangle$, and a {\bf colon ideal} operation is defined as
-$J_1:J_2 = \{f \in R\ |\ f\cdot g \in J_1, \forall g \in J_2\}$. 
+j\leq r\rangle$, and a {\it  colon ideal} operation is defined as
+$J_1:J_2 = \{f \in R\ :\ f\cdot g \in J_1, \forall g \in J_2\}$. 
 Ideals and varieties are dual concepts:
 $V(J_1 + J_2) = V(J_1) \cap V(J_2)$, whereas $V(J_1 * J_2) = V(J_1)
 \cup V(J_2)$. A colon ideal operation corresponds the set difference of 
-two varieties, $V_{\Fn}(J_1:J_2)=V_{\Fn}(J_1)
-\setminus V_{\Fn}(J_2)$. 
-These ideal operations are implemented in computer algebra tools, which we utilize.
+two varieties, $V(J_1:J_2)=V(J_1)
+\setminus V(J_2)$. 
+Modern computer algebra tools~\cite{DGPS_410,pbori:JSC09} implement these ideal operations, which we utilize.\\
+% These ideal operations are implemented in computer algebra tools, which we utilize.\\
 % Algebraic geometry analyzes ideals to reason about varieties without explicitly computing the varieties, which is infeasible in practice. 
 % In the third column, $" \cdot "~,~ " +" ~,~" : " $ represent product, sum, and colon operations on ideals, respectively; these ideal operations are implemented in computer algebra tools, which we utilize.
 % understood and correspond to the union, intersection, and difference of varieties, respectively.
@@ -218,18 +227,18 @@ These ideal operations are implemented in computer algebra tools, which we utili
 % with special properties that helps to solve many polynomial decision
 % and quantification problems.  
  % that is a canonical representation of the ideal. 
-{\it \Grobner Bases:}
+\bif{ \Grobner Bases:}
 An ideal may have many different sets of generators such that
 their varieties are the same. A {\it \Grobner basis} (GB) is
 one such generating set with special properties that allows 
 to solve many polynomial decision and quantification problems. 
 \begin{Definition}
 \label{def:gb}
-{\bf [\Grobner Basis]}~\cite{gb_book}: 
+{\it  [\Grobner Basis]}~\cite{gb_book}: 
 For a monomial ordering $>$, a set of non-zero polynomials $G =
-\{g_1,g_2,\cdots,g_t\}$ contained in an ideal $J$, is called a
+\{g_1,g_2,\dots,g_t\}$ contained in an ideal $J$, is called a
 \Grobner Basis (GB) of $J$ $\iff$
-$\forall f \in J$, $f\xrightarrow{g_1,\dots,g_t}_+0$. 
+$\forall f \in J$, $f\xrightarrow{g_1,g_2,\dots,g_t}_+0$. 
 %$i \in \{1,\cdots, t\}$ 
 \end{Definition}
 % The GB $G$ for an ideal $J$ can be computed using the  Buchberger's
@@ -241,11 +250,11 @@ $\forall f \in J$, $f\xrightarrow{g_1,\dots,g_t}_+0$.
 % The GB $G$ for an ideal $J$ can be computed using the  Buchberger's
 % algorithm  %\cite{buchberger_thesis}. 
 % (cf. Alg. 1.7.1 in~\cite{gb_book})
-The GB $G$ for an ideal $J$ can be computed using the Buchberger's
+The GB $G$ for an ideal $J$ can be computed using Buchberger's
 algorithm~\cite{buchberger_thesis}. 
 The algorithm, shown in Alg. \ref{alg:gb}, takes the set of
 polynomials $F = \{f_1,\dots, f_s\}$ as input and computes their
-GB $G = \{g_1,\dots, g_t\}$., such that $J = \langle
+GB $G = \{g_1,g_2,\dots, g_t\}$, such that $J = \langle
 F\rangle = \langle G\rangle$. Moreover, the polynomials of $F$ and $G$
 have the same solution-set, i.e. $V(J) = V(\langle F \rangle) = V(\langle G \rangle)$. 
 
@@ -280,7 +289,7 @@ multiple.
 \end{algorithmic}
 \end{algorithm}
 
-{\it Ideal Membership Test:} The above definition inherently provides
+\bif{ Ideal Membership Test:} The above definition inherently provides
 a decision procedure to test for membership of a polynomial in an ideal:
 $f$ is a member of an ideal $J$ {\it if and only if} 
 % dividing $f$ by the \Grobner basis $G = GB(J)$ gives the remainder 0. 
@@ -296,10 +305,10 @@ unique/canonical.
 % A \Grobner basis can be computed using Buchberger's 
 % algorithm (cf. Alg. 1.7.1 in~\cite{gb_book}). 
 A \Grobner basis can be further reduced. A reduced \Grobner basis
-(redGB) is canonical representation of the ideal $J$.
+of $J$ ($redGB(J)$) is a canonical representation of the ideal $J$.
 
 \begin{Definition} \label{def:rgb}
-{\bf [Reduced \Grobner Basis]}:
+{\it  [Reduced \Grobner Basis]}:
     A redGB for a polynomial ideal $J$ is 
     a GB $G=\{g_{1},\dots,g_{t}\}$ such that:
     \begin{itemize}
@@ -317,7 +326,7 @@ A \Grobner basis can be further reduced. A reduced \Grobner basis
 
 % A reduced \Grobner basis
 % is computed by first computing a minimal \Grobner basis, and then reducing it.
-{\it The Strong Nullstellensatz in Finite Fields:}
+\bif{ Strong Nullstellensatz, Radical ideals, and Varieties:}
 For any element $\varphi\in\Fq$, $\varphi^q=\varphi$ holds. Therefore,
 the polynomial $x^q-x$ vanishes everywhere in $\Fq$, and we call it a
 {\it vanishing polynomial}. We denote by $F_0 =
@@ -332,19 +341,42 @@ V_{\Fqbar}(J) \cap\Fq^d = V_{\Fqbar}(J) \cap V_{\Fqbar}(J_0) =
 V_{\Fqbar}(J+J_0) = V_{\Fq}(J+J_0)$. 
 
 
-\begin{Definition}
+\begin{Definition}{\it [Ideal of vanishing polynomials]}:
 Given an ideal $J\subset R$ and $V(J) \subseteq \Fq^d$, the {\it ideal
 of polynomials that vanish on} $V(J)$ is $I(V(J)) = \{ f \in R :
 \forall \bm{a} \in V(J), f(\bm{a}) = 0\}$.
 \end{Definition}
 
-If $f$ vanishes on $V(J)$, then $f \in I(V(J))$. The Strong
-Nullstellensatz, which has a special form over finite fields,
+If $f$ vanishes on $V(J)$, then $f \in I(V(J))$. 
+
+\begin{Definition}{\it [Radical ideal]}:
+For any ideal $J\subset R$, the {\it radical} of $J$ is defined
+as $\sqrt{J} = \{f \in R: \exists m \in \mathbb{N} ~s.t. f^m \in J\}.$
+\end{Definition}
+
+When $J = \sqrt{J}$, then $J$ is called a {\it radical ideal}.
+Over algebraically closed fields, the {\it Strong Nullstellensatz}
+establishes the correspondence between radical ideals and varieties. 
+
+\begin{Definition}{\it [Maximal ideal]}: An ideal $J\subset R$ is 
+said to be {\it maximal} if $J \neq R$ and any
+ideal $J'$ containing $J$ is such that either $J'=J$ or $J'=R$.
+\end{Definition}
+
+\begin{Lemma}
+\label{lemma:radical-ff}
+(From \cite{gao:qe-gf-gb}) For an arbitrary ideal $J\subset
+\Fq[x_1,\dots,x_d]$, and  $J_0 = \langle
+x_1^q-x_1,\dots,x_d^q  -  x_d\rangle$, the ideal $J + J_0$ is radical;  
+i.e. $\sqrt{J+J_0} = J+J_0$. 
+\end{Lemma}
+
+The Strong Nullstellensatz, which has a special form over finite fields,
 characterizes the ideal $I(V(J))$.
 
-\begin{Theorem}[{\it The Strong Nullstellensatz over finite fields
-(Theorem 3.2 in \cite{gao:qe-gf-gb})}] \label{thm:strong-ns}  
-For any ideal $J \subset \Fq[x_1,\dots,x_d]$$, ~I(V_{\Fq}(J)) = J + J_0$.
+\begin{Theorem}{\it [The Strong Nullstellensatz over finite fields
+(Theorem 3.2 in \cite{gao:qe-gf-gb})]}: \label{thm:strong-ns}  
+For any ideal $J \subset \Fq[x_1,\dots,x_d]$$, ~I(V(J)) = J + J_0$.
 \end{Theorem}
 
 % {\it Vanishing Polynomials:} For any element $\varphi\in\Fq$, $\varphi^q=\varphi$ holds. Therefore,
@@ -392,27 +424,35 @@ For any ideal $J \subset \Fq[x_1,\dots,x_d]$$, ~I(V_{\Fq}(J)) = J + J_0$.
 % for polynomial representation and manipulation. 
 
 
-
-The computational complexity of GB algorithm is exponential
+\bif{Reverse Topological Term Order:}
+The computational complexity of the GB algorithm is exponential
 in the number of variables $d$.
 For efficient GB computations on polynomials derived from a circuit,
 \cite{lv:tcad2013} proposed the use of a specialized term order that
-exploits the topology of the circuit and renders the set of polynomials for 
-the gates of the circuit, a \Grobner basis itself. This term order '$>$`
+exploits the topology of the circuit and renders the set of polynomials $F=\{f_1,\dots,f_s\}$ for 
+the gates of the circuit, a \Grobner basis itself. 
+This term order '$>$`
 is called the {\it Reverse Topological Term Order (RTTO)}.
 
 \begin{Definition}\label{def:rtto}
-{\bf [Reverse Topological Term Order]}~\cite{lv:tcad2013}:
+{\it  [Reverse Topological Term Order]}~\cite{lv:tcad2013}:
 Let $C$ be an arbitrary combinational
 circuit. Let $\{x_1, \dots$ $, x_d\}$ denote the set of all variables
 (signals) in $C$. Starting from the primary outputs, perform
 a {\it reverse topological traversal} of the circuit and order the
 variables such that $x_k > x_j$ if $x_k$ appears earlier in the
 reverse topological order. Impose a lex term order $>$ to represent each
-gate as a polynomial $f_j$, s.t. $f_j = x_k + tail(f_j)$. Then 
-set of polynomials $\{f_1,\dots,f_s\}$ corresponding to the gates of the circuits 
+gate as a polynomial $f_j$, s.t. $f_j = x_k + tail(f_j)$. 
+As each gate output is a distinct net, the
+leading terms of all polynomials in $F$ become relatively prime.
+Then, the set of polynomials $F=\{f_1,\dots,f_s\}$ corresponding to the gates of the circuit 
 is a \Grobner basis when RTTO is used for ordering.
 \end{Definition}
+
+Consequently, remainders 
+  generated by polynomial division using RTTO $>$ comprise only primary input variables.
+  Our rectification approach also uses RTTO $>$
+for polynomial representation and manipulation.
 
 %To overcome the complexity of GB computations,
 % While the computations are based on GB theory, 

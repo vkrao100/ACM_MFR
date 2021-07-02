@@ -5,139 +5,192 @@
 % basis reduction $f\xrightarrow{GB(J+J_0)}_+ r$. 
 % To help formulate the rectification function computation, we restate 
 % the decision procedure presented in~\cite{Vkrao:ISQED21} as per our needs.
-In~\cite{Vkrao:ISQED21}, the authors presented techniques 
-which utilize the aforementioned polynomial ideal setup
-to derive the necessary and sufficient conditions for the existence
-of a multi-fix rectification at the given set of targets.
-We rephrase and restate Thm. V.1 from~\cite{Vkrao:ISQED21}, and 
-briefly discuss its key aspects. 
-Subsequently, we formulate the computation of rectification functions by utilizing
-the outcome of their decision procedure.
+If verification results in a non-zero remainder $r$, then the circuit is deemed faulty and rectification needs 
+to be performed to fix the circuit. 
+We use the aforementioned polynomial ideal setup to {\it state and prove}
+whether or not the circuit can indeed be rectified at a given set of $m$ targets.
+% As a first step, it is required to 
+% derive the necessary and sufficient condition to
+% confirm whether or not the circuit can be rectified at a given set of $m$ targets.
+This check implies the {\it existence of a
+polynomial function} with mapping $u_i:\Ftwo^{|X_{PI}|}\rightarrow \Ftwo$, at individual targets $w_i$.
+Subsequently, we formulate the computation of rectification functions $U = \{u_1,\dots,u_m\}$ by utilizing
+the outcome of this decision procedure. The computed polynomial functions when substituted at the corresponding 
+targets, $w_i = u_i[X_{PI}]$, rectifies the circuit.
+
+
+% In~\cite{Vkrao:ISQED21}, we presented techniques 
+% % which utilize the aforementioned polynomial ideal setup
+% to derive the necessary and sufficient conditions for the existence
+% of multi-fix rectification at the given set of targets.
+% We rephrase and restate Thm. V.1 from~\cite{Vkrao:ISQED21}, and 
+% discuss its key aspects. 
+% Subsequently, we formulate the computation of rectification functions by utilizing
+% the outcome of this decision procedure.
 % Subsequently, we formulate the computation of rectification functions as a 
 % quantification procedure by building upon
 % the outcome of their decision procedure.
 
+Let $W = \{w_1,\dots,w_m\} \subset \{X_g,X_{PO}\}$ denote a given set of $m$ candidate targets.
+Let $W_c = \{(0,0,\dots,0),\dots,(1,1,\dots,1)\}$ represent the set of all $\{0,1\}$-assignments to targets $W$.
+Here, $|W| = m$ and $|W_c| = 2^m$, with each $W_c[l]$, $1 \leq l \leq 2^m$, representing one set of assignments 
+to targets $W$ ($|W_c(l)| = m $). In other words, the tail of gate polynomials representing the targets are replaced
+by the corresponding $\{0,1\}$-values from $W_c[l]$.
+
 \begin{Theorem}{\bf [Multi-fix Rectification Theorem]}\label{Thm:rect}
-A \spec~polynomial $f$, a faulty 
-\impl~$C$ represented using the ideal 
-$J +J_0 = \langle F \cup F_0\rangle \subset R$,
- and a set of targets $W=(w_1,\dots,w_m) \subset \{X-X_{PI}\}$
- are given. 
+A specification polynomial $f$, a faulty circuit
+implementation $C$ represented using the ideal 
+$J +J_0 = \langle F + F_0\rangle \subset R = \Fn[Z,A,X]$,
+ and a set of targets $W$ are given. 
 %  Here, each $w_i$, for $i=1,\dots,m$ represents the output
 % of an $i^{th}$ gate in $C$.
 % The targets in set $W$ are considered fan-in free or treated as pseudo primary inputs.
-RTTO $>$ is imposed on $R$. Let $W_c = \{(0,0,..,0),\dots,(1,1,..,1)\},$ $~|W_c| = 2^m$, 
- denote the set of all possible $\{0,1\}$ assignments to targets $W$.
- This is akin to computing cofactors of the circuit functions with 
- respect to the targets $W$.
+RTTO $>$ is imposed on $R$. 
+% Let $W_c = \{(0,0,..,0),\dots,(1,1,..,1)\},$ $~|W_c| = 2^m$, 
+%  denote the set of all possible $\{0,1\}$ assignments to targets $W$.
+%  This is akin to computing cofactors of the circuit functions with 
+%  respect to the targets $W$.
  % Roland et al.~\cite{MF_Huang:DATE12} refer to them as cofactors
  % and we use the same terminology. 
-Each cofactor tuple $W_c[l]$ serves as one set
- of assignments to $m$ targets at their respective indexes in $W$. 
+% Each cofactor tuple $W_c[l]$ serves as one set
+%  of assignments to $m$ targets at their respective indexes in $W$. 
 % We construct the ideals by considering all the
 % t 
 % Here $F=\{f_1,\dots,f_{w_1}:w_1+tail(f_{w_1}),\dots,f_{w_m}:w_m+tail(f_{w_m}),\dots,f_s\}$
 %(Setup as described in Sec.\ref{sec:rsetup}),
 The following ideals are constructed:  
 \bi
-\item {\small $J_l = \langle F_l\rangle =\langle f_1,\dots,f_{w_1}:w_1+W_c[l][1],
-	\dots,f_{w_m}:w_m+W_c[l][m]$ $,\dots,f_s\rangle$}, $\forall l \in 1,\dots 2^m$. 
+\item $J_l = \langle F_l\rangle =\langle f_1,\dots,f_{w_1}:w_1+W_c[l][1],
+	\dots,f_{w_m}:w_m+W_c[l][m]$ $,\dots,f_s\rangle$, for $1 \leq l \leq 2^m$. 
 \ei
 
-Reduce $f$ by $F_l\cup F_0$ to obtain remainders $rem_l$: 
-$f\xrightarrow{F_l\cup F_{0}}_+ rem_l,$  for $1 \leq l \leq 2^m$.
-Then, the circuit $C$ is rectifiable at the target set $W$ {\bf\textit{if
-   and only if}} union of varieties $\bigcup\limits_{l=1}^{2^m}V(rem_l) = \Ftwo^{|X_{PI}|}$. 
+Reduce $f$ by $F_l + F_0$ to obtain remainders $rem_l$: 
+$f\xrightarrow{F_l +  F_{0}}_+ rem_l,$  for $1 \leq l \leq 2^m$.
+Then, the faulty circuit $C$ is rectifiable at the target set $W$ {\bf\textit{if
+   and only if}} 
+\begin{equation}
+   % \bigcup\limits_{l=1}^{2^m}V( \langle rem_l \rangle + J_0 ) = \{0,1\}^{|X_{PI}|} 
+   \bigcup\limits_{l=1}^{2^m}V(\langle rem_l \rangle) = \Ftwo^{|X_{PI}|}  
+   \label{eq:rcheck}
+\end{equation}
+
 \end{Theorem}
 
-{\red
 % To synthesize a patch, a desired $u_i$ corresponds
 % to a polynomial function $u_i:\F_2^{|X_{PI}|} \mapsto \F_2$. 
 \begin{Proof}
-As the correction at target $W$ makes $C$ match $f$, $f$ should vanish on
-$V_{\Fkk}(J')$.
-Moreover, each $rem_l$ comprises only $X_{PI}$ variables. This is
-because WRTO $>_R$ ensures that each non primary input variable (each gate
-output and  word-level variable) appears as the leading term of some
-polynomial in $F'$. Thus each non primary input variable is canceled
-in the reduction $f\xrightarrow{F'_l, F'_{0}}_+ rem_l$. Furthermore,
+As rectification at target-set $W$ makes $C$ match $f$, 
+$f$ should be implied by the ideal $J$ or 
+$f$ should vanish on $V(J)$.
+Moreover, each $rem_l$ comprises only $X_{PI}$ variables in its support. This is
+because RTTO $>$ ensures that each non-primary input variable (each gate
+output and word-level variable) appears as the leading term of some
+polynomial in $F$. Thus each non-primary input variable is canceled
+in the reduction $f\xrightarrow{F_l+ F_{0}}_+ rem_l$. Furthermore,
 as $X_{PI}$ take values in $\F_2$, $x^2=x, \forall x \in
 X_{PI}$. Hence, 
 % even though $V_{\Fkk}(J')$ is evaluated in $\Fkk$,
 $V(rem_l) \subseteq \F_{2}^{|X_{PI}|}$. Thus, the rectification theorem
  can be equivalently stated as: ``$f$ vanishes on
-\begin{small}
-$V_{\Fkk}(J') \iff \bigcup\limits_{l=1}^{2^m}V(rem_l) = \Ftwo^{|X_{PI}|}$''.
-\end{small} 
+$V(J) \iff \bigcup\limits_{l=1}^{2^m}V(\langle rem_l \rangle) = \Ftwo^{|X_{PI}|}$''.
 
 (i) {\bf To prove ``$\Rightarrow$''}: Let $x_{PI} \in \Ftwo^{|X_{PI}|}$ be an
 assignment to the primary input variables of $C$. Every assignment
 $x_{PI}$ results in a corresponding assignment $x_{int}$ 
-to rest of the variables in $C$. For each such point $(x_{PI},x_{int})\in \Fkk$,
-the target $W$ evaluates to one of the values in the list $\delta$,
-i.e. $(0,1,\be,\dots,\beta^{2^m-2})$. When $W = 0$, $J'_1$ vanishes on
-the point $(x_{PI},x_{int})$. Likewise, $J'_2$ vanishes on
-$(x_{PI},x_{int})$ when $W = 1$, and so on. Since
-$f\xrightarrow{F'_l\cup F'_0}_+rem_l,1 \leq l \leq 2^m$, and $f$ vanishes
+to rest of the variables in $C$. For each such point $(x_{PI},x_{int})\in \Fn$,
+the set of $m$ targets $W$ evaluate to one set of possible $\{0,1\}$ assignment
+from $W_c$. When the $m$-targets in $W$ evaluate to  $W_c[1] = (0,0,\dots,0)$,
+$J_1 = \langle F_1 \rangle$ vanishes on the point $(x_{PI},x_{int})$. 
+Likewise, $J_2 = \langle F_2 \rangle$ vanishes on $(x_{PI},x_{int})$ when the targets 
+evaluate to $W_c[2] = (0,0,\dots,1)$, and so on. Since
+$f\xrightarrow{F_l\cup F_0}_+rem_l,1 \leq l \leq 2^m$, and $f$ vanishes
 on the point $(x_{PI},x_{int})$ to begin with, we obtain that for
 every  primary input assignment $x_{PI}$, one of the $rem_l$ vanishes. This
-implies that $ \bigcup\limits_{l=1}^{2^m}V(rem_l) = \Ftwo^{|X_{PI}|}$.
+implies that $ \bigcup\limits_{l=1}^{2^m}V(\langle rem_l\rangle) = \Ftwo^{|X_{PI}|}$.
 
 (ii) {\bf To prove ``$\Leftarrow$''}: Say there exists an assignment to the
 primary inputs $x_{PI} \in \Ftwo^{|X_{PI}|}$ such that $rem_1$ vanishes on
 $x_{PI}$, i.e. $rem_1(x_{PI})=0$. For the given point $x_{PI}$, the rest of the variables 
 of $C$ get a corresponding assignment $x_{int}$. 
-As $f\xrightarrow{F'_1\cup F'_0}_+ rem_1$, we have that $f$ is a member of the
-ideal $J'_1 + J'_0 + \langle rem_1 \rangle$. Therefore, when
-$rem_1(x_{PI})=0$, the ideal $J'_1$ also vanishes on $(x_{PI},x_{int}) \in \Fkk$
-because the tuple $(x_{PI},x_{int})$ is a valid evaluation of the circuit.
-Further, $J'_0$ by definition vanishes everywhere in $R'$. This implies that
+As $f\xrightarrow{F_1\cup F_0}_+ rem_1$, we have that $f$ is a member of the
+ideal $J_1 + J_0 + \langle rem_1 \rangle$. Therefore, when
+$rem_1(x_{PI})=0$, the ideal $J_1$ also vanishes on $(x_{PI},x_{int}) \in \Fn$
+because the point $(x_{PI},x_{int})$ is a valid evaluation of the circuit.
+Further, $J_0$ by definition vanishes everywhere in $R$. This implies that
 $f(x_{PI},x_{int})=0$. The argument similarly holds for each
 $rem_{l}$ vanishing on some $x_{PI}$. This proves that for all primary
 inputs, if any $rem_l:1 \leq l \leq 2^m$ vanishes, then $f$ vanishes too; and 
 that completes the proof.
 \end{Proof}
- }
 
-The above check for union of varieties can be performed 
-% as $\prod_{l=1}^{2^m} rem_l\xrightarrow{J_{0}^{X_{PI}}}_+0?$ (cf. Section \ref{sec:prelim}).
-as product of ideals, i.e. by checking if $\prod_{l=1}^{2^m} 
-rem_l\xrightarrow{J_{0}}_+0$.
-RTTO $>$ is known to have the property that makes the division 
-$f\xrightarrow{F_l\cup F_{0}}_+ rem_l$ mimic gate level substitution
-in polynomial algebra.
-% RTTO $>$, $f\xrightarrow{F_l\cup F_{0}}_+ rem_l$ 
-% mimics polynomial substitution. 
-Thus, after reduction, 
-all non-primary input variables in the circuit are canceled and the 
-final remainder has only $X_{PI}$ variables in its support.
+As described before, due to RTTO $>$, each $rem_l$ comprises 
+only $X_{PI}$ variables in its support. Moreover, we have that 
+$J_0 = \langle F_0 \rangle = \{x_i^2-x_i:~x_i \in X_{PI}\}$. 
+As the union of varieties corresponds to the variety of the 
+product of the ideals (~\autoref{tab:var_ideal_corr}), the expression
+for $\bigcup\limits_{l=1}^{2^m}V(\langle rem_l\rangle)$ can be rewritten as:
+\begin{align*}
+ \bigcup\limits_{l=1}^{2^m}V(\langle rem_l\rangle) =& V(\langle rem_1 \rangle) \cup V( \langle rem_2 \rangle) \cup \dots \cup V(\langle rem_{2^m} \rangle)\\
+  =&V(\langle rem_1 * rem_2 *  \dots * rem_{2^m} \rangle) \\
+  =&V_{\Fqbar}(\langle rem_1 * rem_2 * \dots * rem_{2^m} \rangle+ J_0) \\
+  =&V_{\Fq}(\langle rem_1 * rem_2 * \dots * rem_{2^m} \rangle+ J_0)
+\end{align*}
+
+Therefore, to check for rectification at the set of targets $W$, 
+the test ``Is $\bigcup\limits_{l=1}^{2^m}V(rem_l) =
+  \F_2^{|X_{PI}|}$'' can be performed by checking if
+$\prod_{l=1}^{2^m} rem_l\xrightarrow{J_0}_+0$.
+
+% As the union of varieties
+% corresponds to the variety of the product of corresponding ideals
+% (cf. Section \ref{sec:prelim}), we have that: 
+% $\bigcup\limits_{l=1}^{2^m}V(rem_l) =
+% %V_{\Ftwo}( \prod_{l=1}^{2^m}rem_l)=
+% V_{\Ftwo}( \langle \prod_{l=1}^{2^m} rem_l \rangle +
+% J_0^{X_{PI}} )$.  
+% Therefore, to check for MFR at target $W$, the test ``Is
+% ${\scriptstyle \bigcup\limits_{l=1}^{2^m}V(rem_l) =
+%   \F_2^{|X_{PI}|}}$'' can be performed by checking if
+% $\prod_{l=1}^{2^m} rem_l\xrightarrow{J_{0}^{PI}}_+0$. 
+
+% Therefore, the check for union of varieties can be performed 
+% % as $\prod_{l=1}^{2^m} rem_l\xrightarrow{J_{0}^{X_{PI}}}_+0?$ (cf. Section \ref{sec:prelim}).
+% as product of ideals (~\autoref{tab:var_ideal_corr}), i.e. by checking if $\prod_{l=1}^{2^m} 
+% rem_l\xrightarrow{J_{0}}_+0$.
+% RTTO $>$ is known to have the property that makes the division 
+% $f\xrightarrow{F_l\cup F_{0}}_+ rem_l$ mimic gate level substitution
+% in polynomial algebra.
+% % RTTO $>$, $f\xrightarrow{F_l\cup F_{0}}_+ rem_l$ 
+% % mimics polynomial substitution. 
+% Thus, after reduction, 
+% all non-primary input variables in the circuit are canceled and the 
+% final remainder has only $X_{PI}$ variables in its support.
 
 \begin{Example}
 \label{ex:3}
 {\it 
-Continuing on with the Ex. \ref{verify_ex}, we
-demonstrate the rectification check presented in~\cite{Vkrao:ISQED21}
-for $W=(r_3,rr_3)$. 
+Continuing Ex. \ref{verify_ex}, we
+demonstrate the rectification check for $W= \{w_1,w_2\} = \{r_3,rr_3\}$. 
 
 Constructing the $J_l$ ideals:
 \bi
-\item {\small$J_1 = \langle F_1\rangle$, where $F_1[f_{26}: r_3+0],F_1[f_{27}: rr_3 + 0]$},$(r_3 =0, rr_3 = 0)$ 
-\item {\small$J_2 = \langle F_2\rangle$, where $F_2[f_{26}: r_3+0],F_2[f_{27}: rr_3 + 1]$},$(r_3 =0, rr_3 = 1)$
-\item {\small$J_3 = \langle F_3\rangle$, where $F_3[f_{26}: r_3+1],F_3[f_{27}: rr_3 + 0]$},$(r_3 =1, rr_3 = 0)$
-\item {\small$J_4 = \langle F_4\rangle$, where $F_4[f_{26}: r_3+1],F_4[f_{27}: rr_3 + 1]$},$(r_3 =1, rr_3 = 1)$
+\item $J_1 = \langle F_1\rangle$, where $F_1[f_{26}: r_3+0],F_1[f_{27}: rr_3 + 0]$,$(r_3 =0, rr_3 = 0)$ 
+\item $J_2 = \langle F_2\rangle$, where $F_2[f_{26}: r_3+0],F_2[f_{27}: rr_3 + 1]$,$(r_3 =0, rr_3 = 1)$
+\item $J_3 = \langle F_3\rangle$, where $F_3[f_{26}: r_3+1],F_3[f_{27}: rr_3 + 0]$,$(r_3 =1, rr_3 = 0)$
+\item $J_4 = \langle F_4\rangle$, where $F_4[f_{26}: r_3+1],F_4[f_{27}: rr_3 + 1]$,$(r_3 =1, rr_3 = 1)$
 \ei
 Reducing the $\spec$ $f: Z+A\cdot B$ modulo these ideals, we get:
 \bi
-\item $rem_1 = f \xrightarrow[]{F_1\cup F_{0}}_+(\ga+1)a_2b_1b_2+(\ga^2+\ga)a_2b_2$
-\item $rem_2 = f \xrightarrow[]{F_2\cup F_{0}}_+(\ga+1)a_2b_1b_2$
-\item $rem_3 = f \xrightarrow[]{F_3\cup F_{0}}_+(\ga+1)a_2b_1b_2+a_2b_1 + (\ga^2+\ga)a_2b_2$
-\item $rem_4 = f \xrightarrow[]{F_4\cup F_{0}}_+(\ga+1)a_2b_1b_2+a_2b_1$
+\item $rem_1 = f \xrightarrow[]{F_1 + F_{0}}_+(\ga+1)a_2b_1b_2+(\ga^2+\ga)a_2b_2$
+\item $rem_2 = f \xrightarrow[]{F_2 + F_{0}}_+(\ga+1)a_2b_1b_2$
+\item $rem_3 = f \xrightarrow[]{F_3 + F_{0}}_+(\ga+1)a_2b_1b_2+a_2b_1 + (\ga^2+\ga)a_2b_2$
+\item $rem_4 = f \xrightarrow[]{F_4 + F_{0}}_+(\ga+1)a_2b_1b_2+a_2b_1$
 \ei
 
 When we compute $\prod_{l=1}^{2^m} 
 rem_l\xrightarrow{J_{0}}_+$, 
  we obtain remainder 0, thus confirming
-that the target set $W=(r_3,rr_3)$ indeed admits correction.
+that the target set $W=\{r_3,rr_3\}$ indeed admits correction.
 % Even though it is beyond the scope of this paper, $W=a_2b_1b_2+\be \cdot a_2b_2$ 
 % is a polynomial which can be computed to rectify the circuit. 
 % In fact, the rectification test also passes with nets $d_2$ and $d_5$;
@@ -149,6 +202,33 @@ that the target set $W=(r_3,rr_3)$ indeed admits correction.
 }
 \end{Example}
 
+% Intuitively, Thm.~\ref{Thm:rect} can be elaborated as follows.
+% In each ideal $J_l$, the polynomials representing the targets from
+% $W$ are replaced by the corresponding values from $W_c[l]$. 
+% Subsequently, the specification polynomial $f$ is reduced by 
+% each ideal $J_l+J_0$ to produce corresponding remainder $rem_l$. 
+% The variety of $rem_l$, for any $l$, corresponds to the set of
+% all assignments to primary inputs $X_{PI}$ (minterms) where the
+% specification $f$ agrees with the implementation $C$. Thus, the
+% condition of Thm.~\ref{Thm:rect} implies that every minterm in the 
+% input space is contained in the union of varieties of each $rem_l$. 
+% Thus, for every minterm from the input space, there exists an assignment
+% $W_c[l]$ to target set $W = \{w_1,\dots,w_m\}$ where $f$ and $C$ match. Consequently, there
+% exists a set of individual rectification functions $U=\{u_1,\dots,u_m\}$ for the targets 
+% that can be computed to rectify every error minterm. We exploit and explore this concept 
+% to evaluate rectification functions in the following section.
+
+% Intuitively, Thm.~\ref{Thm:rect} can be elaborated as follows.
+% In each ideal $J_l$, the polynomials representing the targets from
+% $W$ are replaced by the corresponding values from $W_c[l]$. 
+% Subsequently, the specification polynomial $f$ is reduced by 
+% each ideal $J_l+J_0$ to produce corresponding remainder $rem_l$. 
+% The variety of $rem_l$, for any $l$, corresponds to the set of
+% all assignments to primary inputs $X_{PI}$ (minterms) where the
+% specification $f$ agrees with the implementation $C$.
+% Therefore, we can consider 
+
+
 % every $F_l\cup F_0$ forms a \Grobner basis in itself, and hence
 % each corresponding $rem_l \in \Fkn[X_{PI}]$, and subsequently 
 % $V(rem_l) \subseteq \F_{2}^{|X_{PI}|}$. 
@@ -157,87 +237,26 @@ that the target set $W=(r_3,rr_3)$ indeed admits correction.
 % However, on further investigation, one could
 % use the information embedded within this check to 
 % characterize the rectification functions.
-The concepts presented in~\cite{Vkrao:ISQED21} are limited to
-proving the {\it existence} of rectification functions.
-However, our investigation further reveals that their result
-can be extended to characterize the desired rectification functions.
-Intuitively, the concept can be elaborated as follows.
-The variety of $rem_l$ for any $l$ corresponds to the set of
-all assignments to primary inputs $X_{PI}$ (minterms) where the
-$\spec$ $f$ agrees with the $\impl$ $C$. Thus, the
-condition of Thm.~\ref{Thm:rect} implies that the union of individual
-varieties of $rem_l$'s comprises the set of all minterms where $f$ and $C$ evaluate the same. 
-Thus, for every primary input assignment, {\it there exists} a cofactor tuple
-assignment $W_c[l]$ to $W$ such that $f$ and $C$ match. Consequently, there
-exists a set of functions $U = (u_1,\dots,u_m)$ that can be computed to 
-rectify every error minterm. We exploit and explore this concept 
-to compute rectification functions in the following section.
+% The concepts presented in~\cite{Vkrao:ISQED21} are limited to
+% proving the {\it existence} of rectification functions.
+% However, our investigation further reveals that their result
+% can be extended to characterize the desired rectification functions.
+% Intuitively, the concept can be elaborated as follows.
+% The variety of $rem_l$ for any $l$ corresponds to the set of
+% all assignments to primary inputs $X_{PI}$ (minterms) where the
+% $\spec$ $f$ agrees with the $\impl$ $C$. Thus, the
+% condition of Thm.~\ref{Thm:rect} implies that the union of individual
+% varieties of $rem_l$'s comprises the set of all minterms where $f$ and $C$ evaluate the same. 
+% Thus, for every primary input assignment, {\it there exists} a cofactor tuple
+% assignment $W_c[l]$ to $W$ such that $f$ and $C$ match. Consequently, there
+% exists a set of functions $U = (u_1,\dots,u_m)$ that can be computed to 
+% rectify every error minterm. We exploit and explore this concept 
+% to compute rectification functions in the following section.
 
 
 % To synthesize a patch, a desired $u_i$ corresponds
 % to a polynomial function $u_i:\F_2^{|X_{PI}|} \mapsto \F_2$. 
 % \begin{Proof}
-% As the correction at target $W$ makes $C$ match $f$, $f$ should vanish on
-% $V_{\Fkk}(J')$.
-% Moreover, each $rem_l$ comprises only $X_{PI}$ variables. This is
-% because WRTO $>_R$ ensures that each non primary input variable (each gate
-% output and  word-level variable) appears as the leading term of some
-% polynomial in $F'$. Thus each non primary input variable is canceled
-% in the reduction $f\xrightarrow{F'_l, F'_{0}}_+ rem_l$. Furthermore,
-% as $X_{PI}$ take values in $\F_2$, $x^2=x, \forall x \in
-% X_{PI}$. Hence, 
-% % even though $V_{\Fkk}(J')$ is evaluated in $\Fkk$,
-% $V(rem_l) \subseteq \F_{2}^{|X_{PI}|}$. Thus, the rectification theorem
-%  can be equivalently stated as: ``$f$ vanishes on
-% \begin{small}
-% $V_{\Fkk}(J') \iff \bigcup\limits_{l=1}^{2^m}V(rem_l) = \Ftwo^{|X_{PI}|}$''.
-% \end{small} 
-
-% (i) {\bf To prove ``$\Rightarrow$''}: Let $x_{PI} \in \Ftwo^{|X_{PI}|}$ be an
-% assignment to the primary input variables of $C$. Every assignment
-% $x_{PI}$ results in a corresponding assignment $x_{int}$ 
-% to rest of the variables in $C$. For each such point $(x_{PI},x_{int})\in \Fkk$,
-% the target $W$ evaluates to one of the values in the list $\delta$,
-% i.e. $(0,1,\be,\dots,\beta^{2^m-2})$. When $W = 0$, $J'_1$ vanishes on
-% the point $(x_{PI},x_{int})$. Likewise, $J'_2$ vanishes on
-% $(x_{PI},x_{int})$ when $W = 1$, and so on. Since
-% $f\xrightarrow{F'_l\cup F'_0}_+rem_l,1 \leq l \leq 2^m$, and $f$ vanishes
-% on the point $(x_{PI},x_{int})$ to begin with, we obtain that for
-% every  primary input assignment $x_{PI}$, one of the $rem_l$ vanishes. This
-% implies that $ \bigcup\limits_{l=1}^{2^m}V(rem_l) = \Ftwo^{|X_{PI}|}$.
-
-% (ii) {\bf To prove ``$\Leftarrow$''}: Say there exists an assignment to the
-% primary inputs $x_{PI} \in \Ftwo^{|X_{PI}|}$ such that $rem_1$ vanishes on
-% $x_{PI}$, i.e. $rem_1(x_{PI})=0$. For the given point $x_{PI}$, the rest of the variables 
-% of $C$ get a corresponding assignment $x_{int}$. 
-% As $f\xrightarrow{F'_1\cup F'_0}_+ rem_1$, we have that $f$ is a member of the
-% ideal $J'_1 + J'_0 + \langle rem_1 \rangle$. Therefore, when
-% $rem_1(x_{PI})=0$, the ideal $J'_1$ also vanishes on $(x_{PI},x_{int}) \in \Fkk$
-% because the tuple $(x_{PI},x_{int})$ is a valid evaluation of the circuit.
-% Further, $J'_0$ by definition vanishes everywhere in $R'$. This implies that
-% $f(x_{PI},x_{int})=0$. The argument similarly holds for each
-% $rem_{l}$ vanishing on some $x_{PI}$. This proves that for all primary
-% inputs, if any $rem_l:1 \leq l \leq 2^m$ vanishes, then $f$ vanishes too; and 
-% that completes the proof.
-% \end{Proof}
- 
-
-%where the union of
-%varieties corresponds to the product of ideals and is characterized by
-%Strong Nullstellensatz over finite fields ({\red refer Strong
-%  Nullstellensatz}). 
-%% \begin{small}
-%% \begin{align*}
-%% &\bigcup\limits_{l=1}^{2^m}V(rem_l) =V_{\Ftwo}( \prod_{l=1}^{2^m}
-%%   rem_l)= V_{\Ftwo}( \langle \prod_{l=1}^{2^m} rem_l \rangle +
-%%   J_0^{X_{PI}} ) \\
-%% & \quad\quad\quad\quad\quad\quad\quad\quad = V_{\Ftwo}(\langle \prod_{l=1}^{2^m} rem_l \rangle+ J_0^{PI})
-%%   % V_{\Fqbar}(\langle r_1\cdot \dots r_{2^m} \rangle+ J_0^{PI}) \\
-%% \end{align*}
-%% \end{small}
-%% Thus, to check for MFR at target $W$, we need
-%% to check if $\prod_{l=1}^{2^m} rem_l\xrightarrow{J_{0}^{PI}}_+0$?  
-
 
 % \begin{algorithm}\label{rect_flow_alg}
 % \caption{Rectification of finite field arithmetic circuits}\label{pseudocode}
@@ -285,4 +304,3 @@ to compute rectification functions in the following section.
 % $\spec$ at a given set of $m$-distinct targets 
 % $W=(w_1,\dots,w_m)\subset \{\{X\}-\{X_{PI}\}\}$ can be ascertained
 % algebraically. 
-%  

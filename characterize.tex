@@ -1,0 +1,159 @@
+\section{Characterizing Rectification Functions}
+
+We now show how to utilize the above rectifiability check setup to 
+characterize the rectification functions.  
+Intuitively, Theorem.~\ref{Thm:rect} can be elaborated as follows.
+In each ideal $J_l$, the polynomials representing the targets from
+$W$ are replaced by the corresponding values from $W_c[l]$. 
+Subsequently, the specification polynomial $f$ is reduced by 
+each ideal $J_l+J_0$ to produce corresponding remainder $rem_l$. 
+The variety of $rem_l$, for any $l$, corresponds to the set of
+all assignments to primary inputs $X_{PI}$ (minterms) where the
+specification $f$ agrees with the implementation $C$. Thus, the
+condition of Theorem.~\ref{Thm:rect} implies that every minterm in the 
+input space is contained in the union of varieties of each $rem_l$. 
+Therefore, for every minterm from the input space, there exists an assignment
+$W_c[l]$ to target set $W = \{w_1,\dots,w_m\}$ where $f$ and $C$ match. Consequently, there
+exists a set of individual rectification functions $U=\{u_1,\dots,u_m\}$ with individual function 
+mapping $u_i:\Ftwo^{|X_{PI}|}\rightarrow \Ftwo$ for each targets $w_i$ that 
+can be computed to rectify every error minterm. 
+
+To illustrate the characteristics of the hitherto unknown rectification functions $U$,
+consider the special case of rectification formulation at a single target ($m=1$).
+It follows that:  
+\begin{align*}
+W=\{w_1\},~U=\{u_1\},~and~W_c = \{(0),(1)\}\\
+f \xrightarrow[]{F_1 + F_{0}}_+rem_1,~where,~F_1[f_{w_1}: w_1 + 0]~or~w_1=0\\
+f \xrightarrow[]{F_2 + F_{0}}_+rem_2,~where,~F_2[f_{w_1}: w_1 + 1]~or~w_1=1
+\end{align*}
+
+Suppose that the application of Theorem.~\ref{Thm:rect} at net $w_1$ ascertains
+that $rem_1*rem_2\xrightarrow{J_0}_+0$, implying that $C$ admits rectification 
+at $w_1$. 
+Consider the following observations:
+
+\bi
+\item $V(rem_1)$ consists of all the points (minterms) where $w_1$ is assigned $0$ and the circuit evaluation matches
+the specification evaluation.
+\item $V(rem_2)$ consists of all the points (minterms) where $w_1$ is assigned $1$ and the circuit evaluation matches
+the specification evaluation.
+\item $V(rem_1) \cap V(rem_2)$ consists of all the points (minterms) where $w_1$ is assigned $0~(rem_1)$ or $1~(rem_2)$ and the circuit evaluation matches the specification evaluation.
+\ei
+
+From the proof of Theorem.~\ref{Thm:rect}, we know that the entire input space is contained in the 
+union of points (minterms) from $V(rem_1)$ and $V(rem_2)$. The proof implies that there {\it exists a
+polynomial function} $u_1\in \F_2[X_{PI}]$ with mapping $u_1:\Ftwo^{|X_{PI}|}\rightarrow \Ftwo$ 
+at target $w_1$, that rectifies the circuit $C$.  
+% This polynomial function $u_i$ is such that.  
+As $w_1 = u_1$ rectifies the circuit at net $w_1$, consider the following statements: 
+
+\begin{enumerate}
+  \item Polynomial function $u_1$ should vanish on $V(rem_1)$, in other words should evaluate 
+  to $0$ at least on $V(rem_1)$.
+  \item Polynomial function $u_1$ should not vanish on $V(rem_2)$, in other words should evaluate 
+  to non-zero values at least on $V(rem_2)$.
+  \bi
+    \item However, since $u_1$ can only evaluate in $\F_2$, we can rephrase this statement as:
+    $u_1$ should evaluate to $1$ on $V(rem_2)$. 
+  \ei
+  \item Polynomial function $u_1$ evaluates to $0$ or $1$ for points in $V(rem_1) \cap V(rem_2)$.
+\end{enumerate}
+
+We know that the remainders $rem_1$ and $rem_2$ contain 
+only $X_{PI}$ variables in its support and collectively encapsulates points (minterms) where 
+specification agrees with the implementation. Clearly, we can consider the remainders $rem_1$
+and $rem_2$ for characterizing and evaluating the function $u_1$. 
+
+In logic synthesis terms, the sets $V(rem_1)$, $V(rem_2)$, and
+$V(rem_1) \cap V(rem_2)$ are the OFF-set, ON-set, and DC-set, respectively, for the
+rectification function. In the sequel (Sec. ~\ref{comp:synth}) we show how to utilize the
+remainder polynomials $rem_l$ to synthesize a patch sub-circuit. 
+% If we use a Karnaugh map to 
+% to find a optimal function (in number of literals) using these
+% sets, we get $x_i = b_0$. 
+
+% While $u_1$ is a polynomial in $\F_2[\xpi]$, we need to compute the
+% above sets as Boolean functions to optimize an ON-set $w.r.t.$ DC-set. 
+% Notice that the primary input assignements that make $U_{ON} = 0$ are the same that evaluate $a_1\wedge b_0$ 
+% to be true.
+% SIS can optimize a Boolean function (in our case
+% the ON set) using external don't cares (in our case the DC set).
+% Consider the polynomials $rem_1$ and $rem_2$ generated as part of the rectifiability
+% theorem.
+% %and Alg. \ref{algo:id2poly}
+% % from ideals $E_H$ and $J_D$, respectively. 
+% These polynomials satisfy the following conditions:
+% \begin{enumerate}
+%   \item $rem_1=0$ on points in $V(rem_1)$ $i.e.$ $\vpi(U_{ON},\jzpi) = \vpi(E_H)$
+%   \item $U_{DC}=0$ on points in $\vpi(J_D)$ $i.e.$ $\vpi(U_{DC},\jzpi) = \vpi(J_D)$
+%  \end{enumerate} 
+
+% However, Boolean functions for both the ON-set and DC-set
+% must evaluate to 1 (and not 0 as $U_{ON}$ and $U_{DC}$ do). This is
+% achieved by adding 1 to both $U_{ON}$ and $U_{DC}$, as $+1 \pmod{ 2}$
+% complements the function. Subsequently, convert the polynomial
+% $U_{ON}+1$ (respectively, $U_{DC}+1$) to corresponding Boolean
+% functions by treating $+$, $\cdot$, and $+1$ as XOR, AND, and 
+% INV operations, respectively.
+ % (as described in Example \ref{exm:ci_ckt_1}). 
+
+% We exploit and explore this concept 
+% to evaluate rectification functions in the following section.
+
+
+% , such that substituting the patches
+% into the polynomial set $F$ $(f_{w_1}:w_1+u_1,\dots,f_{w_m}:w_m+u_m)$ 
+% rectifies the circuit.
+
+% This involves computing a {\bf reduced \Grobner basis} for the polynomial $rem_l$ and then 
+%  From the ideal $J$, a polynomial $U$ can be computed
+% using Lagrange interpolation,
+% which evaluates to 0 on $V(J)$ and 1 everywhere else $i.e.$ $V(U)=V(J)$. 
+% % Due to the formulation of Lagrange interpolation, 
+% The polynomial
+% $U$ has variables in the set $\xpi$, and coefficients in $\{0,1\}$; $U \in \F_2[\xpi]$.
+% Therefore, $U$ always evaluates to either 0 or 1 for any value of
+% $\xpi$ variables. 
+
+% After computing $\uc$, we can patch the circuit
+% with the polynomial $f_i: x_i + \uc$.
+
+% \subsection{Background}
+% A \Grobner basis computed using Buchberger's algorithm is not a canonical
+% representation of an ideal in itself. To obtain the canonical representation of
+% an ideal, we need to compute a {\bf reduced \Grobner basis}. A reduced \Grobner basis
+% is computed by first computing a minimal \Grobner basis and then reducing it.
+
+% \begin{Definition}\label{def:minigb}
+% A {\bf minimal Gr\"obner basis} $G=\{g_1,\dots,g_t\}$ for a polynomial ideal $I$ is a \Grobner basis for $I$ such that
+%     \begin{itemize}
+%         \item $lc(g_{i})=1,\forall g_{i}\in G$
+%         \item $\forall g_{i} \in G$,  $lt(g_{i}) \notin \langle lt(G-\{g_{i}\})\rangle$
+%     \end{itemize}
+% \end{Definition}
+% A {\bf minimal} \Grobner basis is a \Grobner basis such that all polynomials
+% have a coefficient of $1$ and no leading term of any element in $G$ divides 
+% another in $G$.
+% Given a \Grobner basis $G$, a minimal \Grobner basis can be
+% computed as follows:
+% \begin{enumerate}
+% \item Make every $g_i \in G$ monic, i.e $g_i=g_i/lc(g_i)$
+% \item For $g_i, g_j \in G$ where $i\neq j$, remove $g_i$ from $G$ if $lt(g_i)\mid lt(g_j)$, i.e. remove every polynomial in $G$ whose leading term is divisible by the leading term of some other polynomial in $G$.
+% \end{enumerate}
+
+% Then $G$ is minimal $w.r.t.$ number of elements. 
+% A minimal Gr\"obner basis can then be further reduced.
+% \begin{Definition}
+%     A {\bf reduced Gr\"obner basis} for a polynomial ideal $I$ is a Gr\"obner basis $G=\{g_{1},\dots,g_{t}\}$ such that:
+%     \begin{itemize}
+%         \item $lc(g_{i})=1,\forall g_{i}\in G$
+%         \item $\forall g_{i} \in G$, no monomial of $g_{i}$ lies in $\langle lt(G-\{g_{i}\})\rangle$
+%     \end{itemize}
+% \end{Definition}
+% $G$ is a reduced Gr\"obner basis when no monomial of any element in $G$ is
+% divisible by the leading term of another element. 
+% \vspace{-0.12in}
+% \subsection{Computing Rectification Patches}  
+
+% The techniques described above evaluate an unknown rectification
+% function $u_i$ by reasoning about its variety, and the variety of the remainders $rem_l$.

@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{34}
+\begin{thebibliography}{36}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -107,6 +107,18 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Decker, Greuel, Pfister, and
+  Sch\"onemann}{Decker et~al\mbox{.}}{2016}]%
+        {DGPS_410}
+\bibfield{author}{\bibinfo{person}{Wolfram Decker},
+  \bibinfo{person}{Gert-Martin Greuel}, \bibinfo{person}{Gerhard Pfister},
+  {and} \bibinfo{person}{Hans Sch\"onemann}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \bibinfo{title}{{\sc Singular} {4-1-0} --- {A} computer algebra
+  system for polynomial computations}.
+\newblock \bibinfo{howpublished}{\url{http://www.singular.uni-kl.de}}.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Farahmandi and Mishra}{Farahmandi and
   Mishra}{2016}]%
         {farimah:2016:1}
@@ -172,6 +184,16 @@
   {U}sing {D}ependency {Q}uantified {B}oolean {F}ormulae}. In
   \bibinfo{booktitle}{\emph{IEEE International Conference on Computer Design
   (ICCD)}}. \bibinfo{pages}{396--403}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Gupta}{Gupta}{2020}]%
+        {UTK:thesis}
+\bibfield{author}{\bibinfo{person}{U. Gupta}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \emph{\bibinfo{title}{Rectification of Finite Field Arithmetic
+  Circuits with Craig Interpolation using Algebraic Geometry}}.
+\newblock \bibinfo{thesistype}{Ph.D. Dissertation}. \bibinfo{school}{University
+  of Utah}.
 \newblock
 
 
@@ -309,7 +331,6 @@
 \bibfield{author}{\bibinfo{person}{Vikas Rao}.}
   \bibinfo{year}{2018}\natexlab{}.
 \newblock \bibinfo{howpublished}{\url{http://eng.utah.edu/~utkarshg/cex.pdf},}.
-    (\bibinfo{year}{2018}).
 \newblock
 
 

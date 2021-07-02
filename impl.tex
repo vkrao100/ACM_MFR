@@ -1,7 +1,26 @@
-\section{Improving rectification setup efficiency using ZDDs}\label{impl}
+\section{Efficiency improvement using ZDDs}\label{impl}
 
+The techniques described in rectification check and function computation 
+predominantly involve \Grobner basis computations and polynomial reductions.
+By virtue of RTTO $>$, the complexity of remainder ($rem_l$) generation 
+in the rectification check was moved from one of computing GB to that of 
+GB-reduction by way of multivariate polynomial division. 
+However, the function computation operation also involves computing
+a reduced GB, which can be especially prohibitive when applied to circuits with
+large size operands. Hence, there is a need for efficient representation 
+to overcome the infeasibility of these operations using conventional 
+computer algebra tools. 
+ 
+ As the GB algorithms are employed to compute rectification function
+patches via remainders generated from the circuit, we analyze the circuit and its 
+topology to derive specific
+information, which we use to guide the computation of patches efficiently. Moreover, we
+further show how our ZDD based algorithms can effectively utilize this information
+to compute rectification patches. By combining our theories and algorithms, we can explore
+the space of all possible rectification functions through their ON-set, OFF-set, and DC-set
+of corresponding Boolean functions.
 
-Taking inspiration from~\cite{Utkarsh:TCAD19}, we utilize 
+In this regards, we take inspiration from~\cite{Utkarsh:TCAD19} and utilize 
 PolyBori’s~\cite{pbori:JSC09} reduction procedure with 
 ZDDs~\cite{Minato:DAC93,Minato:DAC94} as the underlying data structure 
 to improve our proposed approach.
@@ -15,9 +34,11 @@ on the ZDDs, which allows for multiple monomials to be canceled in one division-
 along with simplifying the search for divisors.
 The efficiency is derived by treating the polynomials 
 as unate cube sets and checking isomorphism between the implementation and specification 
-graphs. We reason about the presence or absence of solutions and other properties of a 
-system of polynomials without explicitly solving them. 
-The Boolean values of the nets of a circuit for all possible input assignments is a set 
-of points, which can be construed as solutions to a set of polynomials.
-We further improve upon the rectification approach by exploiting the circuit 
-topology and ZDD based GB reductions.
+graphs. 
+
+% We reason about the presence or absence of solutions and other properties of a 
+% system of polynomials without explicitly solving them. 
+% The Boolean values of the nets of a circuit for all possible input assignments is a set 
+% of points, which can be construed as solutions to a set of polynomials.
+% We further improve upon the rectification approach by exploiting the circuit 
+% topology and ZDD based GB reductions.

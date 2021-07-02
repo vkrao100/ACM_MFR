@@ -1,0 +1,292 @@
+\section{Synthesizing Rectification Functions}\label{comp:synth}
+
+The above techniques show how to construct a rectification function
+by reasoning about the varieties of $rem_l$.  
+% The techniques described above evaluate an unknown rectification
+% function $u_i$ by reasoning about its variety and the variety of the remainders $rem_l$.
+However, algebraically, we compute these functions using their corresponding ideals.
+Specifically, we show how the remainders computed in Theorem~\ref{Thm:rect} can be utilized for rectification function computation.
+For this purpose, we restate Theorem 8.5 and its proof from~\cite{UTK:thesis}, which we utilize. 
+
+% Since it is not practical to compute varieties, we provide a procedure to
+% obtain the rectification functions from the generators of these ideals themselves. 
+
+\begin{Theorem}
+\label{thm:coffF2}
+Given a polynomial ring $\Fn[x_1,\dots,x_d]$ and a variety $V \subseteq \mathbb{F}_2^d$,
+the ideal $\mathcal{I}_{\Fn}(V)$ that vanishes on $V$ and has coefficients in $\Fn$ 
+can be expressed as the product $A \cdot\Fn[x_1,\ldots,x_d]$, where $A = \bigcap_{a\in V}m_a$
+and $m_a = \langle x_1-a_1,\dots,x_d-a_d \rangle \subseteq \F_2[x_1, \ldots, x_d]$ for 
+each $a=(a_1,\dots,a_d) \in V$.
+\end{Theorem}
+
+\begin{proof}
+Consider a single point $a \in V$ and the ideal $\mathcal{I}_{\Fn}(\{a\})$ which has coefficients in 
+$\Fn$ and vanishes on $a$. This ideal can be written as,
+\begin{align*}
+\mathcal{I}_{\Fn}(\{a\})=\mathcal{I}_{\overline{\Fn}}(\{a\})\cap\Fn[x_1,\dots,x_d]
+\end{align*}
+The above expression can further simplified as follows,
+\begin{align*}
+\mathcal{I}_{\overline{\Fn}}(\{a\})\cap \Fn[x_1,\ldots,x_d] 
+&= (m_a\cdot \overline{\Fn}[x_1,\ldots,x_d])\cap\Fn[x_1,\ldots,x_d] \\
+&= m_a\cdot \Fn[x_1,\ldots,x_d]
+\end{align*}
+
+Now consider the ideal $\mathcal{I}_{\Fn}(V)$ which can written as the intersection of 
+$\mathcal{I}_{\Fn}(\{a\})$ for each $a \in V$,
+\begin{align*}
+\mathcal{I}_{\Fn}(V) &= \bigcap_{a\in V}\mathcal{I}_{\Fn}(\{a\}) \\
+&= \bigcap_{a\in V}m_a\cdot \Fn[x_1,\ldots,x_d] \\
+&= (\bigcap_{a\in V}m_a)\cdot \Fn[x_1,\ldots,x_d],
+\end{align*}
+where the last equality is due to $\F_2[x_1,\ldots,x_d] \subseteq \Fn[x_1,\ldots,x_d]$.
+\end{proof}
+
+Now consider the remainders $rem_l$ ($\langle rem_l \rangle \subseteq \Fn[X_{PI}] $) computed in Theorem~\ref{Thm:rect}. 
+Even though the remainders $rem_l$ have coefficients in $\Fkn$ (higher field), their varieties 
+are in $\F_{2}^{|X_{PI}|}$ ($V(\langle rem_l\rangle)\subseteq \F_2^{|X_{PI}|}$) as they correspond to 
+bit-level assignments to $X_{PI}$.
+We have that $\mathcal{I}_{\Fn}(V(\langle rem_l\rangle)) = \langle rem_l \rangle + J_0$ (Theorem \ref{thm:strong-ns}).
+It is a property of such ideals ($\langle rem_l \rangle + J_0 $) that the generators of their reduced
+\Grobner bases (Def.~\ref{def:rgb}) have coefficients only in $\Ftwo$. Let $G_l=redGB(\langle rem_l \rangle + J_0 )$
+denote the generators of the reduced \Grobner basis computation.
+Then using Theorem~\ref{thm:coffF2}, $G_l = A \cdot \Fn[\xpi]$ where $A = \bigcap_{a\in V(G_l)}m_a$
+and $m_a$ is as defined in the theorem statement. 
+% Since $G_l$ is computed using the Theorem~\ref{thm:elm},
+% it is a Gr\"obner basis itself, and therefore, $E_L = A = \bigcap_{a\in \vpi(E_L)}m_a \subseteq \F_2[\xpi]$.
+% In other words, the generators of the ideal $E_L$ computed using the Theorem~\ref{thm:chk} have coefficients in $\F_2$.
+% The same result can also be shown for the generators of the ideals $E_H$ and $E'_H$. 
+% Consequently, any ideal-interpolant $J_I$ computed
+% for the pair $(E_L,E_H)$ will also have generators in $\F_2[\xpi]$. 
+This, in turn implies that for 
+any point in $\F_2^{|\xpi|}$, each generator of $G_l$ will either evaluate to 0 or 1.
+Using these results, a rectification polynomial $\uc$ can be computed
+from the generators of $G_l$ and subsequently, a sub-circuit can be synthesized from $\uc$. 
+
+
+% {\color{red}
+% The ideal-interpolant $J_I$ is computed through a \Grobner basis which
+% is a set of polynomials $G_I = \{g_1,\dots, g_t\}$. It is non-trivial
+% to synthesize a single-output Boolean function from this set of
+% polynomials. This problem can be simplified if we can compute a
+% rectification  $\uc$ from $G_I$ with $V(\uc) = V(G_{I})$,
+% and then synthesize it into a subcircuit.  
+% %More specifically, we use the generators of $E_L$ for the computation. 
+% %As our goal is to synthesize the rectification function $\uc$, 
+% This can be achieved if the coefficients of $\uc$ are in
+% $\F_2=\{0,1\}$, as $X_{PI}$ variables already take values in
+% $\{0,1\}$. {\bf For this we first (wish to) prove the following
+%   conjecture on the nature of generators of the ideal $E_L$.}
+
+% \begin{Conjecture}
+% \label{thm:ELF2}
+% Ideal $E_L$ as given in Thm \ref{thm:chk} is computed as follows:
+% \begin{enumerate}
+% \item Compute $G=GB(J_L+J_0)$ with the lex order ``non-$\xpi$ variables $> \xpi$ variables''
+% \item From $G$, obtain $G_L = G \cap\Fkk[X_{PI}] = \{g_1,\dots,g_t\}$
+%   as the \Grobner basis of the elimination ideal $E_L$, i.e. $G_L = GB(E_L)$.
+% \end{enumerate}
+% Then the polynomials $g_1,\dots,g_t \in \F_2[\xpi]$.
+% % Then from this $GB$ set, we pick the polynomials that contain only $\xpi$ variables.
+% % We know that $\vpi(E_L) \subseteq \F_2^{|\xpi|}$, can we show that the 
+% % coefficients of the generators of the ideal $E_L$, computed as above,
+% % are from the set $\{0,1\}$. 
+% \end{Conjecture} 
+
+% {\bf
+% Florian:  If we can show that the above conjecture is true, $\uc$ computed
+%   from Eqn. \ref{eqn:id2poly} will evaluate to $\{0,1\}$, i.e in $\F_2$.
+% As a result, $\uc$ can be synthesized using AND and XOR gates. In all
+% our experiments, we have observed that the computed \Grobner basis is
+% in $\F_2[\xpi]$. In subsection \ref{sec:conj_proof}, Utkarsh gives a
+% reasoning for why we think this always happens, and his reasoning relies on
+% the subsequent concepts. That is why it is described in two sections.
+% A similar proof can also be shown for the generators of $E_H$ and
+% $E'_H$. 
+% }}
+
+\subsubsection{Obtaining $\uc$ from $E_L$}
+
+%% In finite fields, given an ideal $J$, it always possible to find a 
+%% polynomial $U$ such that $V(U) = V(J)$. The reason is that
+%% every ideal in a finite field has a finite
+%% variety and a polynomial with those points as its roots can always be
+%% constructed using the Lagrangian interpolation formula. We construct
+%% the rectification polynomial $U$ from the ideal-interpolant $E_L$ as
+%% shown below, such that $V(E_L) = V(U)$. 
+
+With $GB(E_L) = \{g_1,\dots,g_t\}$, $U$ is computed as:
+\begin{equation}
+\label{eqn:id2poly}
+U = (1+g_1)(1+g_2)\cdots(1+g_t)+1
+\end{equation}
+
+It is easy to assert that $V(U) = V(E_L)$. 
+Consider a point $\bm{a} \in V(E_L)$. As all of 
+$g_1,\dots,g_t$ vanish (= 0) at $\bm{a}$,
+\begin{align*}
+U(\bm{a}) &= (1+g_1(\bm{a}))(1+g_2(\bm{a}))\cdots(1+g_t(\bm{a}))+1 \\
+&= (1+0)(1+0)\cdots(1+0) + 1 = 0
+\end{align*}
+Conversely, for a point $\bm{a'} \not \in V(E_L)$, at least one  
+of $g_1,\dots,g_t$ will evaluate to 1. 
+Without loss of generality, if
+$g_1$ evaluates to 1 at $\bm{a'}$, then $U=(1+1)(1+0)\cdots(1+0)+1 = 1 \neq
+0$. In addition to $\vpi(\uc) = \vpi(E_L)$, $\uc$ either evaluates to 0 or 1. 
+%%%%%%%%% The algorithm is commented out
+%% \par Using Eqn. (\ref{eqn:id2poly}), a recursive procedure is derived to
+%% compute $U$, and it is depicted in Algorithm \ref{algo:id2poly}. At
+%% every recursive step, we also reduce the intermediate  
+%% results by $\pmod{ J_0}$ (line 7) so as to avoid terms of high degree.
+In this fashion, from the ideal-interpolant $E_L$, we compute the
+single-fix rectification polynomial function $\uc$, and synthesize a
+sub-circuit at net $x_i$ such that $x_i = \uc$ rectifies the circuit. 
+
+
+% However, in~\cite{Utkarsh:VLSI18}, it was 
+% shown that it is a property of such ideals ($\langle rem_l, J_0 \rangle$) that their reduced
+% \Grobner bases (Def.~\ref{def:rgb}) have coefficients only in $\Ftwo$.
+Further, it was shown that, given an ideal $I$ with coefficients in $\Ftwo$ with generators  $\{g_1,\dots,g_t\}$, 
+a polynomial $p$ can always be constructed as $p = (1+g_1)(1+g_2)\dots(1+g_t)+1$, such that $V(p) = V(I)$. 
+% This helps in computing a singleton polynomial for each 
+%% {\it Ideal-Poly Conversion:} Over finite fields, given an ideal $J$, 
+%% a polynomial $p$ can always be computed 
+%% such that $V(p) = V(J)$. Let $\{g_1,\dots,g_t\}$ denote the generators
+%% of $J$. Then, the polynomial $p$ can be constructed as, 
+%% $p = (1+g_1)(1+g_2)\dots(1+g_t)+1$~\cite{Utkarsh:VLSI18}. 
+% i.e. $V(rem_l)\subseteq \F_{2}^{|X_{PI}|}, 1 \leq l \leq 2^m$.
+% It is a property of such ideals ($\langle rem_l,\jzxpi \rangle$), that their Reduced
+% \Grobner basis (Def.~\ref{def:rgb}) will have coefficients only in $\Ftwo$.
+% Once we compute a GB with coefficients in $\Ftwo$, we can translate it to a polynomial 
+% which has the same variety as the ideal (Sec.~\ref{sec:prelim}).
+Consequently, the rectification function operations are restricted to
+algebraic computations in $\F_2[X_{PI}]\equiv \B$. 
+
+To compute the patch $u_i$, we perform the following steps:
+\bi
+\item Compute reduced \Grobner bases of $\langle rem_l, J_0 \rangle$.
+\item Construct a singleton polynomial $p$ such that \\ $V(p) = V(\langle rem_l, J_0 \rangle)$.
+\item Impose an order on the sets for $DC_{pair}$ and composite set computations.
+\item Compute $DC_{pair}$ using Eqn.~(\ref{eqn:dc_pair}), and then obtain the composite sets
+      in Eqn.~(\ref{eqn:composite_dc}) which are then assigned to DC-, on- and off-sets of the 
+      rectification functions (Sec.~\ref{comp:DFC1}).
+\item In order to perform the variety union, intersection, and difference operations, we use ideal 
+        product, sum, and colon operations, respectively, on the
+        singleton polynomial $p$ representation of the ideal.
+% Use ideal operations sum, product, and colon ideal to perform intersection, 
+% sum, and difference of varieties, respectively.
+\item The above procedure delivers $u_{i_{DC}}$ and $u_{i_{on}}$ as singleton polynomials in $\Ftwo[X_{PI}]$.
+Translate $u_{i_{DC}}$ and $u_{i_{on}}$ into Boolean functions by interpreting the product, sum,
+and '+1' as Boolean AND, XOR, and INV gates, respectively. Optimize the on-set $u_{i_{on}}$ w.r.t. to the DC-set $u_{i_{DC}}$.
+\ei
+
+%  A polynomial in $\F_2[X_{PI}]$ can be converted to a Boolean AND-XOR operation. This expression can be
+% synthesized into a sub-circuit whose output can be connected to the respective targets in $W$ to rectify the circuit.
+% As the product and sum operations are performed modulo 2; they can be implemented
+% in a circuit using AND and XOR gates, respectively.
+
+% The expression can be synthesized into a sub-circuit by replacing the modulo 2 product and sum 
+% in the polynomial expression with the Boolean AND and XOR operators, respectively.
+% We synthesize a subcircuit by interpreting sum as XOR $\pmod{2}$ and product 
+% as AND gates.
+% Subsequently,  we convert the polynomial to corresponding Boolean functions by treating $+,\cdot,+1$ 
+% as XOR, AND, and INV operations, respectively.
+
+% In order to compute a desired $u_i \in \F_2[X_{PI}]$ with a 
+% $\F_2^{|X_{PI}|} \mapsto \F_2$ mapping,
+% we perform the following steps.
+
+
+% \bi
+% \item Compute the generators $Gr_l$ for the ideal $Jr_l=\langle rem_l \rangle$ as 
+% $redGB(Jr_l+\jzxpi)$, where $rem_l \in \Fkn[X_{PI}]$.
+% Then the polynomials in $Gr_l$ have coefficients in $\F_2$,
+% and variables in $\xpi$[Corollary~8.1]~\cite{UTK:thesis}.
+% \item Use the Ideal-Poly conversion procedure from (Section \ref{sec:prelim})
+% to compute a polynomial $rem_l'$. The computed $rem_l'$ is such that 
+% $rem_l'\in \F_2[X_{PI}]$ and $V(rem_l') = V(rem_l)$.
+% \item To compute $u_i$ algebraically, we utilize the relevant ideal operations described in
+% the ideal-variety correspondences (Section \ref{sec:prelim}) to perform the union, intersection,
+% and set difference of varieties over $V(rem_l')$.
+% \ei
+
+
+% $U_{dc} = \bigcap\limits_{l=1}^{2^m}V(pr_l)$
+
+% \begin{Example}
+% Continuing with our example~\ref{ex:4}, for the circuit shown in Fig.~\ref{fig:mas_bug_W},
+% the intersection of Variety of remainders yields us the DC for all the targets.
+
+% $U_{dc} = \bigcap\limits_{l=1}^{4}V(pr_l) = a_2b_1b_2+a_2b_1+a_2b_2+1$
+% \end{Example}
+
+% However, our experiments show that for a large class of benchmarks depending on the
+% target selection, the intersection of all sets is most likely to be empty. Thus,
+% we need a stronger DC set computation for individual targets.
+
+% Recall that the variety of each $pr_l$ corresponds to the set of correct points
+% for a given tuple assignment to the targets from $W_c[l]$. Thus, all 
+% the points which lie in the intersection of all the $pr_l$'s comprises the 
+% DC for all the targets.
+% We can compute a polynomial $pr_l \in \F_{2}^{|X_{PI}|}$
+%  such that $V(pr_l) = V(rem_l)$~\cite{Utkarsh:VLSI18}. 
+% \subsubsection{DC for individual targets}
+
+\begin{Example}\label{ex:4}
+  Continuing with Ex.~\ref{ex:3}:
+  % , we illustrate the above procedure:
+
+  \bi
+  \item $rem_3 = (\ga+1)a_2b_1b_2+a_2b_1 + (\ga^2+\ga)a_2b_2$ %\\ coefficients in $\Fkn$
+  \item $redGB(\langle rem_3,J_0\rangle) = \{a_2b_1,a_2b_2\}$ %\\ coefficients in $\Ftwo$
+  \item $p_{rem_3} = (1+a_2b_1)*(1+a_2b_2)+1 = a_2b_1b_2+a_2b_1+a_2b_2$
+  \bi
+    \item Here, $V(p_{rem_3}) = V(\langle rem_3, J_0 \rangle)$
+  \ei
+  \item Similarly:
+  \bi
+    \item $p_{rem_1} = a_2b_2$
+    \item $p_{rem_2} = a_2b_1b_2$
+    \item $p_{rem_4} = a_2b_1b_2 + a_2b_1$
+  \ei
+  \ei
+  The rectification polynomials for the targets $(r_3,rr_3)$ computed using the greedy approach~(Sec.~\ref{comp:GFC})
+  \begin{align*}
+    % \begin{split}
+      &u_{1_{on}}  = a_2b_1b_2; &u_{1_{off}} &= a_2b_1b_2 +1; &r_3  &= u_{1_{patch}} =(a_2\wedge b_1 \wedge b_2);\\
+      &u_{2_{on}}  = a_2b_2;    &u_{2_{off}} &= a_2b_2+1;     &rr_3 &= u_{2_{patch}}= (a_2\wedge b_2).
+    % \end{split}
+  \end{align*}
+  The rectification polynomials for the targets $(r_3,rr_3)$ computed using the on-set and don't care simplification~(Sec.~\ref{comp:DFC2})
+  \begin{flalign*}
+    % \begin{split}
+     &u_{1_{dc}} = a_2b_1b_2+a_2b_2;&u_{1_{on}} &= a_2b_1b_2; &r_3 &= u_{1_{patch}} = a_2\wedge b_2; \\
+     &u_{2_{dc}} = a_2b_2+1;        &u_{2_{on}} &= a_2b_2;    &rr_3 &= u_{2_{patch}} = 1. 
+    % \end{split}
+  \end{flalign*}
+  % As seen above, the synthesis tool ({\it sis}) was able to simplify 
+  % the on-set for $u_1$ patch function.
+\end{Example}
+
+\section{Improving efficiency using ZDDs}\label{comp:synth}
+
+The techniques described in rectification check and function computation 
+predominantly involve \Grobner basis computations and polynomial reductions.
+By virtue of RTTO $>$, the complexity of remainder ($rem_l$) generation 
+in the rectification check was moved from one of computing GB to that of 
+GB-reduction by way of multivariate polynomial division. 
+However, the function computation operation also involves computing
+a reduced GB, which can be especially prohibitive when applied to circuits with
+large size operands. Hence, there is a need for efficient representation 
+to overcome the infeasibility of these operations using conventional 
+computer algebra tools. 
+ 
+ to overcome
+this complexity. As the GB algorithms are employed to compute rectification function
+patches via CI on the circuit, we analyze the circuit and its topology to derive specific
+information, which we use to guide the computation of patches efficiently. Moreover, we
+further show how our ZDD based algorithms can effectively utilize this information
+to compute rectification patches. By combining our theories and algorithms, we can explore
+the space of all possible rectification functions through their ON-set, OFF-set, and DC-set
+of corresponding Boolean functions.
