@@ -23,8 +23,8 @@ consider the special case of rectification formulation at a single target ($m=1$
 It follows that:  
 \begin{align*}
 W=\{w_1\},~U=\{u_1\},~and~W_c = \{(0),(1)\}\\
-f \xrightarrow[]{F_1 + F_{0}}_+rem_1,~where,~F_1[f_{w_1}: w_1 + 0]~or~w_1=0\\
-f \xrightarrow[]{F_2 + F_{0}}_+rem_2,~where,~F_2[f_{w_1}: w_1 + 1]~or~w_1=1
+f \xrightarrow[]{J_1 + J_{0}}_+rem_1,~where,~F_1[f_{w_1}: w_1 + 0]~or~w_1=0\\
+f \xrightarrow[]{J_2 + J_{0}}_+rem_2,~where,~F_2[f_{w_1}: w_1 + 1]~or~w_1=1
 \end{align*}
 
 Suppose that the application of Theorem.~\ref{Thm:rect} at net $w_1$ ascertains
@@ -65,7 +65,7 @@ specification agrees with the implementation. Clearly, we can consider the remai
 and $rem_2$ for characterizing and evaluating the function $u_1$. 
 
 In logic synthesis terms, the sets $V(rem_1)$, $V(rem_2)$, and
-$V(rem_1) \cap V(rem_2)$ are the OFF-set, ON-set, and DC-set, respectively, for the
+$V(rem_1) \cap V(rem_2)$ are the OFF-set $\cup$ DC-set, ON-set $\cup$ DC-set, and DC-set, respectively, for the
 rectification function. In the sequel (Sec. ~\ref{comp:synth}) we show how to utilize the
 remainder polynomials $rem_l$ to synthesize a patch sub-circuit. 
 % If we use a Karnaugh map to 

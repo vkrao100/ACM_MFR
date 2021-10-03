@@ -64,8 +64,8 @@ The following ideals are constructed:
 	\dots,f_{w_m}:w_m+W_c[l][m]$ $,\dots,f_s\rangle$, for $1 \leq l \leq 2^m$. 
 \ei
 
-Reduce $f$ by $F_l + F_0$ to obtain remainders $rem_l$: 
-$f\xrightarrow{F_l +  F_{0}}_+ rem_l,$  for $1 \leq l \leq 2^m$.
+Reduce $f$ by $J_l + J_0$ to obtain remainders $rem_l$: 
+$f\xrightarrow{J_l +  J_{0}}_+ rem_l,$  for $1 \leq l \leq 2^m$.
 Then, the faulty circuit $C$ is rectifiable at the target set $W$ {\bf\textit{if
    and only if}} 
 \begin{equation}
@@ -86,7 +86,7 @@ Moreover, each $rem_l$ comprises only $X_{PI}$ variables in its support. This is
 because RTTO $>$ ensures that each non-primary input variable (each gate
 output and word-level variable) appears as the leading term of some
 polynomial in $F$. Thus each non-primary input variable is canceled
-in the reduction $f\xrightarrow{F_l+ F_{0}}_+ rem_l$. Furthermore,
+in the reduction $f\xrightarrow{J_l+ J_{0}}_+ rem_l$. Furthermore,
 as $X_{PI}$ take values in $\F_2$, $x^2=x, \forall x \in
 X_{PI}$. Hence, 
 % even though $V_{\Fkk}(J')$ is evaluated in $\Fkk$,
@@ -103,7 +103,7 @@ from $W_c$. When the $m$-targets in $W$ evaluate to  $W_c[1] = (0,0,\dots,0)$,
 $J_1 = \langle F_1 \rangle$ vanishes on the point $(x_{PI},x_{int})$. 
 Likewise, $J_2 = \langle F_2 \rangle$ vanishes on $(x_{PI},x_{int})$ when the targets 
 evaluate to $W_c[2] = (0,0,\dots,1)$, and so on. Since
-$f\xrightarrow{F_l\cup F_0}_+rem_l,1 \leq l \leq 2^m$, and $f$ vanishes
+$f\xrightarrow{J_l + J_0}_+rem_l,1 \leq l \leq 2^m$, and $f$ vanishes
 on the point $(x_{PI},x_{int})$ to begin with, we obtain that for
 every  primary input assignment $x_{PI}$, one of the $rem_l$ vanishes. This
 implies that $ \bigcup\limits_{l=1}^{2^m}V(\langle rem_l\rangle) = \Ftwo^{|X_{PI}|}$.
@@ -112,7 +112,7 @@ implies that $ \bigcup\limits_{l=1}^{2^m}V(\langle rem_l\rangle) = \Ftwo^{|X_{PI
 primary inputs $x_{PI} \in \Ftwo^{|X_{PI}|}$ such that $rem_1$ vanishes on
 $x_{PI}$, i.e. $rem_1(x_{PI})=0$. For the given point $x_{PI}$, the rest of the variables 
 of $C$ get a corresponding assignment $x_{int}$. 
-As $f\xrightarrow{F_1\cup F_0}_+ rem_1$, we have that $f$ is a member of the
+As $f\xrightarrow{J_1 + J_0}_+ rem_1$, we have that $f$ is a member of the
 ideal $J_1 + J_0 + \langle rem_1 \rangle$. Therefore, when
 $rem_1(x_{PI})=0$, the ideal $J_1$ also vanishes on $(x_{PI},x_{int}) \in \Fn$
 because the point $(x_{PI},x_{int})$ is a valid evaluation of the circuit.
@@ -181,10 +181,10 @@ Constructing the $J_l$ ideals:
 \ei
 Reducing the $\spec$ $f: Z+A\cdot B$ modulo these ideals, we get:
 \bi
-\item $rem_1 = f \xrightarrow[]{F_1 + F_{0}}_+(\ga+1)a_2b_1b_2+(\ga^2+\ga)a_2b_2$
-\item $rem_2 = f \xrightarrow[]{F_2 + F_{0}}_+(\ga+1)a_2b_1b_2$
-\item $rem_3 = f \xrightarrow[]{F_3 + F_{0}}_+(\ga+1)a_2b_1b_2+a_2b_1 + (\ga^2+\ga)a_2b_2$
-\item $rem_4 = f \xrightarrow[]{F_4 + F_{0}}_+(\ga+1)a_2b_1b_2+a_2b_1$
+\item $rem_1 = f \xrightarrow[]{J_1 + J_{0}}_+(\ga+1)a_2b_1b_2+(\ga^2+\ga)a_2b_2$
+\item $rem_2 = f \xrightarrow[]{J_2 + J_{0}}_+(\ga+1)a_2b_1b_2$
+\item $rem_3 = f \xrightarrow[]{J_3 + J_{0}}_+(\ga+1)a_2b_1b_2+a_2b_1 + (\ga^2+\ga)a_2b_2$
+\item $rem_4 = f \xrightarrow[]{J_4 + J_{0}}_+(\ga+1)a_2b_1b_2+a_2b_1$
 \ei
 
 When we compute $\prod_{l=1}^{2^m} 

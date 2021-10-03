@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.3.31)  2 JUL 2021 11:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.3.31)  5 JUL 2021 20:55
 entering extended mode
 **./ACM_MFR.tex
 (ACM_MFR.tex
@@ -1168,14 +1168,7 @@ LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
  [2.2]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 (Font)              scaled to size 10.0pt on input line 116.
-
-
-LaTeX Warning: Reference `sec:exp' on page 3 undefined on input line 185.
-
-
-LaTeX Warning: Reference `sec:conc' on page 3 undefined on input line 186.
-
-[3.3]) (prelim.tex [4.4]
+ [3.3]) (prelim.tex [4.4]
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
@@ -1251,7 +1244,7 @@ sed, duplicate ignored
 l.286       \If {$h \neq 0$} \State
                                     $G:= G \cup \{h\}$ \EndIf [7.7])
 (pmodel.tex [8.8]
-<mas_3_ddc_mfr_a.pdf, id=253, 675.86174pt x 751.09pt>
+<mas_3_ddc_mfr_a.pdf, id=263, 675.86174pt x 751.09pt>
 File: mas_3_ddc_mfr_a.pdf Graphic file (type pdf)
 <use mas_3_ddc_mfr_a.pdf>
 Package pdftex.def Info: mas_3_ddc_mfr_a.pdf  used on input line 187.
@@ -1277,69 +1270,78 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 5.5pt on input line 100.
  [15.15]) (func_synth.tex [16.16]
-[17.17]) (impl.tex) (ACM_MFR.bbl [18.18]
+[17.17]) (impl.tex) (experiments.tex [18.18]
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/it' will be
+(Font)              scaled to size 8.0pt on input line 133.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/it' will be
+(Font)              scaled to size 6.2pt on input line 133.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <8> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 133.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 8.0pt on input line 46.
+(Font)              scaled to size 8.0pt on input line 148.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 6.2pt on input line 148.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/it' will be
+(Font)              scaled to size 8.0pt on input line 148.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
+(Font)              scaled to size 8.0pt on input line 148.
+ [19.19]) (ACM_MFR.bbl [20.20]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
 (Font)              scaled to size 8.0pt on input line 117.
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 8.0pt on input line 118.
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 6.2pt on input line 118.
 
 Underfull \vbox (badness 1895) has occurred while \output is active []
 
- [19.19])
+ [21.21])
 
 Class acmart Warning: ACM reference format is mandatory for papers over one pag
 e.
 
-[20.20] (ACM_MFR.aux)
-
-LaTeX Warning: There were undefined references.
-
+[22.22] (ACM_MFR.aux)
 Package rerunfilecheck Info: File `ACM_MFR.out' has not changed.
-(rerunfilecheck)             Checksum: 2C68821AE699EE509038CE8DDBBC5685;3968.
+(rerunfilecheck)             Checksum: F253E7E817CE0A882E4EF17A77871B8F;4247.
  ) 
 Here is how much of TeX's memory you used:
- 23106 strings out of 479287
- 371540 string characters out of 2863087
- 722910 words of memory out of 3000000
- 39089 multiletter control sequences out of 15000+600000
- 640116 words of font info for 601 fonts, out of 8000000 for 9000
+ 23262 strings out of 479287
+ 374593 string characters out of 2863087
+ 731910 words of memory out of 3000000
+ 39123 multiletter control sequences out of 15000+600000
+ 688730 words of font info for 671 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 96i,18n,131p,1353b,670s stack positions out of 5000i,500n,10000p,200000b,80000s
-{C:/Users/vikas/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/libertine/lbtn_kij
-ugd.enc}{C:/Users/vikas/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/libertine/lb
-tn_ncsllp.enc}{C:/Users/vikas/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/libert
-ine/lbtn_ki75ao.enc}{C:/Users/vikas/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/
-libertine/lbtn_oexx6f.enc}{C:/Users/vikas/AppData/Roaming/MiKTeX/2.9/fonts/enc/
-dvips/libertine/lbtn_7grukw.enc}{C:/Users/vikas/AppData/Roaming/MiKTeX/2.9/font
-s/enc/dvips/libertine/lbtn_nh77jq.enc}{C:/Users/vikas/AppData/Roaming/MiKTeX/2.
-9/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{C:/Program Files/MiKTeX 2.9/fonts/
-enc/dvips/base/8r.enc}{C:/Users/vikas/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvip
-s/libertine/lbtn_76gpa5.enc}<C:/Users/vikas/AppData/Roaming/MiKTeX/2.9/fonts/ty
-pe1/public/newtx/LibertineMathBMI.pfb><C:/Users/vikas/AppData/Roaming/MiKTeX/2.
-9/fonts/type1/public/newtx/LibertineMathMI.pfb><C:/Users/vikas/AppData/Roaming/
-MiKTeX/2.9/fonts/type1/public/newtx/LibertineMathMI5.pfb><C:/Users/vikas/AppDat
-a/Roaming/MiKTeX/2.9/fonts/type1/public/newtx/LibertineMathMI7.pfb><C:/Users/vi
-kas/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/libertine/LinLibertineT.pfb><
-C:/Users/vikas/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/libertine/LinLiber
-tineTB.pfb><C:/Users/vikas/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/libert
-ine/LinLibertineTBI.pfb><C:/Users/vikas/AppData/Roaming/MiKTeX/2.9/fonts/type1/
-public/libertine/LinLibertineTI.pfb><C:/Users/vikas/AppData/Roaming/MiKTeX/2.9/
-fonts/type1/public/newtx/NewTXMI.pfb><C:/Users/vikas/AppData/Roaming/MiKTeX/2.9
-/fonts/type1/public/newtx/NewTXMI7.pfb><C:/Users/vikas/AppData/Roaming/MiKTeX/2
-.9/fonts/type1/public/newtx/txbsys.pfb><C:/Users/vikas/AppData/Roaming/MiKTeX/2
-.9/fonts/type1/public/newtx/txexs.pfb><C:/Users/vikas/AppData/Roaming/MiKTeX/2.
-9/fonts/type1/public/newtx/txmiaX.pfb><C:/Users/vikas/AppData/Roaming/MiKTeX/2.
-9/fonts/type1/public/txfonts/txsyb.pfb><C:/Users/vikas/AppData/Roaming/MiKTeX/2
-.9/fonts/type1/public/newtx/txsys.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/u
-hvr8a.pfb>
-Output written on ACM_MFR.pdf (20 pages, 632292 bytes).
+ 96i,18n,131p,1353b,671s stack positions out of 5000i,500n,10000p,200000b,80000s
+{C:/Users/vikas/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/libertine/lbtn_fyg
+cup.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}{C:/Users/vika
+s/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/libertine/lbtn_kijugd.enc}{C:/User
+s/vikas/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/libertine/lbtn_ncsllp.enc}{C
+:/Users/vikas/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/libertine/lbtn_ki75ao.
+enc}{C:/Users/vikas/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/libertine/lbtn_o
+exx6f.enc}{C:/Users/vikas/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/libertine/
+lbtn_7grukw.enc}{C:/Users/vikas/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/libe
+rtine/lbtn_nh77jq.enc}{C:/Users/vikas/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvip
+s/libertine/lbtn_naooyc.enc}{C:/Users/vikas/AppData/Roaming/MiKTeX/2.9/fonts/en
+c/dvips/libertine/lbtn_76gpa5.enc}<C:/Users/vikas/AppData/Roaming/MiKTeX/2.9/fo
+nts/type1/public/newtx/LibertineMathBMI.pfb><C:/Users/vikas/AppData/Roaming/MiK
+TeX/2.9/fonts/type1/public/newtx/LibertineMathMI.pfb><C:/Users/vikas/AppData/Ro
+aming/MiKTeX/2.9/fonts/type1/public/newtx/LibertineMathMI5.pfb><C:/Users/vikas/
+AppData/Roaming/MiKTeX/2.9/fonts/type1/public/newtx/LibertineMathMI7.pfb><C:/Us
+ers/vikas/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/libertine/LinLibertineT
+.pfb><C:/Users/vikas/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/libertine/Li
+nLibertineTB.pfb><C:/Users/vikas/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/
+libertine/LinLibertineTBI.pfb><C:/Users/vikas/AppData/Roaming/MiKTeX/2.9/fonts/
+type1/public/libertine/LinLibertineTI.pfb><C:/Users/vikas/AppData/Roaming/MiKTe
+X/2.9/fonts/type1/public/libertine/LinLibertineTZ.pfb><C:/Users/vikas/AppData/R
+oaming/MiKTeX/2.9/fonts/type1/public/newtx/NewTXMI.pfb><C:/Users/vikas/AppData/
+Roaming/MiKTeX/2.9/fonts/type1/public/newtx/NewTXMI7.pfb><C:/Users/vikas/AppDat
+a/Roaming/MiKTeX/2.9/fonts/type1/public/newtx/txbsys.pfb><C:/Users/vikas/AppDat
+a/Roaming/MiKTeX/2.9/fonts/type1/public/newtx/txexs.pfb><C:/Users/vikas/AppData
+/Roaming/MiKTeX/2.9/fonts/type1/public/newtx/txmiaX.pfb><C:/Users/vikas/AppData
+/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/txsyb.pfb><C:/Users/vikas/AppDat
+a/Roaming/MiKTeX/2.9/fonts/type1/public/newtx/txsys.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvet
+ic/uhvro8a.pfb>
+Output written on ACM_MFR.pdf (22 pages, 730944 bytes).
 PDF statistics:
- 489 PDF objects out of 1000 (max. 8388607)
- 119 named destinations out of 1000 (max. 500000)
- 135330 words of extra memory for PDF output out of 154059 (max. 10000000)
+ 529 PDF objects out of 1000 (max. 8388607)
+ 125 named destinations out of 1000 (max. 500000)
+ 170162 words of extra memory for PDF output out of 184870 (max. 10000000)
 
